@@ -8,6 +8,7 @@ html(lang='en')
     title #{title}
     meta(name="description", content=description)
     block head
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 
   body(class=pageClass)
     
@@ -15,6 +16,7 @@ html(lang='en')
       include ../includes/modules/header
       .content-wrapper
         block content
+          include ../includes/modules/content 
       include ../includes/modules/footer
 
     block script

@@ -1,0 +1,19 @@
+mixin text-field(name,placeholder)
+  .text-field
+    label.text-field__label(for=name) Имя
+      input.text-field__input(type="text", name=name, id=name, placeholder=placeholder)
+
+
+.block
+    +text-field("name","Имя")
+
+    .drop-down
+      label.drop-down__label(for="name1") Имя
+      .drop-down__div
+        input.drop-down__input(type="text", name="name1", id="name1", placeholder="Имя") 
+        input.drop-down__checkbox(type="checkbox", name="check") 
+
+//input.text-field__input(type="text", name="name", id="name", placeholder="Имя")
+  .text-field
+     label.text-field__label(for="name1") Имя
+      input.text-field__input(type="text", name="name1", id="name1", placeholder="Имя", pattern="2-[0-9]{3}-[0-9]{3}")   

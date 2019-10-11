@@ -1,1 +1,137 @@
 // header style
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+ }
+
+ //Header SCSS
+.header__wrapper {
+    display: flex;
+    align-items: flex-end;
+    height: 70px;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+.heaer__button{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 9px 20px 10px 20px;
+    margin: auto 20px auto 0;
+}
+.heaer__button:last-child{
+    margin-right: 140px;
+}
+//Logo SCSS
+.logo{
+    display: flex;
+    margin: auto auto auto 140px;
+}
+
+//Menu SCSS
+.menu{
+    display: flex;
+    margin: auto 0;
+ 
+}
+
+.menu__list{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.menu__item{
+    margin-right: 30px;
+
+}
+
+.menu__link{
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(31, 32, 65, 0.5);
+
+
+}
+
+.menu__link--is-bold{
+    color: rgba(31, 32, 65, 0.75);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.menu__link--more::after{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    line-height: 20px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: rgba(31, 32, 65, 0.5);
+    content: 'expand_more';
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+//Button SCSS
+.button{
+    
+    border-radius: 22px;
+    
+}
+.button--with-background{
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button--with-border{
+   
+    display: flexbox;
+    color: #BC9CFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border:0.3em solid transparent;
+    background: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .button--with-border:before {
+    content: "";
+    display: block;
+    border-radius: 22px;
+    position: absolute;
+    background: inherit;
+    top: 0.2em;
+    left: 0.2em;
+    right: 0.2em;
+    bottom: 0.2em;
+    z-index: -1;
+  }
+  .button--with-border:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    
+  }
