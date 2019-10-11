@@ -54,35 +54,189 @@
     margin: 5px 30px;
     font-size: 14px;
     line-height: 18px;
-    
-    &__div{
+
+    &__menu{
         
         border: 1px solid rgba(31, 32, 65, 0.25);
-        border-radius: 4px;
-        width: 100%;
+  
+        border-radius: 0 0 4px 4px;
+        border-top-style: none; 
+        padding-top: 7px;       
     }
-
-    &__input{
-        margin: 13px 15px;
-    }
-    &__checkbox{
-        
-    }
-    &__checkbox::after{
-        content: '^';
-
-    }
-
-
-
-
-
-    
 
     &__label{
-        
+
+        width: 44px;
+        height: 100%;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
     }
+    
+    &__field{
+        display: flex;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px 4px 0 0 ;
+      
+        width: 100%;
+    }
+
+    &__input{
+        display: flex;
+        margin: 13px 15px;
+        width: 100%
+
+    }
+
+    &__checkbox-hidden{
+        display: none;
+    }
+    
+    &__checkbox{
+        display: flex;
+        margin: auto 10px;
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px; /* Preferred icon size */
+        line-height: 20px;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        color: rgba(31, 32, 65, 0.75);
+        align-items: center;
+        text-align: center;
+        vertical-align: middle; 
+    }
+    &__checkbox-hidden:checked + &__checkbox{
+        color: rgba(31, 32, 65, 0.5);   
+    }
+
+
+
+    &__item{
+        margin-bottom: 7px;
+        font-weight: bold;
+        display: flex;
+        
+    }
+
+    &__item-text{
+        font-size: 12px;
+        font-style: normal;
+        font-weight: bold;
+        margin: auto auto auto 15px;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        color:#1F2041;
+        vertical-align: middle;
+    }
+
+    &__item-group{
+        display: flex;
+        margin: auto 7px auto auto;
+        width: 95px;
+    }
+    &__item-input{
+        font-family: Montserrat;
+        text-align: center;        
+        width: 32px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    &__item-button-dec, &__item-button-inc{
+        font-style: normal;
+        font-weight: normal;
+        width: 30px;
+        height: 30px;
+        border-radius: 22px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        background: white;
+        color: rgba(31, 32, 65, 0.5);
+    }
+}
+
+.checkbox-list{
+    font-family: Montserrat; 
+    margin: 5px 30px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    
+    &__label{
+        width: 100%;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: auto 0;
+    
+    }
+
+ 
+    &__field{
+        height: 44px;
+        display: flex;
+        width: 100%;
+        
+    }
+    
+    &__checkbox-hidden{
+        display: none;
+    }
+   
+
+    &__checkbox{
+        margin: auto 0;
+        
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px; /* Preferred icon size */
+        line-height: 20px;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        color: rgba(31, 32, 65, 0.5);
+        align-items: center;
+        text-align: center;
+        vertical-align: middle; 
+    }
+    &__checkbox-hidden:checked + &__checkbox{
+        color: rgba(31, 32, 65, 0.5);  
+        transform: rotate(-180deg); 
+    }
+
+    &__item{
+        display: flex;
+    }
+
+    &__item-checkbox-hidden{
+        display:none;
+    }
+    &__item-checkbox{
+        display:block;
+        width: 20px;
+        height: 20px;
+
+
+        //background:transparent;
+        
+        border:1px solid #BC9CFF;;
+        
+        border-radius: 4px;
+    
+        background: url(/assets/img/vector.svg) no-repeat 4px 3px;
+        
+    }
+
+
 }
