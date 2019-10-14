@@ -1,55 +1,86 @@
-mixin text-field(name,placeholder)
-  .text-field
-    label.text-field__label(for=name) Имя
-      input.text-field__input(type="text", name=name, id=name, placeholder=placeholder)
+//Mixin field
+mixin field(type,name,label_text,placeholder,symbol)
+    if(label_text && placeholder)
+      label(class=type+"__caption", for=type+"__section")= label_text 
+    div(class=type+"__section")
+      if(placeholder)
+        input(class=type+"__input", type="text", name=type+"-input-"+name, id=type+"-input-"+name, placeholder=placeholder, readonly=true) 
+      else
+        span(class=type+"__input", name=type+"-input-"+name, id=type+"-input-"+name)= label_text
+      if(symbol)
+        input(class=type+"__checkbox-hidden", type="checkbox", name=type+"-checkbox-"+name, id=type+"-checkbox-"+name)
+        label(class=type+"__checkbox", for=type+"-checkbox-"+name)= symbol
+
+//Mixin text-field
+mixin text-field(name,label_text,placeholder,symbol)
+  - var class_text_field="text-field"
+  .div(class= class_text_field)
+    +field(class_text_field,name,label_text,placeholder,symbol)
+  
+
+
+//Mixim drop-down
+mixin drop-down(name,placeholder,label_text,items)
+  .drop-down
+    .drop-down__main
+    +field("drop-down",name,label_text,placeholder,"expand_more")
+    .drop-down__menu
+      ul.drop-down__items
+        - for (var x = 0; x < items.length; x++){
+        li.drop-down__item
+          div.drop-down__item-text= items[x][0]
+          .drop-down__item-group
+            button.drop-down__item-button-inc -
+            input.drop-down__item-input(type="text", name="drop-down__input-"+name value= items[x][1] )
+            button.drop-down__item-button-dec +
+        - }
+
+//Mixin checkbox-list
+mixin checkbox-list(name,text,items,symbol)
+ .checkbox-list
+  .checkbox-list__main
+    +field("checkbox-list",name,text,"",symbol)
+  .checkbox-list__menu
+    ul.checkbox-list__items
+      - for (var x = 0; x < items.length; x++){
+      li.checkbox-list__item
+        input.checkbox-list__item-checkbox-hidden(type="checkbox", name= type+"-"+name+"-checkbox-"+x, id=type+"-"+name+"-checkbox-"+x, checked=items[x][1])
+        label.checkbox-list__item-checkbox(for= name=type+"-"+name+"-checkbox-"+x) 
+        div.checkbox-list__item-label= items[x][0]
+      - }
+
+//Mixin extra-list
+mixin extra-list(items)
+  .extra-list
+    .extra-list__items
+      - for (var x = 0; x < items.length; x++){
+        .extra-list__item
+          .extra-list__item-pic
+            span.extra-list__item-symbol= items[x][2]      
+          .extra-list__box
+            .extra-list__item-text= items[x][0]
+            .extra-list__item-desc= items[x][1]
+    
+      - }
+
 
 
 .block
-  +text-field("name","Имя")
-  .drop-down
-    label.drop-down__label(for="name1") Имя
-    .drop-down__field
-      input.drop-down__input(type="text", name="name1", id="name1", placeholder="Имя") 
-      input.drop-down__checkbox-hidden(type="checkbox", name="check" id="check")
-      label.drop-down__checkbox(for="check") expand_more
-    .drop-down__menu
-      ul.drop-down__items
-        li.drop-down__item 
-          span.drop-down__item-text СПАЛЬНИ
-          .drop-down__item-group
-            button.drop-down__item-button-inc -
-            input.drop-down__item-input(type="text", name="drop-down__input-1" value="0")
-            button.drop-down__item-button-dec +
-      ul.drop-down__items
-        li.drop-down__item 
-          span.drop-down__item-text КРОВАТИ
-          .drop-down__item-group
-            button.drop-down__item-button-inc -
-            input.drop-down__item-input(type="text", name="drop-down__input-1" value="2")
-            button.drop-down__item-button-dec +
-      ul.drop-down__items
-        li.drop-down__item 
-          span.drop-down__item-text ВАННЫЕ КОМНАТЫ
-          .drop-down__item-group
-            button.drop-down__item-button-inc -
-            input.drop-down__item-input(type="text", name="drop-down__input-1" value="2")
-            button.drop-down__item-button-dec +
-  
-  .checkbox-list
-    .checkbox-list__field
-      label.checkbox-list__label(for=name) expandable checkbox list
-      input.checkbox-list__checkbox-hidden(type="checkbox", name="check1" id="check1")
-      label.checkbox-list__checkbox(for="check1") expand_more
-    .checkbox-list__menu
-      ul.checkbox-list__items
-        li.checkbox-list__item
-          input.checkbox-list__item-checkbox-hidden(type="checkbox", name="check2" id="check2")
-          label.checkbox-list__item-checkbox(for="check2") 
-          span.checkbox-list__item-label expandable checkbox list
-      
-
-
-
+  +text-field("tf1","text field","Email" ,"")
+  +drop-down("dd1","Комнаты","Удобства в номере",[["Спальни",2],["Ванные комнаты",2],["Кровати",0]])
+  +text-field("tf2","subscription text field","Email" ,"arrow_forward")
+  +checkbox-list("cl1","expandable checkbox list",[["Завтрак",false],["Письменный стол",true],["Стул для кормления",true],["Кроватка",true],["Телевизор",false],["Шампунь",false],["Телевизор",false],["Шампунь",false]],"expand_more")
+  +checkbox-list("cl1","expandable checkbox list",[["Можно курить",false],["Можно с питомцами",true],["Можно пригласить гостей (до 10 человек)",true]])
+  +extra-list([["Комфорт","Шумопоглощающие стены","insert_emoticon"],["Удобство","Окно в каждой из спален","location_city"]])
+  .radio-list
+    .radio-list__item
+      label.radio-list__item-label
+        input(class="radio-list__item-input", type="radio", name="radio-list")
+        .radio-list__item-text Мужчина
+    .radio-list__item
+      label.radio-list__item-label
+        input(class="radio-list__item-input", type="radio", name="radio-list")
+        .radio-list__item-text Женщина
 
   
 

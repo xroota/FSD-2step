@@ -1,8 +1,9 @@
 
 .block{
     margin: 50px 50px;
+    padding: 40px 30px 30px 30px;
     width: 380px;
-    height: 500px;
+    height: auto;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -10,74 +11,103 @@
 }
 
 .text-field{
-    margin: 5px 30px;
-    font-family: Montserrat;
-    &__input{
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        border-radius: 4px;
-        width: 100%;
-        font-size: 14px;
-        line-height: 18px;
-        padding: 13px 15px;
-
-        &:focus{
-            border: 1px solid rgba(31, 32, 65, 0.5);
-            color:rgba(31, 32, 65, 0.75);
-            &::placeholder{
-                color: rgba(31, 32, 65, 0.75);
-            }
-        }
-        &:hover  {
-            border: 1px solid rgba(31, 32, 65, 0.5);
-            color:rgba(31, 32, 65, 0.75);
-            &::placeholder{
-                     color: rgba(31, 32, 65, 0.75);
-            }
-        }
-
-        
-        &::placeholder{
-            color: rgba(31, 32, 65, 0.25);
-
-        }
-    }
-    &__label{
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-}
-
-.drop-down{
     font-family: Montserrat; 
-    margin: 5px 30px;
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 20px;
+    
 
-    &__menu{
-        
-        border: 1px solid rgba(31, 32, 65, 0.25);
-  
-        border-radius: 0 0 4px 4px;
-        border-top-style: none; 
-        padding-top: 7px;       
-    }
-
-    &__label{
+    &__caption{
 
         width: 44px;
         height: 100%;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
+        text-transform: uppercase;
     }
     
-    &__field{
+    &__section{
         display: flex;
         border: 1px solid rgba(31, 32, 65, 0.25);
-        border-radius: 4px 4px 0 0 ;
-      
+        border-radius: 4px; 
+        width: 100%;
+        width: 100%;
+        &:focus {
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            color:rgba(31, 32, 65, 0.75);
+        }
+        &:hover  {
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            }
+    }
+
+    &__input{
+        display: flex;
+        margin: 12px 15px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 18px;
+        color-interpolation-filters: rgba(31, 32, 65, 0.25); 
+        padding: 0;
+    }
+
+    &__checkbox-hidden{
+        display: none;
+    }
+    
+    &__checkbox{
+        display: flex;
+        margin: auto 10px;
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px; /* Preferred icon size */
+        line-height: 20px;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        color: rgba(31, 32, 65, 0.75);
+        align-items: center;
+        text-align: center;
+        vertical-align: middle; 
+    }
+    &__checkbox-hidden:checked + &__checkbox{
+        color: rgba(31, 32, 65, 0.5);   
+    }
+
+}
+
+.drop-down{
+    font-family: Montserrat; 
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+
+    &__menu{  
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 0 0 4px 4px;
+        border-top-style: none; 
+        padding-top: 7px;       
+    }
+
+    &__caption{
+
+        width: 44px;
+        height: 100%;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+    
+    &__section{
+        display: flex;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px 4px 0 0 ; 
         width: 100%;
     }
 
@@ -134,6 +164,7 @@
         line-height: 30px;
         color:#1F2041;
         vertical-align: middle;
+        text-transform: uppercase;
     }
 
     &__item-group{
@@ -163,23 +194,28 @@
 
 .checkbox-list{
     font-family: Montserrat; 
-    margin: 5px 30px;
+    margin-bottom: 20px;
     font-size: 12px;
     line-height: 15px;
     font-weight: bold;
     
-    &__label{
-        width: 100%;
+    &__input{
+        display: block;
+        
         font-size: 12px;
         line-height: 15px;
-        font-weight: bold;
         text-transform: uppercase;
-        margin: auto 0;
+        font-weight: bold;
+        padding: 0;
+        margin: auto 30px auto 0;
     
+    }
+    &__input::placeholder{
+        color: #1F2041;
     }
 
  
-    &__field{
+    &__section{
         height: 44px;
         display: flex;
         width: 100%;
@@ -192,13 +228,12 @@
    
 
     &__checkbox{
-        margin: auto 0;
-        
+        margin: auto 0 ;
         font-family: 'Material Icons';
         font-weight: normal;
         font-style: normal;
         font-size: 24px; /* Preferred icon size */
-        line-height: 20px;
+        line-height: 44px;
         line-height: 1;
         text-transform: none;
         letter-spacing: normal;
@@ -207,7 +242,6 @@
         direction: ltr;
         color: rgba(31, 32, 65, 0.5);
         align-items: center;
-        text-align: center;
         vertical-align: middle; 
     }
     &__checkbox-hidden:checked + &__checkbox{
@@ -216,7 +250,9 @@
     }
 
     &__item{
+        
         display: flex;
+        margin-bottom: 10px;
     }
 
     &__item-checkbox-hidden{
@@ -226,17 +262,123 @@
         display:block;
         width: 20px;
         height: 20px;
-
-
-        //background:transparent;
-        
-        border:1px solid #BC9CFF;;
-        
+        border:1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
-    
-        background: url(/assets/img/vector.svg) no-repeat 4px 3px;
+        margin-right: 10px;
+    }
+    &__item-checkbox-hidden:checked + &__item-checkbox{
         
+        border-color: #BC9CFF;
+    
+        background: url(/assets/img/vector.svg) no-repeat 4px 2px;
+           
+    }
+    &__item-label{
+        width: 200px;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: normal;
+        color: rgba(31, 32, 65, 0.5);
+        vertical-align: middle;
+
     }
 
+
+
+}
+.extra-list{
+    
+    &__item{
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+        padding: 20px 0;
+    }
+    &__item-pic{
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        float: left;
+        margin-right: 10px;
+    }
+    &__item-symbol{
+        
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 48px;
+        line-height: 41px;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        
+        align-items: center;
+        vertical-align: middle; 
+
+        mix-blend-mode: screen;
+        background: white;
+    }
+    &__item-box{
+        margin-left: 100px;
+        width: 100%;
+    }
+    &__item-text{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    &__item-desc{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+}
+
+.radio-list{
+    &__item-label{
+        position: relative;
+    }
+    &__item-input{
+        z-index: -1;
+        opacity: 0;
+        
+    }
+    &___item-text{
+        position: absolute;
+        left: 30px;
+        top:0px;
+        cursor: pointer;
+    }
+    &__item-text:before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #CDD1DA;
+        border-radius: 10px;
+        background: #FFF;
+    }
+    &__item-text:after {
+        content: '';
+        position: absolute;
+        top:0px;
+        left: 0px;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        border: 1px solid #BC9CFF;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        opacity: 0;
+        transition: .2s;
+    }
+    &__item-input:checked + &__item-text:after {
+        opacity: 1;
+        border-color:rgba(31, 32, 65, 0.25);
+    }
+    &__item-input:focus + &__item-text:before {
+        //box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+    }
 
 }
