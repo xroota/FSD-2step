@@ -19,11 +19,11 @@ mixin text-field(name,label_text,placeholder,symbol)
   
 
 
-//Mixim drop-down
-mixin drop-down(name,placeholder,label_text,items)
+//Mixin drop-down
+mixin drop-down(name,placeholder,label_text,items,footer_items)
   .drop-down
     .drop-down__main
-    +field("drop-down",name,label_text,placeholder,"expand_more")
+      +field("drop-down",name,label_text,placeholder,"expand_more")
     .drop-down__menu
       ul.drop-down__items
         - for (var x = 0; x < items.length; x++){
@@ -34,6 +34,13 @@ mixin drop-down(name,placeholder,label_text,items)
             input.drop-down__item-input(type="text", name="drop-down__input-"+name value= items[x][1] )
             button.drop-down__item-button-dec +
         - }
+      if(footer_items)
+        .drop-down__menu-footer
+          .drop-down__menu-footer-items
+            - for (var x = 0; x < footer_items.length; x++){
+             .drop-down__menu-footer-item= footer_items[x]
+            - }
+    
 
 //Mixin checkbox-list
 mixin checkbox-list(name,text,items,symbol)
@@ -48,6 +55,22 @@ mixin checkbox-list(name,text,items,symbol)
         label.checkbox-list__item-checkbox(for= name=type+"-"+name+"-checkbox-"+x) 
         div.checkbox-list__item-label= items[x][0]
       - }
+
+mixin rich-checkbox-list(name,text,items,symbol)
+ .rich-checkbox-list
+  .rich-checkbox-list__main
+    +field("checkbox-list",name,text,"",symbol)
+  .rich-checkbox-list__menu
+    ul.rich-checkbox-list__items
+      - for (var x = 0; x < items.length; x++){
+      li.rich-checkbox-list__item
+        input.rich-checkbox-list__item-checkbox-hidden(type="checkbox", name= type+"-"+name+"-checkbox-"+x, id=type+"-"+name+"-checkbox-"+x, checked=items[x][2])
+        label.rich-checkbox-list__item-checkbox(for= name=type+"-"+name+"-checkbox-"+x) 
+        .rich-checkbox-list__section  
+          .rich-checkbox-list__item-text= items[x][0]
+          .rich-checkbox-list__item-desc= items[x][1]
+                
+      - }      
 
 //Mixin extra-list
 mixin extra-list(items)
@@ -70,26 +93,72 @@ mixin extra-list(items)
   +drop-down("dd1","Комнаты","Удобства в номере",[["Спальни",2],["Ванные комнаты",2],["Кровати",0]])
   +text-field("tf2","subscription text field","Email" ,"arrow_forward")
   +checkbox-list("cl1","expandable checkbox list",[["Завтрак",false],["Письменный стол",true],["Стул для кормления",true],["Кроватка",true],["Телевизор",false],["Шампунь",false],["Телевизор",false],["Шампунь",false]],"expand_more")
-  +checkbox-list("cl1","expandable checkbox list",[["Можно курить",false],["Можно с питомцами",true],["Можно пригласить гостей (до 10 человек)",true]])
+  +checkbox-list("cl2","expandable checkbox list",[["Можно курить",false],["Можно с питомцами",true],["Можно пригласить гостей (до 10 человек)",true]])
   +extra-list([["Комфорт","Шумопоглощающие стены","insert_emoticon"],["Удобство","Окно в каждой из спален","location_city"]])
   .radio-list
     .radio-list__item
       label.radio-list__item-label
-        input(class="radio-list__item-input", type="radio", name="radio-list")
+        input(class="radio-list__item-input", type="radio", name="radio-list-item" checked)
         .radio-list__item-text Мужчина
     .radio-list__item
       label.radio-list__item-label
-        input(class="radio-list__item-input", type="radio", name="radio-list")
+        input(class="radio-list__item-input", type="radio", name="radio-list-item")
         .radio-list__item-text Женщина
-
-  
-
-
-
-      
-          
-
-//input.text-field__input(type="text", name="name", id="name", placeholder="Имя")
-  .text-field
-     label.text-field__label(for="name1") Имя
-      input.text-field__input(type="text", name="name1", id="name1", placeholder="Имя", pattern="2-[0-9]{3}-[0-9]{3}")   
+  .toggle
+    .toggle__item
+      label.toggle__item-label
+        input(class="toggle__item-input",type="checkbox", name="toggle1" checked)
+        .toggle__item-text Получать спецпредложения
+  .toggle
+    .toggle__item
+      label.toggle__item-label
+        input(class="toggle__item-input",type="checkbox", name="toggle2")
+        .toggle__item-text Получать спецпредложения
+  .like-button
+    .like-button__item
+      label.like-button__item-label 
+        input(class="like-button__item-input",type="checkbox", name="like")
+        .like-button__item-text 2
+  .like-button
+    .like-button__item
+      label.like-button__item-label 
+        input(class="like-button__item-input",type="checkbox", name="like" checked)
+        .like-button__item-text 12
+  .rate
+    .rate-button
+      .rate-button__items
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate1")
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate1")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate2")
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate2")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate3")
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate3")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate4"  checked)
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate4")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate5")
+        div.rate-button__item-span     
+          label.rate-button__item-label(for="rate5")
+    .rate-button
+      .rate-button__items
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate1")
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate1")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate2")
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate2")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate3")
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate3")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate4"  checked)
+        div.rate-button__item-span  
+          label.rate-button__item-label(for="rate4")
+        input(type="radio", class="rate-button__item-input", name="rate" id="rate5")
+        div.rate-button__item-span     
+          label.rate-button__item-label(for="rate5")
+  +drop-down("dd2","Сколько гостей","Dropdown",[["Взрослые",0],["Дети",0],["Младенцы",0]],[["Очистить"],["Применить"]])
+  +drop-down("dd3","3 гостя","Dropdown",[["Взрослые",2],["Дети",1],["Младенцы",0]],[["Очистить"],["Применить"]])
+  +rich-checkbox-list("rcl3","Rich Checkbox Buttons",[["Широкий коридор","Ширина коридоров в номере не менее 91 см.",false],["Помощник для инвалидов","На 1 этаже вас встретит специалист и проводит до номера.",false]])
