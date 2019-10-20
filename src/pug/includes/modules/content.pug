@@ -85,7 +85,11 @@ mixin extra-list(items)
             .extra-list__item-desc= items[x][1]
     
       - }
-
+mixin button(name, text, symbol)
+  button(class="button", name= name)&attributes(attributes)
+    div.button__text= text
+    if (symbol)
+      .button__symbol= symbol
 
 
 .block
@@ -144,21 +148,33 @@ mixin extra-list(items)
           label.rate-button__item-label(for="rate5")
     .rate-button
       .rate-button__items
-        input(type="radio", class="rate-button__item-input", name="rate" id="rate1")
+        input(type="radio", class="rate-button__item-input", name="rate1" id="rate11")
         div.rate-button__item-span  
-          label.rate-button__item-label(for="rate1")
-        input(type="radio", class="rate-button__item-input", name="rate" id="rate2")
+          label.rate-button__item-label(for="rate11")
+        input(type="radio", class="rate-button__item-input", name="rate1" id="rate12")
         div.rate-button__item-span  
-          label.rate-button__item-label(for="rate2")
-        input(type="radio", class="rate-button__item-input", name="rate" id="rate3")
+          label.rate-button__item-label(for="rate12")
+        input(type="radio", class="rate-button__item-input", name="rate1" id="rate13")
         div.rate-button__item-span  
-          label.rate-button__item-label(for="rate3")
-        input(type="radio", class="rate-button__item-input", name="rate" id="rate4"  checked)
+          label.rate-button__item-label(for="rate13")
+        input(type="radio", class="rate-button__item-input", name="rate1" id="rate14")
         div.rate-button__item-span  
-          label.rate-button__item-label(for="rate4")
-        input(type="radio", class="rate-button__item-input", name="rate" id="rate5")
+          label.rate-button__item-label(for="rate14")
+        input(type="radio", class="rate-button__item-input", name="rate1" id="rate15" checked)
         div.rate-button__item-span     
-          label.rate-button__item-label(for="rate5")
+          label.rate-button__item-label(for="rate15")
   +drop-down("dd2","Сколько гостей","Dropdown",[["Взрослые",0],["Дети",0],["Младенцы",0]],[["Очистить"],["Применить"]])
   +drop-down("dd3","3 гостя","Dropdown",[["Взрослые",2],["Дети",1],["Младенцы",0]],[["Очистить"],["Применить"]])
   +rich-checkbox-list("rcl3","Rich Checkbox Buttons",[["Широкий коридор","Ширина коридоров в номере не менее 91 см.",false],["Помощник для инвалидов","На 1 этаже вас встретит специалист и проводит до номера.",false]])
+  .range-slider
+    .range-slider__header
+      .range-slider__header-text Range Slider
+      .range-slider__header-value 5 000₽ - 10 000₽
+    .range-slider__body
+      <div id="slider"  ></div>
+  +button("btn1","Click me","")(class="button--fill")
+  +button("btn2","Click me","")(class="button--border")
+  +button("btn3","Click me","")(class="button--border-none")
+  +button("btn1","Click me","")(class="button--fill button--disabled")
+  +button("btn2","Click me","")(class="button--border button--disabled")
+  +button("btn3","Click me","")(class="button--border-none button--disabled")

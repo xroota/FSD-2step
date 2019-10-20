@@ -1,4 +1,5 @@
 
+
 .block{
     margin: 50px 50px;
     padding: 40px 30px 30px 30px;
@@ -783,5 +784,177 @@
 
     }
 
+.ui-slider {
+    position: relative;
 
+    }
+
+.ui-slider .ui-slider-handle {
+    //Стилизация ползунка
+    width: 12px;
+    height: 12px;
+    position: absolute;
+	z-index: 2;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.ui-slider .ui-slider-handle:after {
+    //Стилизация ползунка
+    left: -1px;
+    top: -1px;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    content: '';
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}       
+/* оформление полосы по которой ходит ползунок */
+.ui-widget-content { 
+    background: #FFFFFF;
+    /* Dark 25% */
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    z-index: 1;
+    border-radius: 3px;
+}   
+
+/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+.ui-slider-horizontal {
+    height: 6px; /* задаем высоту согласно дизайна */
+}
+//Задаем положение ползунков
+.ui-slider-horizontal .ui-slider-handle { 
+	top: -4px;
+	margin-left: -6px;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min { 
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+/* оформление активного участка (между двумя ползунками) */
+.ui-widget-header { 
+    border-radius: 3px;
+    height: 6px;
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+}
+    
+.ui-slider .ui-slider-range {
+	position: absolute;
+    top: -1px;
+    z-index: 1;
+    height: 6px;
+	display: block;
+	border: 0;
+	overflow: hidden;
+}
+
+.range-slider{
+    margin: 20px 0 40px 0;
+      
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+        
+    &__header-text{
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #1F2041;
+    }
+    &__header-value{
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: rgba(31, 32, 65, 0.5);
+        font-weight: bold;
+    }
+}
+
+.button{
+    margin: 30px 20px 30px 0; 
+    padding: 13px 19px 14px 19px;
+
+    position: relative;
+    border-radius: 22px;
+    
+    &__text{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;   
+        text-transform: uppercase;
+        vertical-align: middle;
+        
+    }
+
+    &__symbol {
+        top: 0;
+        right:0;  
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 42px;
+        width: 42px;
+        position: absolute;
+
+
+    }
+
+    &.button--fill {
+         
+         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+         color: #FFFFFF;
+    }
+    &.button--border {
+        position: relative;
+        $border: 1px;
+        color: #BC9CFF;
+        background: #fff;
+        background-clip: padding-box; /* !importanté */
+        border: solid $border transparent; /* !importanté */   
+        
+    }
+
+   &.button--border::before {
+        content: '';
+        position: absolute;
+        top: 0px; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -1px; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        
+    }
+
+   &.button--border-none{
+    border: none;
+    padding: 0;  
+    color: #BC9CFF;
+    background: #fff;
+    }
+    &.button--disabled{
+        filter: opacity(0.7);
+    }
+
+    &.button--disabled:before{
+        filter: opacity(0.7);
+        
+    }
+
+
+}
