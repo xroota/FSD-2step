@@ -90,7 +90,14 @@ mixin button(name, text, symbol)
     div.button__text= text
     if (symbol)
       .button__symbol= symbol
-
+mixin bullet-list(text, items)
+  .bullet-list
+    .bullet-list__text= text
+    .bullet-list__items
+      - for (var x = 0; x < items.length; x++){
+        .bullet-list__item
+          .bullet-list__item-text= items[x]
+      -}
 
 .block
   +text-field("tf1","text field","Email" ,"")
@@ -174,7 +181,12 @@ mixin button(name, text, symbol)
       <div id="slider"  ></div>
   +button("btn1","Click me","")(class="button--fill")
   +button("btn2","Click me","")(class="button--border")
-  +button("btn3","Click me","")(class="button--border-none")
-  +button("btn1","Click me","")(class="button--fill button--disabled")
-  +button("btn2","Click me","")(class="button--border button--disabled")
-  +button("btn3","Click me","")(class="button--border-none button--disabled")
+  +button("btn4","Click me","")(class="button--border-none")
+  +button("btn5","Click me","")(class="button--fill button--disabled")
+  +button("btn6","Click me","")(class="button--border button--disabled")
+  +button("btn7","Click me","")(class="button--border-none button--disabled")
+  +button("btn8","Click me","arrow_forward")(class="button--fill button--symbol")
+  .pagination-block
+    ul(id="pagination" class="pagination-sm pagination-block__item")
+    .pagination-block__text 1 – 12 из 100+ вариантов аренды
+  +bullet-list("Bullet list",["Нельзя с питомцами","Без вечеринок и мероприятий","Время прибытия — после 13:00, а выезд до 12:00"])
