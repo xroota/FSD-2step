@@ -1,13 +1,3 @@
 extends ../layout/main
 
-block variables
-  - var title = "On Dogs: Man's Best Friend";
-  - var author = "enlore";
-  - var theGreat = "<span>escape!</span>";
-
-
-  mixin link(href, name)
-   //- attributes == {class: "btn"}
-    a(class!=attributes.class href=href)= name
-
-  +link('/foo', 'foo')(class="btn")
+include ../pages/colors-and-types/colors-and-types         

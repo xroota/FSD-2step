@@ -1,0 +1,44 @@
+@import "../../blocks/rich-list-colors/rich-list-colors.scss";
+.container{
+    margin:0;
+    padding: 145px 150px;
+
+
+}
+
+.container__types-list {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+
+.container__rich-list-colors {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+
+}
+
+.types-list {
+    &__item{
+        margin-bottom: 50px;
+    }
+
+    &__item-tag{
+        display: inline-block;
+        width: 30px;
+        vertical-align: top;
+        text-align: right;
+
+    }
+
+    &__item-text{
+        width: 350px; 
+        margin-left: 30px;
+        display: inline-block;
+    }
+
+
+
+}

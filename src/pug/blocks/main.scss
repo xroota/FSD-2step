@@ -1,6 +1,6 @@
 @import "utils/libs";
 @import "utils/vars";
-@import "utils/mixins";
+@import "utils/mixins.scss";
 @import "utils/fonts";
 @import "utils/reset";
 
@@ -46,14 +46,51 @@ html {
 }
 
 body {
+    width: $desktopWidth;
     margin: 0;
     padding: 0;
     font-family: $mainFont;
     font-size: $mainFontSize;
     font-weight: $mainFontWeight;
+    color: $dark-shade-100;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+h1 {
+    color: $dark-shade-100;
+    font-family: $secondFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h2 {
+    color: $dark-shade-100;
+    font-family: $secondFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+
+}
+
+h3 {
+    color: $dark-shade-100;
+    font-family: $secondFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;  
+    text-transform: uppercase;
+}
+  
+
 
 *,
 *:before,
@@ -63,4 +100,5 @@ body {
 // Modules
  @import "modules/header.scss";
  @import "modules/content.scss";
+ @import "../../pug/pages/colors-and-types/colors-and-types.scss";
  @import "~bootstrap/dist/css/bootstrap.min.css"; 

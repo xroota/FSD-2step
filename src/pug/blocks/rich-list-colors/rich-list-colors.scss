@@ -1,0 +1,45 @@
+.rich-list-colors{
+    &__items{
+        display: flex;  
+        flex-direction: column;
+        align-items: flex-start;
+              
+    } 
+
+    &__item{
+        display: flex;    
+        margin-bottom: 20px; 
+        
+    }
+
+    &__item-box{
+        display: flex;
+        width: 70px;
+        height: 70px;
+        margin-right: 40px;
+        border-radius: 6px;   
+    }
+    
+    &__item-group{
+        display: flex;
+        flex-direction: column;
+        //margin: auto;
+        align-self: center;
+    }
+    
+    &__item-text{
+
+        
+        
+
+    }
+
+    &__item-desc{
+      
+        
+
+    }
+
+
+
+}

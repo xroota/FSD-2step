@@ -1,0 +1,10 @@
+mixin rich-list-colors(items)
+  .rich-list-colors&attributes(attributes)
+    ul.rich-list-colors__items
+      - for (var x = 0; x < items.length; x++){
+        .rich-list-colors__item      
+          .rich-list-colors__item-box(style={ background: items[x][2]})
+          .rich-list-colors__item-group
+            .rich-list-colors__item-text= items[x][0]
+            .rich-list-colors__item-desc= items[x][1]
+      - }

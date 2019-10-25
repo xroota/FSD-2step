@@ -1,8 +1,7 @@
-include ../utils/mixins
 block variables
 
 doctype html
-html(lang='en')
+html(lang='ru')
   head
     meta(charset='utf-8')
     title #{title}
@@ -10,12 +9,12 @@ html(lang='en')
     block head
     link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
   body(class=pageClass)
-    
-    #app
+  
+    block header
       include ../includes/modules/header
-      .content-wrapper
-        block content
-          include ../includes/modules/content 
+    
+    block content
+    block footer    
       include ../includes/modules/footer
 
     block script
