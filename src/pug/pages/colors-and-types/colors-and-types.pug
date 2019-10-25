@@ -1,11 +1,14 @@
 block variables
-  - var title = "On Dogs: Man's Best Friend";
+  - var title = "Colors & Types";
   - var author = "enlore";
   - var theGreat = "<span>escape!</span>";
 block header
 block content
   include ../../blocks/rich-list-colors/rich-list-colors
+  include ../../blocks/logo/logo
+  +logo("../../../assets/img/logo.svg","red")
   .container
+    
     +rich-list-colors([["Dark Shade 100%","#1F2041","#1F2041"],
                        ["Dark Shade 75%","#1F2041","rgba(31, 32, 65, 0.75)"],
                        ["Dark Shade 50%","#1F2041","rgba(31, 32, 65, 0.5)"], 

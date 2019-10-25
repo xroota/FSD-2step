@@ -1,23 +1,45 @@
 @import "../../blocks/rich-list-colors/rich-list-colors.scss";
-.container{
-    margin:0;
-    padding: 145px 150px;
 
+.logo {
+    position: absolute;
+    left: 30px;
+    top:30px;
+    margin: 0;
+}
+svg path {
+    position: absolute;
+
+    fill: rgba(31, 32, 65, 0.25);
 
 }
 
+.container{
+    
+    margin: 145px 150px;
+    padding:0;
+    width: 1440px;
+    //Claarfix
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 .container__types-list {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
+    //display: inline-block;
+    //vertical-align: top;
+    //width: 50%;
+    float: right;
 }
 
 
 .container__rich-list-colors {
-    display: inline-block;
-    vertical-align: top;
-    text-align: right;
-
+    float: left;
+    //display: inline-block;
+    //vertical-align: top;
+    //text-align: right;
+    //width: 50%;
 }
 
 .types-list {
