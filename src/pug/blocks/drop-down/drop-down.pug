@@ -1,0 +1,13 @@
+include ../../blocks/text-field/text-field
+
+mixin drop-down(data)
+  .drop-down&attributes(attributes)
+    +text-field(
+        {title        : data.title,
+         titleText    : data.titleText,
+         placeholder  : data.placeholder,
+         inputText    : data.inputText,
+         buttonText   : "expand_more",
+         redOnly      : true
+         }
+      )(class="text-field--placeholder-dark-75")

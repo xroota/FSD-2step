@@ -17,30 +17,12 @@ svg path {
     
     margin: 145px 150px;
     padding:0;
-    width: 1440px;
-    //Claarfix
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-.container__types-list {
-    //display: inline-block;
-    //vertical-align: top;
-    //width: 50%;
-    float: right;
+    width: $desktopWidth;
+    display: flex;
+    justify-content: space-between;
 }
 
 
-.container__rich-list-colors {
-    float: left;
-    //display: inline-block;
-    //vertical-align: top;
-    //text-align: right;
-    //width: 50%;
-}
 
 .types-list {
     &__item{

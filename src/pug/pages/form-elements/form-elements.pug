@@ -1,0 +1,80 @@
+block variables
+  - var title = "Form Elements";
+  - var author = "enlore";
+  - var theGreat = "<span>escape!</span>";
+block header
+block content
+  include ../../blocks/text-field/text-field
+  include ../../blocks/drop-down/drop-down
+  include ../../blocks/logo/logo
+  .block
+    +logo("../../../assets/img/logo.svg","red")
+    +text-field(
+        {title        : "Text Field",
+         titleText    : "Default",
+         placeholder  : "Email",
+         inputText    : "",
+         readOnly     : false
+         }
+      )
+    +text-field(
+        {title        : "Text Field",
+         titleText    : "Hover / Focus",
+         placeholder  : "",
+         inputText    : "This is pretty awesome",
+         readOnly     : false
+         }
+      )
+    +drop-down(
+        {title        : "Dropdown",
+         titleText    : "Default",
+         placeholder  : "Сколько гостей",
+         inputText    : "",
+         readOnly     : true
+         }
+      )
+    +text-field(
+        {title        : "masked text field",
+         titleText    : "Default",
+         placeholder  : "ДД.ММ.ГГГГ",
+         inputText    : "",
+         readOnly     : false
+         }
+      )
+    .double-drop
+      +drop-down(
+        {title        : "date Dropdown ",
+         titleText    : "",
+         placeholder  : "ДД.ММ.ГГГГ",
+         inputText    : "",
+         readOnly     : true
+         }
+      )(class="double-drop__drop-down")
+      +drop-down(
+        {title        : "date Dropdown ",
+         titleText    : "",
+         placeholder  : "19.08.2019",
+         inputText    : "",
+         readOnly     : true
+         }
+      )(class="double-drop__drop-down")
+    .filter-date
+      +text-field(
+          {title        : "filter date dropdown",
+           titleText    : "",
+           placeholder  : "19 авг - 23 авг",
+           inputText    : "",
+           readOnly     : true,
+           buttonText   : "expand_more"
+           }
+        )(class="text-field--width-s text-field--placeholder-dark-75")
+    +text-field(
+        {title        : "subscription text field",
+         titleText    : "",
+         placeholder  : "Email",
+         inputText    : "",
+         readOnly     : false,
+         buttonText   : "arrow_forward"
+         }
+      )
+    

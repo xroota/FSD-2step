@@ -99,6 +99,7 @@ h3 {
 }
 // Modules
  @import "modules/header.scss";
- @import "modules/content.scss";
+ //@import "modules/content.scss";
  @import "../../pug/pages/colors-and-types/colors-and-types.scss";
+ @import "../../pug/pages/form-elements/form-elements.scss";
  @import "~bootstrap/dist/css/bootstrap.min.css"; 

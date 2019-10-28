@@ -1,0 +1,25 @@
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/drop-down/drop-down";
+
+.block{
+    margin: 141px 143px;
+    padding: 40px 30px 30px 30px;
+    width: 380px;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.double-drop{
+  display: flex;
+  justify-content: space-between;
+  &__drop-down{
+      flex-basis:46.875%;
+  }
+}
+
+
+
+
+

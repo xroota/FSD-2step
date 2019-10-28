@@ -40,3 +40,27 @@ $border-base             : #DCDFE6;
 $border-light            : #E4E7ED;
 $border-lighter          : #EBEEF5;
 $border-lightex          : #F2F6FC;
+
+
+%input{
+    line-height: 24px;
+    color: $dark-shade-75;
+    width: 100%;
+    padding: 9px 15px; 
+  
+    &::placeholder{
+        color:$dark-shade-25;
+    }
+  }
+  
+%material-icons{
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+  }

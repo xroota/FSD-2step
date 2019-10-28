@@ -1,0 +1,44 @@
+.text-field{
+
+    &__title {
+    
+    }
+
+    &__title-text{
+        color: $dark-shade-50;
+        float: right;
+        text-align: right;
+    }
+    
+    &__input-box{
+        display:flex;
+        border: 1px solid $dark-shade-25;
+        border-radius: 4px;
+        &:focus, &:hover {
+            border: 1px solid $dark-shade-50;
+        }
+    }
+
+    &__input{
+        @extend %input;
+        z-index: -1;
+    }
+
+    &__input-button{
+        width: 42px;
+        @extend %material-icons;
+        color: $dark-shade-50;
+    }
+
+    &--menu-visible &__input-button{
+        color: $dark-shade-75;
+            }
+    &--placeholder-dark-75 &__input::placeholder{
+        color: $dark-shade-75;    
+    }
+    &--width-s{
+        width: 83.125%;
+    }
+
+  
+}
