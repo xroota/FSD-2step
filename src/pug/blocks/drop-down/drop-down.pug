@@ -1,13 +1,22 @@
 include ../../blocks/text-field/text-field
 
 mixin drop-down(data)
-  .drop-down&attributes(attributes)
+  .drop-down(class=data.dropDownClass)&attributes(attributes)
     +text-field(
         {title        : data.title,
          titleText    : data.titleText,
          placeholder  : data.placeholder,
          inputText    : data.inputText,
          buttonText   : "expand_more",
-         redOnly      : true
+         readOnly     : true,
+         addClass     : data.textFieldClass
          }
-      )(class="text-field--placeholder-dark-75")
+      )
+    ul.drop-down__items
+     each item in data.items
+      li.drop-down__item
+        div.drop-down__item-text= item.text
+        .drop-down__item-group
+          button.drop-down__item-button -
+          input.drop-down__item-input(type="text", name="drop-down__input-" value= item.value )
+          button.drop-down__item-button +

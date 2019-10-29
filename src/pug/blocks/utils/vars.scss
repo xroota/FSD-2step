@@ -46,11 +46,12 @@ $border-lightex          : #F2F6FC;
     line-height: 24px;
     color: $dark-shade-75;
     width: 100%;
-    padding: 9px 15px; 
-  
+    margin: 9px 15px; 
+    border: none;
     &::placeholder{
         color:$dark-shade-25;
     }
+    outline:none;
   }
   
 %material-icons{
@@ -63,4 +64,13 @@ $border-lightex          : #F2F6FC;
     align-items: center;
     text-align: center;
   
+  }
+
+  %h3{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;  
+    text-transform: uppercase;
+    color: $dark-shade-100;
   }

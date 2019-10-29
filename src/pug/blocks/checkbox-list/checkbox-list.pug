@@ -1,0 +1,11 @@
+mixin checkbox-list(data)
+    .checkbox-list(class=data.checkboxClass)
+      h3.checkbox-list__title= data.title
+      .checkbox-list__button= data.buttonText
+      ul.checkbox-list__items
+        - for (var x = 0; x < data.items.length; x++){
+        li.checkbox-list__item
+          input.checkbox-list__item-checkbox-hidden(type="checkbox", name= data.name+"-checkbox-"+x, id=data.name+"-checkbox-"+x, checked=data.items[x].value)
+          label.checkbox-list__item-checkbox(for= name=data.name+"-checkbox-"+x) 
+          div.checkbox-list__item-text= data.items[x].text
+        - }

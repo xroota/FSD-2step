@@ -1,9 +1,9 @@
 mixin text-field(data) 
-    .text-field&attributes(attributes)
-      if data.title
-        h3.text-field__title-text= data.titleText 
-      h3.text-field__title= data.title
-      .text-field__input-box
-        input(class="text-field__input", value=data.inputText, type="text", placeholder= data.placeholder, readonly=data.readOnly) 
-        if data.buttonText
-          .text-field__input-button= data.buttonText
+  .text-field(class=data.addClass)&attributes(attributes)
+    if data.title
+      .text-field__title-text= data.titleText 
+    h3.text-field__title= data.title
+    .text-field__input-box
+      input(type="text", class="text-field__input", readonly=true && data.readOnly, value=data.inputText, placeholder= data.placeholder) 
+      if data.buttonText
+        .text-field__input-button= data.buttonText

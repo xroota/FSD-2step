@@ -422,6 +422,7 @@
     &__item{
         border-bottom: 1px solid rgba(31, 32, 65, 0.1);
         padding: 20px 0;
+
     }
     &__item-pic{
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -544,11 +545,6 @@
 
 .toggle{
     margin-top: 16px;
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
     &__item-input {
         position: absolute;
         z-index: -1;

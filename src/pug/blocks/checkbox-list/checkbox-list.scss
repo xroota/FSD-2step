@@ -1,0 +1,51 @@
+.checkbox-list{
+    &__button{
+        @extend %material-icons;
+        max-width:44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+    }
+    &__title{
+        line-height: 44px;
+        float: left;
+        margin: 0 30px 0 0;
+    }
+
+    &__items{
+        margin-top: 5px;
+        list-style-type: none;
+        padding: 2px 0 0 0px;
+    }
+    &__item{
+        display: flex;
+        margin-right: 0;
+    }
+    &__item-checkbox-hidden{
+        display:none;
+    }
+    &__item-checkbox{
+        display:block;
+        width: 20px;
+        height: 20px;
+        border:1px solid $dark-shade-25;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    &__item-checkbox-hidden:checked + &__item-checkbox{
+        border-color: $purple;
+        background: url(/assets/img/vector.svg) no-repeat 4px 2px;   
+    }
+    &__item-text{
+        line-height: 18px;
+        color: $dark-shade-50;
+        vertical-align: middle;
+        width: 200px;
+    }
+
+    &--menu-visible &__button{
+        color: $dark-shade-50;  
+        transform: rotate(-180deg); 
+
+    }
+}

@@ -1,27 +1,29 @@
 .text-field{
-
     &__title {
-    
+    margin-bottom: 3px;
     }
 
     &__title-text{
+        @extend %h3;
         color: $dark-shade-50;
         float: right;
         text-align: right;
+        
     }
     
     &__input-box{
+        width: 100%;
         display:flex;
         border: 1px solid $dark-shade-25;
         border-radius: 4px;
         &:focus, &:hover {
             border: 1px solid $dark-shade-50;
+
         }
     }
 
     &__input{
         @extend %input;
-        z-index: -1;
     }
 
     &__input-button{
@@ -32,7 +34,11 @@
 
     &--menu-visible &__input-button{
         color: $dark-shade-75;
-            }
+    }
+    &--menu-visible &__input-box{
+        border-radius: 4px 4px 0 0 ; 
+    }
+
     &--placeholder-dark-75 &__input::placeholder{
         color: $dark-shade-75;    
     }

@@ -2,7 +2,7 @@
 @import "utils/vars";
 @import "utils/mixins.scss";
 @import "utils/fonts";
-@import "utils/reset";
+//@import "utils/reset";
 
 
 
@@ -81,13 +81,9 @@ h2 {
 }
 
 h3 {
-    color: $dark-shade-100;
     font-family: $secondFont;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;  
-    text-transform: uppercase;
+    @extend %h3; 
+    
 }
   
 

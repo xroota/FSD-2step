@@ -6,6 +6,10 @@ block header
 block content
   include ../../blocks/text-field/text-field
   include ../../blocks/drop-down/drop-down
+  include ../../blocks/checkbox-list/checkbox-list
+  include ../../blocks/extra-list/extra-list
+  include ../../blocks/radio-list/radio-list  
+  include ../../blocks/toggle-list/toggle-list   
   include ../../blocks/logo/logo
   .block
     +logo("../../../assets/img/logo.svg","red")
@@ -14,7 +18,8 @@ block content
          titleText    : "Default",
          placeholder  : "Email",
          inputText    : "",
-         readOnly     : false
+         readOnly     : false,
+         buttonText   : ""
          }
       )
     +text-field(
@@ -22,7 +27,8 @@ block content
          titleText    : "Hover / Focus",
          placeholder  : "",
          inputText    : "This is pretty awesome",
-         readOnly     : false
+         readOnly     : false,
+         buttonText   : ""
          }
       )
     +drop-down(
@@ -30,7 +36,9 @@ block content
          titleText    : "Default",
          placeholder  : "Сколько гостей",
          inputText    : "",
-         readOnly     : true
+         readOnly     : true,
+         buttonText   : "",
+         items        : []
          }
       )
     +text-field(
@@ -47,7 +55,8 @@ block content
          titleText    : "",
          placeholder  : "ДД.ММ.ГГГГ",
          inputText    : "",
-         readOnly     : true
+         readOnly     : true,
+         items        : []
          }
       )(class="double-drop__drop-down")
       +drop-down(
@@ -55,7 +64,9 @@ block content
          titleText    : "",
          placeholder  : "19.08.2019",
          inputText    : "",
-         readOnly     : true
+         readOnly     : true,
+         buttonText   : "",
+         items        : []
          }
       )(class="double-drop__drop-down")
     .filter-date
@@ -77,4 +88,125 @@ block content
          buttonText   : "arrow_forward"
          }
       )
-    
+    +drop-down(
+        {title         : "Dropdown",
+         titleText     : "Default",
+         placeholder   : "2 спальни, 2 кровати...",
+         inputText     : "",
+         readOnly      : true,
+         buttonText    : "",
+         textFieldClass: "text-field--placeholder-dark-75 text-field--menu-visible",
+         items        : [
+           {text      : "Спальни",
+            value     : 2
+           },
+           {text      : "Кровати",
+            value     : 2
+           },
+           {text      : "Ванные комнаты",
+            value     : 0
+           }
+         ],
+         dropDownClass: "drop-down--width-s"
+         }
+      )
+
+    +checkbox-list(
+      {title       : "expandable checkbox list",
+      buttonText   : "expand_more",
+      name         : "clnw",
+      checkboxClass: "", 
+      items        : []
+      }
+      )
+
+    +checkbox-list(
+    {title       : "expandable checkbox list",
+    buttonText   : "expand_more",
+    name         : "cl",
+    checkboxClass: "checkbox-list--menu-visible", 
+    items        : [
+      {text      : "Завтрак",
+       value     : false
+      },
+      {text      : "Письменный стол",
+       value     : true
+      },
+      {text      : "Стул для кормления",
+       value     : true
+      },
+      {text      : "Кроватка",
+       value     : true
+      },
+      {text      : "Телевизор",
+       value     : false
+      },
+      {text      : "Шампунь",
+       value     : false
+      },
+      {text      : "Телевизор",
+       value     : false
+      },
+      {text      : "Шампунь",
+       value     : false
+      }
+    ]
+    }
+    )
+    +extra-list(
+      {items        : [
+        {title     : "Комфорт",
+         text      : "Шумопоглощающие стены",
+         symbol    : "insert_emoticon"
+        },
+        {title     : "Удобство",
+         text      : "Окно в каждой из спален",
+         symbol    : "location_city"
+        }
+      ]
+      }
+      )
+    +checkbox-list(
+    {title       : "expandable checkbox list",
+    buttonText   : "expand_more",
+    name         : "cl",
+    checkboxClass: "checkbox-list--menu-visible", 
+    items        : [
+      {text      : "Можно курить",
+       value     : false
+      },
+      {text      : "Можно с питомцами",
+       value     : true
+      },
+      {text      : "Можно пригласить гостей (до 10 человек)",
+       value     : true
+      }
+    ]
+    }
+    )
+    +radio-list(
+      { title      : "Radio Buttons", 
+        items      : [
+        {title     : "Мужчина",
+         value     : true
+        },
+        {title     : "Женщина",
+         value     : false
+        }
+      ]
+      }
+      )
+    +toggle-list(
+      { title      : "Toggle", 
+        items      : [
+        {title     : "Получать спецпредложения",
+         name      : "tog1",
+         value     : true
+        },
+        {title     : "Получать спецпредложения",
+         name      : "tog2",
+         value     : false
+        }
+      ]
+      }
+      )

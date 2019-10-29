@@ -1,0 +1,8 @@
+mixin extra-list(data)
+    .extra-list
+      each item in data.items
+        .extra-list__item
+          .extra-list__item-pic= item.symbol
+          .extra-list__item-text
+            #{"strong"}=item.title
+            #{"br"}= item.text

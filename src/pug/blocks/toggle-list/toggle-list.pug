@@ -1,0 +1,8 @@
+mixin toggle-list(data)
+    .toggle-list
+        h3.toggle-list__title= data.title
+        each item in data.items
+          .toggle-list__item
+            label.toggle-lis__item-label
+              input(class="toggle-list__item-input",type="checkbox", name=item.name, checked=item.value)
+              .toggle-list__item-title= item.title
