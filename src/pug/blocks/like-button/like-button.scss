@@ -1,0 +1,93 @@
+.like-button{
+    
+    &__item-input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        
+    }
+    &__item-text {
+        position: relative;
+        cursor: pointer;
+        width: 40px;
+        height: 20px;
+        padding: 4px 0 0 10px ;
+        text-align: center;
+        font-size: 10px;
+        line-height: 12px;
+        color: $dark-shade-25;
+        //Material
+  
+
+
+
+
+    }
+    &__item-text:before {
+        @extend %material-icons;
+        width: 40px;
+        height: 20px;
+        content: '';
+        text-align: left;
+        font-size: 10px;
+        line-height: 9px;
+        position: absolute;
+        top:  0;
+        left: 0;
+        border-radius: 10px;
+        border: 1px solid $dark-shade-25;
+       
+    }
+    &__item-text:after {
+        @extend %material-icons;
+        content: 'favorite_border';
+        width: 40px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 9px;
+        position: absolute;
+        left: 5px;
+        top: 0px; 
+
+    }
+
+
+    &__item-input:checked + &__item-text:before {
+        content: '';
+        position: absolute;
+        top: 0px; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -1px; 
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+
+    &__item-input:checked + &__item-text{
+
+        //width: 50vw;
+        width: 40px;
+        height: 20px;
+        padding: 3px 0 0 10px ; 
+        position: relative;
+        box-sizing: border-box;
+        $border: 1px;
+        color: $purple;
+        background: #fff;
+        background-clip: padding-box; /* !importanté */
+        border: solid $border transparent; /* !importanté */
+        border-radius: 10px;
+    }
+    &__item-input:checked +&__item-text:after {
+        font-size: 10px;
+        line-height: 9px;
+        left: 4px;
+        top: -1px; 
+        content: 'favorite';
+        color: $purple;
+        width: 40px;
+        height: 20px;
+    }
+    
+
+}

@@ -1,11 +1,14 @@
 .drop-down{
-    
-    &__items{
-        list-style-type: none;
+    &__menu{
         border: 1px solid $dark-shade-25;
         border-radius: 0 0 4px 4px;
         border-top-style: none; 
-        padding: 7px 7px 0 15px;
+        padding: 7px 7px 13px 15px;
+    }
+    
+    &__items{
+        list-style-type: none;
+        padding: 0;
          
     }
     
@@ -46,6 +49,22 @@
         color: $dark-shade-50;
         outline-style: none;
 
+    }
+
+    &__menu-buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    &__menu-button{
+        border: none;
+        background: #ffffff;
+        @extend %h3;
+        color: $purple;
+    }
+    &__menu-button:first-child{
+        color: $dark-shade-50;
     }
 
     &--width-s{

@@ -1,0 +1,12 @@
+.feedback{
+   &__box{
+        margin-top: 12px;
+        display: flex;
+}
+   &__like-button{
+       margin: 0 18px 0 0 ;
+   }
+   &__text{
+      width: 653px;
+   }
+}

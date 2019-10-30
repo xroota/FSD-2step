@@ -9,7 +9,12 @@ block content
   include ../../blocks/checkbox-list/checkbox-list
   include ../../blocks/extra-list/extra-list
   include ../../blocks/radio-list/radio-list  
-  include ../../blocks/toggle-list/toggle-list   
+  include ../../blocks/toggle-list/toggle-list  
+  include ../../blocks/like-button/like-button
+  include ../../blocks/rate-button/rate-button
+  include ../../blocks/list-item/list-item
+  include ../../blocks/feedback/feedback
+  include ../../blocks/list/list
   include ../../blocks/logo/logo
   .block
     +logo("../../../assets/img/logo.svg","red")
@@ -209,4 +214,146 @@ block content
         }
       ]
       }
+    )
+    +like-button(
+      { name      : "like1",
+        value     : 2,
+        checked   : true
+
+      }
+    )
+    +like-button(
+      { name      : "like1",
+        value     : 12,
+        checked   : false
+
+      }
+    )
+    +rate-button(
+      { name      : "rate-1",
+        value     : 5,
+        checked   : 4
+      }
+    )
+    +rate-button(
+      { name      : "rate-2",
+        value     : 5,
+        checked   : 5
+      }
+    )
+    +drop-down(
+        {title         : "Dropdown",
+         titleText     : "",
+         placeholder   : "Сколько гостей",
+         inputText     : "",
+         readOnly      : true,
+         buttonText    : "",
+         textFieldClass: "text-field--placeholder-dark-75 text-field--menu-visible",
+         items        : [
+           {text      : "Взрослые",
+            value     : 0
+           },
+           {text      : "Дети",
+            value     : 0
+           },
+           {text      : "Младенцы",
+            value     : 0
+           }
+         ],
+         menuButtons  : [
+           {text      : "Очистить",
+            name      : "clear",
+           },
+           {text      : "Применить",
+            name      : "apply",
+           },
+           
+
+         ],
+         dropDownClass: ""
+         }
       )
+    +drop-down(
+        {title         : "Dropdown",
+         titleText     : "",
+         placeholder   : "3 гостя",
+         inputText     : "",
+         readOnly      : true,
+         buttonText    : "",
+         textFieldClass: "text-field--placeholder-dark-75 text-field--menu-visible",
+         items        : [
+           {text      : "Взрослые",
+            value     : 2
+           },
+           {text      : "Дети",
+            value     : 1
+           },
+           {text      : "Младенцы",
+            value     : 0
+           }
+         ],
+         menuButtons  : [
+           {text      : "Очистить",
+            name      : "clear",
+           },
+           {text      : "Применить",
+            name      : "apply",
+           },
+           
+
+         ],
+         dropDownClass: ""
+         }
+      )
+    +checkbox-list(
+    {title       : "Rich Checkbox Buttons",
+    buttonText   : "",
+    name         : "rcb",
+    checkboxClass: "checkbox-list--menu-visible", 
+    items        : [
+      {title     : "Широкий коридор",
+       text      : "Ширина коридоров в номере не менее 91 см.",
+       value     : false
+      },
+      {title     : "Помощник для инвалидов",
+       text      : "На 1 этаже вас встретит специалист и проводит до номера.",
+       value     : true
+      }
+    ]
+    }
+    )
+    +list-item({
+    title    : "Мурад Сарафанов",
+    text     : "5 дней назад",
+    symbol   : "",
+    urlPic   : "../../assets/img/image.png",
+    classItem: "list-item--is-picture"
+    })
+    +list-item({
+      title    : "",
+      text     : "5 дней назад",
+      symbol   : "",
+      urlPic   : "",
+      classItem: "list-item--is-bullet"
+      })
+    +list({
+        title        : "Bullet List",
+        listItemClass: "list-item--is-bullet",
+        items        : [
+            {text      : "Нельзя с питомцами"},
+            {text      : "Без вечеринок и мероприятий"},
+            {text      : "Время прибытия — после 13:00, а выезд до 12:00"}
+        ]
+        }
+      )
+
+  +feedback({
+      user        : "Мурад Сарафанов",
+      date        : "5 дней назад",
+      userPic     : "../../assets/img/image.png",
+      likeValue   : 12,
+      likeChecked : true,
+      feedbackText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+      })
+  
+    

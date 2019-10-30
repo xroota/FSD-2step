@@ -1,0 +1,19 @@
+mixin feedback(data)
+  .feedback
+    +list-item({
+        title    : data.user,
+        text     : data.date,
+        symbol   : "",
+        urlPic   : data.userPic,
+        classItem: "list-item--is-picture"
+        })
+    .feedback__box
+        +like-button(
+          { name           : data.name+"-like",
+            value          : data.likeValue,
+            checked        : data.likeChecked,
+            likeButtonClass: "feedback__like-button"
+          }
+        )
+        .feedback__text= data.feedbackText
+

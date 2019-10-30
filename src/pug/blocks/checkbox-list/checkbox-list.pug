@@ -7,5 +7,9 @@ mixin checkbox-list(data)
         li.checkbox-list__item
           input.checkbox-list__item-checkbox-hidden(type="checkbox", name= data.name+"-checkbox-"+x, id=data.name+"-checkbox-"+x, checked=data.items[x].value)
           label.checkbox-list__item-checkbox(for= name=data.name+"-checkbox-"+x) 
-          div.checkbox-list__item-text= data.items[x].text
+          .checkbox-list__item-text-box
+            if (data.title)
+              div.checkbox-list__item-title= data.items[x].title
+            .checkbox-list__item-text= data.items[x].text
+
         - }

@@ -1,0 +1,12 @@
+mixin list(data)
+  .list
+    .list__tile= data.title
+    each item in data.items
+      +list-item({
+        title    : "",
+        text     : item.text,
+        symbol   : "",
+        urlPic   : "",
+        classItem: data.listItemClass
+        }
+      )

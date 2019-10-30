@@ -1,0 +1,6 @@
+mixin like-button(data)  
+  .like-button(class=data.likeButtonClass)
+    .like-button__item
+      label.like-button__item-label 
+        input(class="like-button__item-input",type="checkbox", name=data.name, checked=data.checked)
+        .like-button__item-text= data.value

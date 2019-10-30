@@ -12,11 +12,16 @@ mixin drop-down(data)
          addClass     : data.textFieldClass
          }
       )
-    ul.drop-down__items
-     each item in data.items
-      li.drop-down__item
-        div.drop-down__item-text= item.text
-        .drop-down__item-group
-          button.drop-down__item-button -
-          input.drop-down__item-input(type="text", name="drop-down__input-" value= item.value )
-          button.drop-down__item-button +
+    .drop-down__menu
+      ul.drop-down__items
+        each item in data.items
+          li.drop-down__item
+            div.drop-down__item-text= item.text
+            .drop-down__item-group
+              button.drop-down__item-button -
+              input.drop-down__item-input(type="text", name="drop-down__input-" value= item.value )
+              button.drop-down__item-button +
+      if(data.menuButtons)
+        .drop-down__menu-buttons
+          each item in data.menuButtons 
+            button(class="drop-down__menu-button" name= item.name )= item.text

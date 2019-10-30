@@ -19,7 +19,7 @@
     }
     &__item{
         display: flex;
-        margin-right: 0;
+        margin: 0 0 5px 0;
     }
     &__item-checkbox-hidden{
         display:none;
@@ -36,12 +36,22 @@
         border-color: $purple;
         background: url(/assets/img/vector.svg) no-repeat 4px 2px;   
     }
+
+    &__item-title{
+        font-weight: bold;
+        line-height: 18px;
+        margin-bottom: 5px;
+
+    }
+
     &__item-text{
         line-height: 18px;
         color: $dark-shade-50;
         vertical-align: middle;
         width: 200px;
     }
+
+
 
     &--menu-visible &__button{
         color: $dark-shade-50;  
