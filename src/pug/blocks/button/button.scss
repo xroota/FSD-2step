@@ -1,0 +1,89 @@
+.button{
+    padding: 13px 19px 14px 19px;
+    position: relative;
+    border-radius: 22px;
+    
+    &__text{
+        @extend %h3;
+        vertical-align: middle;
+        color: #ffffff;
+    }
+
+    &__symbol {
+        top: 0;
+        right:0;  
+        @extend %material-icons;
+        line-height:42px;
+        width: 42px;
+        position: absolute;
+
+
+    }
+
+    &.button--fill {
+         border: none;
+         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+         color: #FFFFFF;
+    }
+    &.button--border {
+        position: relative;
+        $border: 2px;
+        background: #fff;
+        background-clip: padding-box; /* !importanté */
+        border: solid $border transparent; /* !importanté */   
+        
+    }
+
+    &.button--border &__text{
+        color: $purple;  
+        
+    }
+
+   &.button--border::before {
+        content: '';
+        position: absolute;
+        top: 0px; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -2px; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        
+    }
+
+    &.button--border-none &__text{
+        color: $purple;  
+        
+    }
+
+    &.button--border-none{
+        border: none;
+        padding: 0;  
+        color: $purple;
+        background: #fff;
+        }
+
+    &.button--disabled{
+        filter: opacity(0.7);
+    }
+
+    &.button--disabled:before{
+        filter: opacity(0.7);
+        
+        
+    }
+
+    &.button--border.button--disabled{
+        filter: none;
+        position: relative;
+        $border: 2px;
+        color: $purple;
+        background: #fff;
+        background-clip: padding-box; /* !importanté */
+        border: solid $border transparent; /* !importanté */
+    }
+
+    &.button--width-full{
+        width: 100%;
+    }   
+
+}

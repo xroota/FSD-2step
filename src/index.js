@@ -1,6 +1,7 @@
 // JS
 import './js/index'
 
+
 // SCSS
 import './pug/blocks/main.scss'
 

@@ -15,6 +15,8 @@ block content
   include ../../blocks/list-item/list-item
   include ../../blocks/feedback/feedback
   include ../../blocks/list/list
+  include ../../blocks/button/button
+  include ../../blocks/ui-slider/ui-slider
   include ../../blocks/logo/logo
   .block
     +logo("../../../assets/img/logo.svg","red")
@@ -346,6 +348,46 @@ block content
         ]
         }
       )
+    +button(     
+      { name       : "btn1",
+        text       : "Click Me",
+        buttonClass: "button--fill"
+      })
+    +button(     
+      { name       : "btn2",
+        text       : "Click Me",
+        buttonClass: "button--fill button--disabled"
+      })
+
+    +button(     
+      { name       : "btn3",
+        text       : "Click Me",
+        buttonClass: "button--border"
+      })
+    +button(     
+      { name       : "btn4",
+        text       : "Click Me",
+        buttonClass: "button--border button--disabled"
+      })
+
+    +button(     
+      { name       : "btn5",
+        text       : "Click Me",
+        buttonClass: "button--border-none"
+      })
+    +button(     
+      { name       : "btn6",
+        text       : "Click Me",
+        buttonClass: "button--border-none button--disabled"
+      })
+    +button(     
+      { name       : "btn7",
+        text       : "Перейти к оптате",
+        symbol     : "arrow_forward",
+        buttonClass: "button--fill button--width-full"
+      })
+    +ui-slider()
+
 
   +feedback({
       user        : "Мурад Сарафанов",

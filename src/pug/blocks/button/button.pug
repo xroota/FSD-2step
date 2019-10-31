@@ -1,0 +1,5 @@
+mixin button(data)
+  button(class="button " + data.buttonClass, name= data.name)
+    div.button__text= data.text
+    if (data.symbol)
+      .button__symbol= data.symbol

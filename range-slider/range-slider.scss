@@ -1,0 +1,21 @@
+.range-slider{
+    margin: 20px 0 40px 0;
+      
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+        
+    &__header-text{
+        @extend %h3
+        color: #1F2041;
+    }
+    &__header-value{
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: rgba(31, 32, 65, 0.5);
+        font-weight: bold;
+    }
+}
