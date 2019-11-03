@@ -1,0 +1,11 @@
+.range-slider{
+    @extend %h3;
+    &__title{
+        margin-bottom: 20px;
+    }
+    &__value{
+        float: right;
+        font-weight: normal;
+    }
+
+}

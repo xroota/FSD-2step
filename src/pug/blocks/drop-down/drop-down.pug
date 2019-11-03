@@ -12,7 +12,10 @@ mixin drop-down(data)
          addClass     : data.textFieldClass
          }
       )
+      
     .drop-down__menu
+      if data.addCalendar
+        .data-picker(class="datepicker-here")
       ul.drop-down__items
         each item in data.items
           li.drop-down__item

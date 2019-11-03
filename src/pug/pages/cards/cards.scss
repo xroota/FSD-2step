@@ -1,0 +1,68 @@
+@import "../../blocks/card/card";
+@import "../../blocks/air-datepicker/datepicker.min";
+@import "../../blocks/drop-down/drop-down";
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/button/button";
+@import "../../blocks/radio-list/radio-list";
+@import "../../blocks/toggle/toggle";
+
+.card-find-number{
+    &__drop-down-date-in{
+        margin-bottom: 20.56px;
+        width:46.875%;
+    }
+
+    &__drop-down-date-out{
+        margin-bottom: 20.56px;
+        width:46.875%;
+    }
+    &__drop-down-guests{
+        margin-bottom: 31px;
+    }
+
+}
+
+.card-register{
+    
+    &__name{
+        margin-bottom: 10px;
+    } 
+
+    &__surname{
+        margin-bottom: 10.44px;
+    }
+    
+    &__sex{
+        margin-bottom: 23.56px;
+    }
+
+    &__birthday{
+        margin-bottom: 20px;
+    }
+
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__password{
+        margin-bottom: 10px;
+    }
+    
+    &__offer{
+        margin-bottom: 10px;
+    }
+    
+    &__button-pay{
+        margin-bottom: 30px; 
+    }
+
+    &__text-account{
+        margin: auto 0;
+        line-height: 18px;
+    }
+
+
+
+
+
+}

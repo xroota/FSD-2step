@@ -1,6 +1,7 @@
 .text-field{
+    width: 100%;
     &__title {
-    margin-bottom: 3px;
+    margin: 0 0 3px 0;
     }
 
     &__title-text{
@@ -45,6 +46,11 @@
     &--width-s{
         width: 83.125%;
     }
+    &--display-inline-block{
+        display: inline-block;
+        width: 40%;
+    }
+
 
   
 }

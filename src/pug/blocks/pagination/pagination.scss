@@ -1,0 +1,14 @@
+.pagination{
+    margin-bottom: 10px;
+    display: block;
+
+    &__title{
+        @extend %h3;
+
+    }
+
+    &__text{
+        color: $dark-shade-75;
+    }
+
+}
