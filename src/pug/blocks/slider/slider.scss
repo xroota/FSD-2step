@@ -1,0 +1,107 @@
+.slider{
+    width: 100%;
+    margin: 0 auto;
+
+    &__viewport{
+        width: 100%;
+        display: table;
+        position: relative;
+        overflow: hidden;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    &__slidewrapper{
+        position: relative;
+        width: calc(100% * 4);
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+
+    &__slide{
+        margin: 0;
+        padding: 0;
+        width: calc(100%/4);
+        list-style: none;
+        display: inline;
+        float: left;
+
+    }
+    &__slide-img{
+        width: 100%;
+    }
+
+    %nav-btn{
+        position: absolute;
+        @extend %material-icons;
+        width: 24px;
+        height: 24px;
+        color: $white;
+        transform: rotate(-90deg);
+        top: calc(50% - 25px);
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+
+
+    &__prev-next-btns {
+
+
+    }
+
+
+    &__prev-btn {
+        @extend %nav-btn;
+        left: 20px;
+    }
+    
+    &__next-btn {
+        @extend %nav-btn;
+        right: 20px;
+    }
+
+    &__nav-btns {
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        padding: 0;
+        margin: 0;
+        text-align:right;
+    }
+    
+    &__nav-btn {
+        position: relative;
+        display: inline-block;
+        list-style: none;
+        width: 7.5px;
+        height: 7.5px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        margin: 3px;
+        box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    }
+
+    &__nav-btn--active {
+        
+        background-color: #fff;
+        border: none;
+        box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    }    
+    
+    &__nav-btn:hover {
+        cursor: pointer;
+    }
+}

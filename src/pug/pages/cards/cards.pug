@@ -11,7 +11,7 @@ block content
   include ../../blocks/radio-list/radio-list
   include ../../blocks/toggle/toggle
   include ../../blocks/room-info/room-info
-
+  include ../../blocks/slider/slider
   
   +card({
       title    : "Найдём номера под ваши пожелания",
@@ -357,3 +357,23 @@ block content
       cardClass: "card-login"
   })
     div(class="datepicker-here  calendar" data-range="true" data-multiple-dates-separator=" - ")
+  +card({
+      title    : "slider",
+      cardClass: "card-slider"
+  })
+    +slider(
+        {
+         items        : [
+           {imagePath      : "./assets/img/img1.jpg"
+           },
+           {imagePath      : "./assets/img/img2.jpg"
+           },
+           {imagePath      : "./assets/img/img2.jpg"
+           },
+           {imagePath      : "./assets/img/img4.jpg"
+           }
+
+         ],
+         sliderClass: ""
+         }
+      )
