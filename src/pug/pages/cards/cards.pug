@@ -12,7 +12,8 @@ block content
   include ../../blocks/toggle/toggle
   include ../../blocks/room-info/room-info
   include ../../blocks/slider/slider
-  
+  include ../../blocks/room/room
+
   +card({
       title    : "Найдём номера под ваши пожелания",
       cardClass: "card-find-number"
@@ -194,9 +195,10 @@ block content
   })
 
     +room-info(
-        {roomNumber         : "888",
+        {roomNumber   : "888",
          roomType     : "люкс",
-         roomPrice   : "9 990",
+         roomPrice    : "9 990",
+         roomInfoClass: "card-booking__room-info"
         }
     )
 
@@ -361,9 +363,12 @@ block content
       title    : "slider",
       cardClass: "card-slider"
   })
-    +slider(
-        {
-         items        : [
+    +room(
+      { roomNumber  : "880",
+        roomType    : "люкс",
+        roomPrice   : "9 990",
+        rateCount   : 145,
+        imageItems: [
            {imagePath      : "./assets/img/img1.jpg"
            },
            {imagePath      : "./assets/img/img2.jpg"
@@ -373,7 +378,6 @@ block content
            {imagePath      : "./assets/img/img4.jpg"
            }
 
-         ],
-         sliderClass: ""
-         }
-      )
+         ]
+      }
+    )

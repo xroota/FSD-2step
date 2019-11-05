@@ -1,8 +1,7 @@
 mixin rate-button(data)
     .rate-button
       .rate-button__items
-        - for (var x = 0; x < data.value; x++){
-          
+        - for (var x = 0; x < data.value; x++){   
           if (data.checked==(x+1)) 
            - var checkedItem = true
           else

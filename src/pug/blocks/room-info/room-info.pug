@@ -1,5 +1,5 @@
 mixin room-info(data)
-    .room-info
+    .room-info(class=data.roomInfoClass)
       h1.room-info__number=  "№ " + data.roomNumber
       .room-info__type= data.roomType
       if(data.roomPrice)

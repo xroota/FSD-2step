@@ -1,15 +1,13 @@
 .rate-button {
     display: flex;
     justify-content: left;
-    margin: 16px 20px 16px 0;
+    margin: 0;
     &__items{
         position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: top;
-        flex: 0 0 auto;
-        color: blue;
-        background: linear-gradient(180deg, #BC9CFF , #8BA4F9  );
+        background: linear-gradient(180deg, #BC9CFF , #8BA4F9);
+        height: 20px;
     }
 
     &__item-input{
@@ -23,7 +21,7 @@
         clip: rect(0,0,0,0);
     }
     &__item-label{ 
-        display: flex;
+        //display: flex;
         position: relative;
         cursor: pointer;
         margin: 0;

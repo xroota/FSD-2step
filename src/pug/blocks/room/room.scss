@@ -1,0 +1,27 @@
+@import "../../blocks/rate-button/rate-button";
+
+.room{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__rate-count{
+        line-height: 18px;
+        color: $dark-shade-50;
+    }
+
+    &__line{
+        width: 100%;
+        border-bottom: 1px dotted $dark-shade-25;
+        height: 1px;
+        margin-bottom: 8px;
+    }
+    
+    &__slider{
+        margin-bottom: 20px;
+    }
+
+    &__room-info{
+        margin-bottom: 20px;
+    }
+}

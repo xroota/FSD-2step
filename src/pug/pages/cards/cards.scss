@@ -7,7 +7,7 @@
 @import "../../blocks/toggle/toggle";
 @import "../../blocks/room-info/room-info";
 @import "../../blocks/slider/slider";
-
+@import "../../blocks/room/room";
 
 
 
@@ -74,6 +74,10 @@
 
 .card-booking{
    
+    &__room-info{
+      margin-bottom: 20px;
+    }
+
     &__drop-down-date-in{
         margin-bottom: 20px;
         width:46.875%;

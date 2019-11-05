@@ -1,3 +1,29 @@
-mixin room
+include ../../blocks/rate-button/rate-button
+
+mixin room(data)
   .room
-    img.room-image(src="", alt="")
+    +slider(
+        {
+         items        : data.imageItems,
+         sliderClass: "room__slider"
+         }
+      )
+    +room-info(
+        {roomNumber  : data.roomNumber,
+         roomType    : data.roomType,
+         roomPrice   : data.roomPrice,
+         roomInfoClass: "room__room-info"
+        }
+    )
+    .room__line
+    +rate-button(
+      { name      : "rate-2",
+        value     : 5,
+        checked   : 5
+      }
+    )
+    .room__rate-count 
+        #{"strong"}= data.rateCount
+        |   Отзывов
+
+
