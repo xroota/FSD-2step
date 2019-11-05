@@ -1,7 +1,7 @@
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins.scss";
-@import "utils/fonts";
+@import "utils/fonts.scss";
 //@import "utils/reset";
 
 
@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-    font-family: $secondFont;
+    font-family: $mainFont;
     @extend %h3; 
     
 }

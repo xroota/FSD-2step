@@ -10,6 +10,8 @@ block content
   include ../../blocks/button/button
   include ../../blocks/radio-list/radio-list
   include ../../blocks/toggle/toggle
+  include ../../blocks/room-info/room-info
+
   
   +card({
       title    : "Найдём номера под ваши пожелания",
@@ -190,10 +192,14 @@ block content
       title    : "",
       cardClass: "card-booking"
   })
-    .card-booking__room
-      .card-booking__room-number № 888
-      .card-booking__room-type люкс
-    .card-booking__room-price 9 990₽ в сутки
+
+    +room-info(
+        {roomNumber         : "888",
+         roomType     : "люкс",
+         roomPrice   : "9 990",
+        }
+    )
+
     +drop-down(
         {title         : "Прибытие",
          titleText     : "",
@@ -267,12 +273,87 @@ block content
            },
            
          ],
-         dropDownClass: "card-booking__drop-down-guests"
+         dropDownClass: "card-booking__guests"
          }
       )
-      .card-booking__calc
-      
-        
 
+    mixin calc-box(data)
+      ul.card-booking__calc-items
+        each item in data.items
+          li.card-booking__calc-item
+            .card-booking__calc-item-text= item.text
+            if item.hint
+              .card-booking__calc-item-hint i
+            .card-booking__calc-item-value= item.value
+      .card-booking__total
+        .card-booking__total-text= data.totalText
+        .card-booking__total-line
+        .card-booking__total-value= data.totalValue
 
-  
+    +calc-box({
+       items  :[
+        {text : "9 990₽ х 4 суток", 
+         hint : "",
+         value: "39 960₽"
+         },
+        {text : "Сбор за услуги: скидка 2 179₽", 
+         hint : "hint",
+         value: "0₽"
+         },
+        {text : "Сбор за дополнительные услуги", 
+         hint : "hint",
+         value: "300₽"
+       }],
+         totalText : "Итого",
+         totalValue: "38 081₽" 
+
+    })   
+    +button(     
+      { name       : "btn9",
+        text       : "забронировать",
+        symbol     : "arrow_forward",
+        buttonClass: "card-booking__button-book button--fill button--width-full"
+      })       
+  +card({
+      title    : "Войти",
+      cardClass: "card-login"
+  })
+    +text-field(
+        {title         : "",
+         titleText     : "",
+         placeholder   : "Email",
+         inputText     : "",
+         readOnly      : false,
+         buttonText    : "",
+         textFieldClass: "card-login__email"
+         }
+      )
+    +text-field(
+        {title         : "",
+         titleText     : "",
+         placeholder   : "Пароль",
+         inputText     : "",
+         readOnly      : false,
+         buttonText    : "",
+         textFieldClass: "card-login__password"
+         }
+      )
+    +button(     
+      { name       : "btn7",
+        text       : "Войти",
+        symbol     : "arrow_forward",
+        buttonClass: "card-login__button-login button--fill button--width-full"
+      })
+    .card-register__text-account Нет аккаунта на Toxin?
+    +button(     
+      { name       : "btn9",
+        text       : "создать",
+        symbol     : "",
+        buttonClass: "card-login__button-register button--border"
+      }) 
+
+  +card({
+      title    : "Календарь",
+      cardClass: "card-login"
+  })
+    div(class="datepicker-here  calendar" data-range="true" data-multiple-dates-separator=" - ")

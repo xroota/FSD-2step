@@ -5,6 +5,9 @@
 @import "../../blocks/button/button";
 @import "../../blocks/radio-list/radio-list";
 @import "../../blocks/toggle/toggle";
+@import "../../blocks/room-info/room-info";
+
+
 
 .card-find-number{
     &__drop-down-date-in{
@@ -66,3 +69,274 @@
 
 
 }
+
+.card-booking{
+   
+    &__drop-down-date-in{
+        margin-bottom: 20px;
+        width:46.875%;
+    }
+
+    &__drop-down-date-out{
+        margin-bottom: 20px;
+        width:46.875%;
+    }
+
+    &__guests{
+        margin-bottom: 20px;
+    }
+
+    &__calc-items{
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    &__calc-item{
+        
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    &__calc-item-value{
+        margin-left: auto;
+    }
+
+    &__calc-item-hint{
+        border: 1px solid $dark-shade-25;
+        border-radius: 22px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-left: 5px;
+        color: $dark-shade-25; 
+    }
+    
+    &__calc-item-text{
+        max-width: 214px;
+        line-height: 18px;
+    }
+
+    &__total{
+        width: 100%;
+        align-items: end;
+        column-gap: 5px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: baseline;
+        margin-bottom: 20px;
+    }
+
+    &__total-line{
+      border-bottom: 1px dotted $dark-shade-25;
+      height: 1px;
+      
+  }
+
+    &__total-text{
+        font-family: $mainFont;
+        @extend %h2;   
+ 
+    }
+    
+    &__total-value{
+    
+        font-family: $mainFont;
+        @extend %h2; 
+        
+    }
+}
+
+.card-login{
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__password{
+        margin-bottom: 20px;
+    }
+
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__button-login{
+        margin-bottom: 30px;
+    }
+
+}
+
+.calendar{
+    width: 100%;
+
+
+
+    .datepicker{
+        width: 100%;
+        margin-right: 0; 
+        border: none;
+        box-sizing: border-box;
+
+        &--cell {
+            //border-radius: 50%;
+        
+            &.-range-from-,
+            &.-range-to- {
+              background: $dark-shade-50;
+              border-radius: 50%;
+              border: none;
+              color: $white;
+              
+            }
+        
+            &.-range-from-::after {
+              @extend %range;
+              border-radius: 50% 0 0 50%;
+            }
+        
+            &.-range-to-::before {
+              @extend %range;
+              border-radius: 0 50% 50% 0;
+            }
+        
+            &.-current- {
+              background: $secondary-gradient;
+              border-radius: 50%;
+              color: $white;
+        
+      
+        
+              &.-in-range- {
+                background: $secondary-gradient;
+                
+                position: relative;
+        
+                &::after {
+                  @extend %range;
+                }
+              }
+            }
+        
+            &.-selected- {
+              background: $primary-gradient;
+      
+              border-radius: 50%;
+              position: relative;
+        
+              &.-range-from-::after,
+              &.-range-to-::before {
+                @extend %range;
+              }
+        
+              &.-focus- {
+                background: $primary-color;
+              }
+            }
+        
+            &.-in-range- {
+              background: $primary-gradient-25;
+        
+              &.-focus- {
+                background: $primary-gradient-50;
+              }
+            }
+          }
+        
+          &--cell-day {
+            &.-other-month- {
+              &.-selected- {
+                background: $primary-gradient;
+                &.-focus- {
+                  background: $primary-color;
+                }
+              }
+              
+              &.-in-range- {
+                background: $primary-gradient-25;
+        
+                &.-focus- {
+                  background: $primary-gradient-50;
+                }
+              }
+            }
+          }    
+
+      &--nav{
+          border:none;
+          margin-bottom: 30px;
+
+      }
+      
+      &--nav-action svg{
+        width: 16px;
+        height: 17px;
+
+      }
+
+      &--nav-action:first-child svg{
+        stroke: none;
+        transform: rotate(180deg);
+        
+      }
+
+      &--nav-action svg path{
+        stroke: none;
+        fill: $purple;
+        d: path("M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z");
+      }
+
+      &--nav-title{
+        font-family: $mainFont;   
+        @extend %h2;
+          
+        color: dark-shade-100;
+        i{
+            @extend %h2;
+            font-family: $mainFont;   
+            color: dark-shade-100;
+          }
+      }
+
+      &--day-name{
+          @extend %h3;
+          color: $purple;
+          width: 39.88px;
+          height: 40px;
+      }
+
+      &--cell-day{
+        @extend %h3;
+        color: $dark-shade-50;
+        font-weight: normal;
+        width: 39.88px;
+        height: 40px;
+      }
+
+
+      
+     
+    }
+}
+
+
+
+%range {
+    background: $primary-gradient-25;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  
+
+.datepicker {
+    border: none;
+    box-sizing: border-box;
+  
+    
+ 
+  }

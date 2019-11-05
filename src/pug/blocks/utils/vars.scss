@@ -15,6 +15,7 @@ $smPhoneWidth            : 320px;
 
 // Main color
 $default-color           : #ffffff;
+$white                   : #ffffff;
 $dark-shade-100          : #1F2041;
 $dark-shade-75           : rgba(31, 32, 65, 0.75);
 $dark-shade-50           : rgba(31, 32, 65, 0.5);
@@ -66,6 +67,15 @@ $border-lightex          : #F2F6FC;
   
   }
 
+  %h2{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: $dark-shade-100;
+  }
+
   %h3{
     font-style: normal;
     font-weight: bold;
@@ -73,4 +83,13 @@ $border-lightex          : #F2F6FC;
     line-height: 15px;  
     text-transform: uppercase;
     color: $dark-shade-100;
+
   }
+
+  $primary-gradient-25 : linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+
+$primary-gradient-50 : linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+
+$primary-gradient : linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+
+$secondary-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
