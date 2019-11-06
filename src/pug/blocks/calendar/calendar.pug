@@ -1,3 +1,16 @@
 mixin calendar(data)
   .calendar(class=data.calendarClass)
-    div(class="datepicker-here air-datepicker "  data-range="true" data-multiple-dates-separator=" - ") 
+    div(class="datepicker-here air-datepicker calendar__datepicker"  data-range="true" data-multiple-dates-separator=" - ") 
+    .calendar__buttons
+       +button(     
+        { name       : "btn7",
+          text       : "Очистить",
+          symbol     : "",
+          buttonClass: "calendar__button-clear button--border-none button--disabled"
+        })
+       +button(     
+        { name       : "btn7",
+          text       : "Применить",
+          symbol     : "",
+          buttonClass: "calendar__button-apply button--border-none"
+        })
