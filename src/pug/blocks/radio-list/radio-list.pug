@@ -1,6 +1,7 @@
 mixin radio-list(data)
     .radio-list(class=data.radioListClass)
-      h3.radio-list__title= data.title
+      if(data.title) 
+        h3.radio-list__title= data.title
       .radio-list__items
         each item in data.items
             .radio-list__item

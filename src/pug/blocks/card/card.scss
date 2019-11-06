@@ -1,6 +1,6 @@
 .card{
     width: 380px;
-    padding: 40px 30px 30px 30px;
+    padding: 40px 29px 30px 29px;
     //background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
@@ -13,6 +13,13 @@
     &__title{
         width: 100%;
         margin: 0 0 20px 0;
+        letter-spacing: 1.15px;
+    }
+    
+    &--theme-cards{
+        width: 320px;
+        padding: 0;
+        
     }
 
     

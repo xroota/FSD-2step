@@ -3,13 +3,13 @@ include ../../blocks/text-field/text-field
 mixin drop-down(data)
   .drop-down(class=data.dropDownClass)&attributes(attributes)
     +text-field(
-        {title        : data.title,
-         titleText    : data.titleText,
-         placeholder  : data.placeholder,
-         inputText    : data.inputText,
-         buttonText   : "expand_more",
-         readOnly     : true,
-         addClass     : data.textFieldClass
+        {title         : data.title,
+         titleText     : data.titleText,
+         placeholder   : data.placeholder,
+         inputText     : data.inputText,
+         buttonText    : "expand_more",
+         readOnly      : true,
+         textFieldClass: data.textFieldClass
          }
       )
       

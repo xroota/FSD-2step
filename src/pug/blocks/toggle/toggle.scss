@@ -1,5 +1,9 @@
 .toggle{
-    margin-top: 16px;
+    &__title{
+        margin : 0;
+    }
+
+
     &::after {
         content: "";
         display: table;

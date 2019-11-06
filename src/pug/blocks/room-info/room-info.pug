@@ -1,8 +1,8 @@
 mixin room-info(data)
     .room-info(class=data.roomInfoClass)
-      h1.room-info__number=  "№ " + data.roomNumber
+      h1.room-info__number!= data.roomNumber
       .room-info__type= data.roomType
       if(data.roomPrice)
         .room-info__price 
-          #{"strong"}= data.roomPrice + "₽" 
-          |в сутки
+          #{"strong"}!= data.roomPrice + "₽" 
+          #{"small "}  в сутки

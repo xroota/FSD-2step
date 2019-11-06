@@ -1,7 +1,8 @@
 .text-field{
     width: 100%;
     &__title {
-    margin: 0 0 3px 0;
+    margin: 0 0 5px 0;
+    box-sizing: border-box;
     }
 
     &__title-text{
@@ -9,7 +10,6 @@
         color: $dark-shade-50;
         float: right;
         text-align: right;
-        
     }
     
     &__input-box{
@@ -28,9 +28,10 @@
     }
 
     &__input-button{
-        width: 42px;
         @extend %material-icons;
+        min-width: 42px;
         color: $dark-shade-50;
+        justify-content: center;
     }
 
     &--menu-visible &__input-button{
@@ -42,6 +43,7 @@
 
     &--placeholder-dark-75 &__input::placeholder{
         color: $dark-shade-75;    
+        font-size: 14px;
     }
     &--width-s{
         width: 83.125%;

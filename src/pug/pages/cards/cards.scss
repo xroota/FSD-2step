@@ -8,18 +8,33 @@
 @import "../../blocks/room-info/room-info";
 @import "../../blocks/slider/slider";
 @import "../../blocks/room/room";
+@import "../../blocks/calendar/calendar.scss";
+@import "../../blocks/air-datepicker/air-datepicker.scss";
+.cards{
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 1440px;
+  height: 1350px;
+  padding: 149px 140px 130px 140px;
 
+  &__calendar{
+    margin-bottom: 40px;
+  }
 
+}
 
 .card-find-number{
+  margin-bottom: 38px;
     &__drop-down-date-in{
         margin-bottom: 20.56px;
-        width:46.875%;
+        width: 46.875%;
     }
 
     &__drop-down-date-out{
         margin-bottom: 20.56px;
-        width:46.875%;
+        width: 46.875%;
     }
     &__drop-down-guests{
         margin-bottom: 31px;
@@ -28,17 +43,17 @@
 }
 
 .card-register{
-    
+     
     &__name{
         margin-bottom: 10px;
     } 
 
     &__surname{
-        margin-bottom: 10.44px;
+        margin-bottom: 8.44px;
     }
     
     &__sex{
-        margin-bottom: 23.56px;
+        margin-bottom: 21.56px;
     }
 
     &__birthday{
@@ -50,11 +65,11 @@
     }
 
     &__password{
-        margin-bottom: 10px;
+        margin-bottom: 8px; 
     }
     
     &__offer{
-        margin-bottom: 10px;
+        margin-bottom: 22px;
     }
     
     &__button-pay{
@@ -73,9 +88,9 @@
 }
 
 .card-booking{
-   
+    margin-bottom: 37px;
     &__room-info{
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     &__drop-down-date-in{
@@ -89,23 +104,26 @@
     }
 
     &__guests{
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     &__calc-items{
         list-style-type: none;
         padding: 0;
         width: 100%;
-        margin: 0 0 10px 0;
+        margin: 0 0 20px 0
+        
     }
     &__calc-item{
         
         display: flex;
         margin-bottom: 10px;
+        align-items: baseline;
     }
 
     &__calc-item-value{
         margin-left: auto;
+        color: $dark-shade-75;
     }
 
     &__calc-item-hint{
@@ -122,6 +140,7 @@
     &__calc-item-text{
         max-width: 214px;
         line-height: 18px;
+        color: $dark-shade-75;
     }
 
     &__total{
@@ -148,7 +167,7 @@
     
     &__total-value{
     
-        font-family: $mainFont;
+        font-family: $secondFont;
         @extend %h2; 
         
     }
@@ -172,177 +191,3 @@
     }
 
 }
-
-.calendar{
-    width: 100%;
-
-
-
-    .datepicker{
-        width: 100%;
-        margin-right: 0; 
-        border: none;
-        box-sizing: border-box;
-
-        &--cell {
-            //border-radius: 50%;
-        
-            &.-range-from-,
-            &.-range-to- {
-              background: $dark-shade-50;
-              border-radius: 50%;
-              border: none;
-              color: $white;
-              
-            }
-        
-            &.-range-from-::after {
-              @extend %range;
-              border-radius: 50% 0 0 50%;
-            }
-        
-            &.-range-to-::before {
-              @extend %range;
-              border-radius: 0 50% 50% 0;
-            }
-        
-            &.-current- {
-              background: $secondary-gradient;
-              border-radius: 50%;
-              color: $white;
-        
-      
-        
-              &.-in-range- {
-                background: $secondary-gradient;
-                
-                position: relative;
-        
-                &::after {
-                  @extend %range;
-                }
-              }
-            }
-        
-            &.-selected- {
-              background: $primary-gradient;
-      
-              border-radius: 50%;
-              position: relative;
-        
-              &.-range-from-::after,
-              &.-range-to-::before {
-                @extend %range;
-              }
-        
-              &.-focus- {
-                background: $primary-color;
-              }
-            }
-        
-            &.-in-range- {
-              background: $primary-gradient-25;
-        
-              &.-focus- {
-                background: $primary-gradient-50;
-              }
-            }
-          }
-        
-          &--cell-day {
-            &.-other-month- {
-              &.-selected- {
-                background: $primary-gradient;
-                &.-focus- {
-                  background: $primary-color;
-                }
-              }
-              
-              &.-in-range- {
-                background: $primary-gradient-25;
-        
-                &.-focus- {
-                  background: $primary-gradient-50;
-                }
-              }
-            }
-          }    
-
-      &--nav{
-          border:none;
-          margin-bottom: 30px;
-
-      }
-      
-      &--nav-action svg{
-        width: 16px;
-        height: 17px;
-
-      }
-
-      &--nav-action:first-child svg{
-        stroke: none;
-        transform: rotate(180deg);
-        
-      }
-
-      &--nav-action svg path{
-        stroke: none;
-        fill: $purple;
-        d: path("M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z");
-      }
-
-      &--nav-title{
-        font-family: $mainFont;   
-        @extend %h2;
-          
-        color: dark-shade-100;
-        i{
-            @extend %h2;
-            font-family: $mainFont;   
-            color: dark-shade-100;
-          }
-      }
-
-      &--day-name{
-          @extend %h3;
-          color: $purple;
-          width: 39.88px;
-          height: 40px;
-      }
-
-      &--cell-day{
-        @extend %h3;
-        color: $dark-shade-50;
-        font-weight: normal;
-        width: 39.88px;
-        height: 40px;
-      }
-
-
-      
-     
-    }
-}
-
-
-
-%range {
-    background: $primary-gradient-25;
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-  }
-  
-
-.datepicker {
-    border: none;
-    box-sizing: border-box;
-  
-    
- 
-  }
