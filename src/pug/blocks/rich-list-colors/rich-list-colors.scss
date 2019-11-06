@@ -1,5 +1,9 @@
 .rich-list-colors{
+    margin: 0;
+    width: 500px;
     &__items{
+        margin: 0;
+        padding: 0;
         display: flex;  
         flex-direction: column;
         align-items: flex-start;
@@ -28,14 +32,16 @@
     }
     
     &__item-text{
-
-        
+        @extend %h2;
+        line-height: 29px;
         
 
     }
 
     &__item-desc{
-      
+        @extend %h2;
+        font-weight: normal;
+        line-height: 29px;
         
 
     }
