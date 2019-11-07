@@ -6,9 +6,13 @@
     justify-content: space-between;
     width: 270px;
 
-    &__rate-count{
-        line-height: 18px;
-        color: $dark-shade-50;
+    &__slider{
+        margin-bottom: 10px;
+    }
+
+    &__room-info{
+        margin-bottom: 8px;
+        padding: 0 18px 0 19px;
     }
 
     &__line{
@@ -17,12 +21,27 @@
         height: 1px;
         margin-bottom: 8px;
     }
-    
-    &__slider{
-        margin-bottom: 20px;
+
+    &__line{
+        width: 100%;
+        border-bottom: 1px dotted $dark-shade-25;
+        height: 1px;
+        margin: 0 10px 8px 20px;
     }
 
-    &__room-info{
-        margin-bottom: 20px;
+    &__rate-button{
+        margin: 0 auto 0 20px;
     }
+
+    &__rate-count{
+        line-height: 18px;
+        color: $dark-shade-50;
+        margin-right: 20px;
+    }
+
+
+    
+
+
+
 }

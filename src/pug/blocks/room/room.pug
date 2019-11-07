@@ -1,7 +1,7 @@
 include ../../blocks/rate-button/rate-button
 
 mixin room(data)
-  .room
+  .room(class=data.roomClass)
     +slider(
         {
          items        : data.imageItems,
@@ -12,14 +12,15 @@ mixin room(data)
         {roomNumber  : data.roomNumber,
          roomType    : data.roomType,
          roomPrice   : data.roomPrice,
-         roomInfoClass: "room__room-info"
+         roomInfoClass: "room__room-info room-info--font-size-small"
         }
     )
     .room__line
     +rate-button(
-      { name      : "rate-2",
-        value     : 5,
-        checked   : 5
+      { name           : "rate-2",
+        value          : 5,
+        checked        : data.rateChecked,
+        rateButtonClass: "room__rate-button"
       }
     )
     .room__rate-count 

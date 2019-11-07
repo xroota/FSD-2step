@@ -11,7 +11,7 @@
 
     &__number::before{ 
         content: '№ ';
-        font-size: 60%; 
+        font-size: 14px; 
         margin: 0;
         padding: 0;
     }   
@@ -27,5 +27,9 @@
         margin-left: auto;
         color: $dark-shade-50;
         font-size: 14px;
+    }
+
+    &--font-size-small &__number{
+        font-size: 18px;
     }
 }

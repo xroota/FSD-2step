@@ -14,6 +14,8 @@ block content
   include ../../blocks/slider/slider
   include ../../blocks/room/room
   include ../../blocks/calendar/calendar
+  include ../../blocks/logo/logo
+  +logo("../../../assets/img/logo.svg","red")
   .cards
     +card({
         title    : "Найдём номера под ваши пожелания",
@@ -361,10 +363,12 @@ block content
     })
 
     +room(
-        { roomNumber  : "880",
+        { roomNumber  : "888",
           roomType    : "люкс",
           roomPrice   : "9 990",
           rateCount   : 145,
+          rateChecked : 5,
+          roomClass   : "cards__room",
           imageItems: [
              {imagePath      : "./assets/img/img1.jpg"
              },
@@ -378,4 +382,23 @@ block content
            ]
         }
       )
-     
+    +room(
+        { roomNumber  : "840",
+          roomType    : "",
+          roomPrice   : "9 990",
+          rateCount   : 65,
+          rateChecked : 4,
+          roomClass   : "cards__room",
+          imageItems: [
+             {imagePath      : "./assets/img/840.jpg"
+             },
+             {imagePath      : "./assets/img/img2.jpg"
+             },
+             {imagePath      : "./assets/img/img2.jpg"
+             },
+             {imagePath      : "./assets/img/img4.jpg"
+             }
+
+           ]
+        }
+      )

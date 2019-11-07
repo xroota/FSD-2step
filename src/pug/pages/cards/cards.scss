@@ -10,6 +10,14 @@
 @import "../../blocks/room/room";
 @import "../../blocks/calendar/calendar.scss";
 @import "../../blocks/air-datepicker/air-datepicker.scss";
+
+.logo {
+    position: absolute;
+    left: 30px;
+    top:30px;
+    margin: 0;
+}
+
 .cards{
   display: flex;
   align-content: space-between;
@@ -20,6 +28,10 @@
   padding: 149px 140px 130px 140px;
 
   &__calendar{
+    margin-bottom: 40px;
+  }
+
+  &__room{
     margin-bottom: 40px;
   }
 

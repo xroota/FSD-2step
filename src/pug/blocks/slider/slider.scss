@@ -45,11 +45,13 @@
     %nav-btn{
         position: absolute;
         @extend %material-icons;
-        width: 24px;
-        height: 24px;
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+        justify-content: center;
         color: $white;
         transform: rotate(-90deg);
-        top: calc(50% - 25px);
+        top: calc(50% -26px);
         &:hover{
             cursor: pointer;
         }
@@ -65,18 +67,19 @@
 
     &__prev-btn {
         @extend %nav-btn;
-        left: 20px;
+        left: 0px;
     }
     
     &__next-btn {
         @extend %nav-btn;
-        right: 20px;
+        right: 0px;
     }
 
     &__nav-btns {
         position: absolute;
         width: 100%;
-        bottom: 20px;
+        bottom: 13px;
+        right: 13px;
         padding: 0;
         margin: 0;
         text-align:right;
@@ -90,7 +93,7 @@
         height: 7.5px;
         border: 1px solid $white;
         border-radius: 50%;
-        margin: 3px;
+        margin: 2px;
         box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
     }
 
