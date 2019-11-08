@@ -1,0 +1,31 @@
+include ../../blocks/logo/logo
+include ../../blocks/button/button
+
+mixin header(data)
+  .header(class = data.headerClass)
+    +logo({
+        logoClass: "header__logo"
+    })
+    ul.header__nav
+      each item in data.navItems
+         li.header__nav-item(class= (item.hasSubmenu == true) ? "header__nav--has-submenu" : "")
+           .header__nav-text!= item.text
+           if (item.symbol)
+               .header__nav-symbol= item.symbol= item.symbol
+    
+    .header__buttons-auth
+        +button({
+            name       : "btn-header-login",
+            text       : data.buttonLoginText,
+            symbol     : "",
+            buttonClass: "header__button-login button--border button--padding-0"
+        })
+
+        +button({
+            name       : "btn-header-register",
+            text       : data.buttonRegisterText,
+            symbol     : "",
+            buttonClass: "header__button-register button--fill button--padding-0"
+        })
+    .header__user= data.userName
+

@@ -2,14 +2,14 @@
     padding: 14px 22px 15px 18px;
     position: relative;
     border-radius: 22px;
-    
+
     &__text{
         @extend %h3;
         vertical-align: middle;
         color: #ffffff;
         width: 100%;
         text-align: center;
-        margin-right: 0;
+        margin-right: 0;   
     } 
 
     &__symbol {
@@ -20,8 +20,6 @@
         width: 44px;
         position: absolute;
         justify-content: center;
-
-
     }
 
     &.button--fill {
@@ -29,34 +27,21 @@
          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
          color: #FFFFFF;
     }
-    &.button--border {
+    &.button--border{
         position: relative;
-        $border: 2px;
-        background: #fff;
-        background-clip: padding-box; /* !importanté */
-        border: solid $border transparent; /* !importanté */   
-        padding: 12px 24px 13px 24px;
+        background-image: linear-gradient(180deg,#bc9cff,#8ba4f9);
+        background-origin: border-box;
+        border: 2px solid transparent;
+        box-shadow: inset 0 3.125rem #fff;
     }
 
     &.button--border &__text{
-        color: $purple;  
-        
+        color: $purple;   
     }
 
-   &.button--border::before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: -1;
-        margin: -2px; /* !importanté */
-        border-radius: inherit; /* !importanté */
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        
-    }
 
     &.button--border-none &__text{
-        color: $purple;  
-        
+        color: $purple;   
     }
 
     &.button--border-none{
@@ -72,8 +57,6 @@
 
     &.button--disabled:before{
         filter: opacity(0.7);
-        
-        
     }
 
     &.button--border.button--disabled{
@@ -81,7 +64,7 @@
         position: relative;
         $border: 2px;
         color: $purple;
-        background: #fff;
+        //background: #fff;
         background-clip: padding-box; /* !importanté */
         border: solid $border transparent; /* !importanté */
     }
@@ -90,10 +73,6 @@
         width: 100%;
     }   
 
-    &.button--width-normal{
-        width: 99px;
-
-    }
     
     &.button--width-normal{
         width: 99px;
@@ -101,8 +80,7 @@
         padding-right: 0;
     }
     
-   
-
-
-
+    &.button--padding-0 {
+        padding: 0;
+    }
 }

@@ -3,3 +3,13 @@ mixin button(data)
     div.button__text= data.text
     if (data.symbol)
       .button__symbol= data.symbol
+
+//-  Пример вызова
+
+  +button({
+    name       : "btn7",              //- Имя кнопки                                   
+    text       : "Войти",             //- Текст кнопки   
+    symbol     : "arrow_forward",     //- Символ Material Icons 
+    buttonClass: "card-login__button" //- Модификаторы кнопки
+        })
+

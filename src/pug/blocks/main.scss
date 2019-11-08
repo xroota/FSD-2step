@@ -33,6 +33,7 @@ body {
     font-size: $mainFontSize;
     font-weight: $mainFontWeight;
     color: $dark-shade-100;
+    background: $background-color;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -76,8 +77,9 @@ h3 {
     box-sizing: border-box;
 }
 // Modules
- @import "modules/header.scss";
+ //@import "modules/header.scss";
  //@import "modules/content.scss";
  //@import "../../pug/pages/colors-and-types/colors-and-types.scss";
-@import "../../pug/pages/cards/cards";
+//@import "../../pug/pages/cards/cards";
+@import "../../pug/pages/headers-footers/headers-footers"; 
 //@import "~bootstrap/dist/css/bootstrap.min.css"; 
