@@ -1,0 +1,16 @@
+.social{
+    display : grid;
+    column-gap: 20px;
+    grid-template-columns: auto auto auto; 
+
+    &__item{
+        font-family: "Font Awesome 5 Brands";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

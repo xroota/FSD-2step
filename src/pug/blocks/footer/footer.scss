@@ -1,0 +1,104 @@
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/social/social";
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 106px 140px 0 140px;
+    background: $white;
+    height: 443px;
+
+    &__logo{
+        margin-top: -5px;
+        margin-bottom: -7px;
+    }
+
+
+    &__nav{
+        display: grid;
+        grid-template-columns: 300px 200px 200px 200px 260px; 
+        padding-left: -1px;
+    }
+
+    &__nav-item{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__nav-item-title{
+        @extend %h3;
+        margin-bottom:21px;
+        letter-spacing: -0.3px
+    }
+
+
+    &__subitem{
+        list-style: none;
+        line-height: 17px;
+        color: $dark-shade-50;
+        margin-bottom: 21px;
+        letter-spacing: -0.15px;
+        
+    }
+    &__subitem-text{
+        line-height: 24px;
+        color: $dark-shade-100;
+        padding-right: 40px;
+        margin-top: -2px;
+        letter-spacing: -0.15px;
+    }
+
+    &__copyright{
+
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.footer--theme-light &__nav-item:not(:first-child){
+        display: none;
+    }
+
+    &.footer--theme-light &__nav{
+        display: grid;
+        grid-template-columns: 580px ; 
+        justify-content: center;
+
+        padding-left: -1px;
+    }
+
+    &.footer--theme-light &__nav-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &.footer--theme-light &__subitem-text{
+        letter-spacing: 0.05px; 
+
+    }
+
+    &.footer--theme-light &__logo {
+        margin-right: 36px;
+    }
+
+    &.footer--theme-light &__copyright{
+        justify-content: center;
+    }
+
+    &.footer--theme-light &__copyright-text{
+        display: none;
+    }
+
+    &.footer--theme-light{
+        height: 367px;
+        justify-content: flex-start;
+    }
+    
+
+
+}

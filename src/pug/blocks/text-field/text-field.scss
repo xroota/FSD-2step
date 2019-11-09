@@ -1,5 +1,6 @@
 .text-field{
     width: 100%;
+    background: $white;
     &__title {
     margin: 0 0 5px 0;
     box-sizing: border-box;
@@ -32,6 +33,7 @@
         min-width: 42px;
         color: $dark-shade-50;
         justify-content: center;
+        z-index: 1;
     }
 
     &--menu-visible &__input-button{

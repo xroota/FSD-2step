@@ -5,6 +5,7 @@ block variables
 block header
 block content
   include ../../blocks/header/header
+  include ../../blocks/footer/footer
   .headers-footers
     +header(
       { headerClass        : "headers-footers__header",
@@ -62,3 +63,69 @@ block content
          ]
       }
     )
+    +footer({
+      footerText      : "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+      navItems        : [
+         {navTitle    : "Navigation",
+          navSubitems : [
+              {title   : "About Us"},
+              {title   : "News"},
+              {title   : "Support"},
+              {title   : "Products"}
+          ]
+         },
+         {navTitle    : "ABOUT US",
+          navSubitems : [
+              {title   : "Who we are"},
+              {title   : "Our team"},
+              {title   : "Careers"},
+              {title   : "Investors"}
+          ]
+         },
+         {navTitle    : "Support",
+          navSubitems : [
+              {title   : "Documentation"},
+              {title   : "Community"},
+              {title   : "Get in Touch"}
+          ]
+         }
+      ],
+      subscribeTitle       : "Subscribe to our newsletter",
+      subscribeText        : "Receive our latest news and promotions in your inbox!",
+      subscribePlaceholder : "Your email address",
+      copyrightText        : "Copyright © 2018 Toxin UI Kit. All rights reserved."
+  })
+
+    +footer({
+      footerClass       : "footer--theme-light",
+      footerText      : "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+      navItems        : [
+         {navTitle    : "Navigation",
+          navSubitems : [
+              {title   : "About Us"},
+              {title   : "News"},
+              {title   : "Support"},
+              {title   : "Products"}
+          ]
+         },
+         {navTitle    : "ABOUT US",
+          navSubitems : [
+              {title   : "Who we are"},
+              {title   : "Our team"},
+              {title   : "Careers"},
+              {title   : "Investors"}
+          ]
+         },
+         {navTitle    : "Support",
+          navSubitems : [
+              {title   : "Documentation"},
+              {title   : "Community"},
+              {title   : "Get in Touch"}
+          ]
+         }
+      ],
+      subscribeTitle       : "Subscribe to our newsletter",
+      subscribeText        : "Receive our latest news and promotions in your inbox!",
+      subscribePlaceholder : "Your email address",
+      copyrightText        : "Copyright © 2018 Toxin UI Kit. All rights reserved."
+  })

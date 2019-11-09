@@ -1,0 +1,46 @@
+include ../../blocks/text-field/text-field
+include ../../blocks/social/social
+
+mixin footer(data)
+    .footer(class= data.footerClass)
+        .footer__nav
+            ul.footer__nav-item
+                li.footer__subitem
+                    +logo({
+                       logoClass: "footer__logo",
+                       type     : "full"
+                    })
+                li.footer__subitem-text= data.footerText
+            each item in data.navItems
+                ul.footer__nav-item
+                    .footer__nav-item-title= item.navTitle
+                    each subitem in item.navSubitems
+                        li.footer__subitem= subitem.title
+            ul.footer__nav-item
+                .footer__nav-item-title= data.subscribeTitle
+                li.footer__subitem-text= data.subscribeText
+                li.footer__subitem
+                +text-field({
+                    title         : "",
+                    titleText     : "",
+                    placeholder  : data.subscribePlaceholder,
+                    inputText    : "",
+                    readOnly      : false,
+                    buttonText    : "arrow_forward",
+                    textFieldClass: "header__subscribe-field"
+                }
+        )
+        .footer__copyright
+            .footer__copyright-text= data.copyrightText
+            +social({
+                items:[
+                    {socialSymbol : ""  
+                    },
+                    {socialSymbol : ""  
+                    },
+                    {socialSymbol : ""  
+                    }
+                ]
+            })
+          
+

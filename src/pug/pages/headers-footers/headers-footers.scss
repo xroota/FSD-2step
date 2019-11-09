@@ -1,11 +1,11 @@
 @import "../../blocks/header/header";
-
+@import "../../blocks/footer/footer";
 
 .headers-footers{
     //background: #E5E5E5;
     padding: 150px 0;
     display: grid; 
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
     row-gap: 39px;
     &__header{
         

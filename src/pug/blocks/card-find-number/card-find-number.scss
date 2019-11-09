@@ -1,0 +1,17 @@
+@import "../../blocks/card/card";
+@import "../../blocks/air-datepicker/datepicker.min";
+@import "../../blocks/calendar/calendar";
+@import "../../blocks/drop-down/drop-down";
+@import "../../blocks/drop-down-date/drop-down-date";
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/button/button";
+
+
+.card-find-number{
+    margin-bottom: 38px;
+      &__drop-down-guests{
+          margin-top: 20px;
+          margin-bottom: 31px;
+      }
+  
+  }

@@ -1,0 +1,43 @@
+include ../calendar/calendar
+include ../text-field/text-field
+
+mixin drop-down-date(data)
+  .drop-down-date(class=data.dropDownClass)&attributes(attributes)
+    .drop-down-date__dates
+      +text-field(
+          {title         : data.titleFrom,
+           titleText     : "",
+           placeholder   : data.placeholder,
+           inputText     : "",
+           buttonText    : "expand_more",
+           readOnly      : true,
+           textFieldClass: "text-field--placeholder-dark-75"
+           }
+        )
+      if (data.titleTo)
+        +text-field(
+            {title         : data.titleTo,
+             titleText     : "",
+             placeholder   : data.placeholder,
+             inputText     : "",
+             buttonText    : "expand_more",
+             readOnly      : true,
+             textFieldClass: "text-field--placeholder-dark-75"
+             }
+          )
+    .drop-down-date__menu
+      +calendar({
+        calendarClass: "drop-down-date__calendar"
+      })
+      if(data.menuButtons)
+        .drop-down-date__menu-buttons
+          each item in data.menuButtons 
+            +button({ 
+              name       : item.name,
+              text       : item.text,
+              symbol     : "",
+              buttonClass: "button--border-none"
+              })
+
+
+

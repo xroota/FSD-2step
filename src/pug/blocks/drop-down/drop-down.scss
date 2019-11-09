@@ -1,11 +1,16 @@
+@import "../../blocks/calendar/calendar";
+
 .drop-down{
     width: 100%;
+    position: relative;
     &__menu{
         display: none;
         border: 1px solid $dark-shade-25;
         border-radius: 0 0 4px 4px;
         border-top-style: none; 
         padding: 7px 7px 13px 15px;
+        background: white;
+        z-index: 2;
     }
     
     &__items{
@@ -76,6 +81,15 @@
     &--width-flex-two-on-line{
         width:46.875%;
     }
+
+    &.drop-down--menu-visible &__menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        
+
+    }
+    
     
 
 

@@ -4,7 +4,8 @@ include ../../blocks/button/button
 mixin header(data)
   .header(class = data.headerClass)
     +logo({
-        logoClass: "header__logo"
+        logoClass: "header__logo",
+        type     : "full"
     })
     ul.header__nav
       each item in data.navItems

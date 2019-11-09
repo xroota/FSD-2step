@@ -1,4 +1,7 @@
 include ../../blocks/text-field/text-field
+include ../../blocks/calendar/calendar
+
+
 
 mixin drop-down(data)
   .drop-down(class=data.dropDownClass)&attributes(attributes)
@@ -15,16 +18,24 @@ mixin drop-down(data)
       
     .drop-down__menu
       if data.addCalendar
-        .data-picker(class="datepicker-here")
-      ul.drop-down__items
-        each item in data.items
-          li.drop-down__item
-            div.drop-down__item-text= item.text
-            .drop-down__item-group
-              button.drop-down__item-button -
-              input.drop-down__item-input(type="text", name="drop-down__input-" value= item.value )
-              button.drop-down__item-button +
+          +calendar({
+            calendarClass: "cards__calendar"
+          })
+      if (data.items)
+        ul.drop-down__items
+          each item in data.items
+            li.drop-down__item
+              div.drop-down__item-text= item.text
+              .drop-down__item-group
+                button.drop-down__item-button -
+                input.drop-down__item-input(type="text", name="drop-down__input-" value= item.value )
+                button.drop-down__item-button +
       if(data.menuButtons)
         .drop-down__menu-buttons
           each item in data.menuButtons 
-            button(class="drop-down__menu-button" name= item.name )= item.text
+            +button({ 
+              name       : item.name,
+              text       : item.text,
+              symbol     : "",
+              buttonClass: "button--border-none"
+              })

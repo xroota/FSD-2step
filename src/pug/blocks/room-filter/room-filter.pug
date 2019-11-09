@@ -1,0 +1,121 @@
+include ../drop-down-date/drop-down-date
+include ../drop-down/drop-down
+include ../range-slider/range-slider
+include ../checkbox-list/checkbox-list
+include ../extra-list/extra-list
+
+
+mixin room-filter(data)
+    .room-filter
+        +drop-down-date({
+            titleFrom     : "Дата пребывания в отеле",
+            titleTo       : "",
+            placeholder   : "ДД.ММ.ГГГГ",
+            menuButtons  : [{
+                text      : "Очистить",
+                name      : "clear",
+            },{
+                text      : "Применить",
+                name      : "apply",
+            }],
+            dropDownClass: "room-filter__drop-down-date"
+        })
+        +drop-down({
+            dropDownClass: "room-filter__drop-down-guests",
+            title         : "Гости",
+            titleText     : "",
+            placeholder   : "Сколько гостей",
+            inputText     : "",
+            readOnly      : true,
+            buttonText    : "",
+            textFieldClass: "text-field--placeholder-dark-75",
+            items        : [{
+                text      : "Взрослые",
+                value     : 0
+                },{
+                text      : "Дети",
+                value     : 0
+                },{
+                text      : "Младенцы",
+                value     : 0
+                }
+            ],
+            menuButtons  : [{
+                text      : "Очистить",
+                name      : "clear"
+                },{
+                text      : "Применить",
+                name      : "apply"
+                },
+            ]
+        })
+        +range-slider({
+            title        : "Диапазон цены",
+            value        : "5 000₽ - 10 000₽",
+            text         : "Стоимость за сутки пребывания в номере"
+        })
+        +checkbox-list({
+            title        : "Checkbox Buttons",
+            buttonText   : "",
+            name         : "cl",
+            checkboxClass: "checkbox-list--menu-visible", 
+            items        : [{
+                text      : "Можно курить",
+                value     : false
+                },{
+                text      : "Можно с питомцами",
+                value     : true
+                },{
+                text      : "Можно пригласить гостей (до 10 человек)",
+                value     : true
+            }]
+        })
+        +checkbox-list({
+            title       : "доступность",
+            buttonText   : "",
+            name         : "rcb",
+            checkboxClass: "checkbox-list--menu-visible", 
+            items        : [{
+                title     : "Широкий коридор",
+                text      : "Ширина коридоров в номере не менее 91 см.",
+                value     : false
+                },{
+                title     : "Помощник для инвалидов",
+                text      : "На 1 этаже вас встретит специалист и проводит до номера.",
+                value     : true
+                }]
+        })
+        +extra-list({
+            items        : [{
+                title     : "Комфорт",
+                text      : "Шумопоглощающие стены",
+                symbol    : "insert_emoticon"
+                 },{
+                title     : "Удобство",
+                text      : "Окно в каждой из спален",
+                symbol    : "location_city"
+                }]
+            }
+        )
+        +drop-down({
+            dropDownClass: "",
+            title         : "удобства номера",
+            titleText     : "",
+            placeholder   : "2 спальни, 2 кровати...",
+            inputText     : "",
+            readOnly      : true,
+            buttonText    : "",
+            textFieldClass: "text-field--placeholder-dark-75",
+            items        : [{
+                text      : "Спальни",
+                value     : 2
+                },{
+                text      : "Кровати",
+                value     : 2
+                },{
+                text      : "Ванные комнаты",
+                value     : 0
+            }]
+         
+         }
+      )

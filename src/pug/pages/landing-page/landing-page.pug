@@ -1,0 +1,74 @@
+block variables
+  - var title = "Landing page";
+  - var author = "enlore";
+  - var theGreat = "<span>escape!</span>";
+block header
+block content
+  include ../../blocks/header/header
+  include ../../blocks/footer/footer
+  include ../../blocks/card-find-number/card-find-number
+
+
+
+  +header(
+      { headerClass        : "headers-footers__header",
+        buttonLoginText    : "Войти",
+        buttonRegisterText : "Зарегистрироваться",
+        userName           : "",
+        navItems: [
+           {text      : "О нас",
+            symbol    : ""
+           },
+           {text      : "Услуги",
+            symbol    : "expand_more",
+            hasSubmenu: true
+           },
+           {text      : "Вакансии",
+            symbol    : ""
+           },
+           {text      : "Новости",
+            symbol    : ""
+           },
+           {text      : "Соглашения",
+            symbol    : "expand_more",
+            hasSubmenu: true
+           }
+         ]
+      }
+    )
+  .landing-page
+    +card-find-number({
+        cardClass : "landing-page__card-find-number"
+    })
+  +footer({
+      footerText      : "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+      navItems        : [
+         {navTitle    : "навигация",
+          navSubitems : [
+              {title   : "О нас"},
+              {title   : "Новости"},
+              {title   : "Служба поддержки"},
+              {title   : "Услуги"}
+          ]
+         },
+         {navTitle    : "о нас",
+          navSubitems : [
+              {title   : "О сервисе"},
+              {title   : "Наша команда"},
+              {title   : "Вакансии"},
+              {title   : "Инвесторы"}
+          ]
+         },
+         {navTitle    : "Служба поддержки",
+          navSubitems : [
+              {title   : "Соглашения"},
+              {title   : "Сообщества"},
+              {title   : "Связь с нами"}
+          ]
+         }
+      ], 
+      subscribeTitle       : "Подписка",
+      subscribeText        : "Получайте специальные предложения и новости сервиса",
+      subscribePlaceholder : "Email",
+      copyrightText        : "Copyright © 2018 Toxin отель. Все права зачищены."
+  })
