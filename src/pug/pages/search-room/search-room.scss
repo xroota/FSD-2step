@@ -1,11 +1,11 @@
 @import "../../blocks/header/header";
 @import "../../blocks/footer/footer";
-@import "../../blocks/room-filter/room-filter"; 
+@import "../../blocks/room-filter/room-filter";
 
-.search-room{
-    display: grid;
-    grid-template-columns: 266px;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-    background: $white;
+.search-room {
+  display: grid;
+  grid-template-columns: 266px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  background: $white;
 }
