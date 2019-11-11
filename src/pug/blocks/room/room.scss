@@ -1,4 +1,6 @@
 @import "../../blocks/rate-button/rate-button";
+@import "../../blocks/room-info/room-info";
+@import "../../blocks/slider/slider";
 
 .room{
     display: flex;
@@ -6,12 +8,13 @@
     justify-content: space-between;
     width: 270px;
 
+
     &__slider{
         margin-bottom: 10px;
     }
 
     &__room-info{
-        margin-bottom: 8px;
+        margin-bottom: 5px;
         padding: 0 18px 0 19px;
     }
 
@@ -37,6 +40,7 @@
         line-height: 18px;
         color: $dark-shade-50;
         margin-right: 20px;
+        margin-bottom: 23.37px;
     }
 
 

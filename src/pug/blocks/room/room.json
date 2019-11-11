@@ -1,0 +1,170 @@
+[
+  {
+    "roomNumber": 888,
+    "roomType": "люкс",
+    "roomPrice": "9 990",
+    "rateCount": 145,
+    "rateChecked": 5,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/888.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 840,
+    "roomType": "",
+    "roomPrice": "9 990",
+    "rateCount": 65,
+    "rateChecked": 4,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/840.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 980,
+    "roomType": "",
+    "roomPrice": "8 500",
+    "rateCount": 19,
+    "rateChecked": 5,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/980.jpg"},
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 856,
+    "roomType": "",
+    "roomPrice": "8 500",
+    "rateCount": 19,
+    "rateChecked": 5,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/856.jpg"},
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 740,
+    "roomType": "",
+    "roomPrice": "6 000",
+    "rateCount": 44,
+    "rateChecked": 4,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/740.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 982,
+    "roomType": "",
+    "roomPrice": "5 800",
+    "rateCount": 56,
+    "rateChecked": 3,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/982.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 678,
+    "roomType": "",
+    "roomPrice": "5 500",
+    "rateCount": 45,
+    "rateChecked": 5,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/678.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 450,
+    "roomType": "",
+    "roomPrice": "5 300",
+    "rateCount": 39,
+    "rateChecked": 4,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/450.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 350,
+    "roomType": "",
+    "roomPrice": "5 000",
+    "rateCount": 77,
+    "rateChecked": 3,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/350.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 666,
+    "roomType": "",
+    "roomPrice": "5 000",
+    "rateCount": 25,
+    "rateChecked": 5,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/666.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 444,
+    "roomType": "",
+    "roomPrice": "5 000",
+    "rateCount": 15,
+    "rateChecked": 3,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/444.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  },
+  {
+    "roomNumber": 352,
+    "roomType": "",
+    "roomPrice": "5 000",
+    "rateCount": 55,
+    "rateChecked": 3,
+    "roomClass": "",
+    "imageItems": [
+      { "imagePath": "./assets/img/rooms/352.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/img4.jpg" }
+    ]
+  }
+]

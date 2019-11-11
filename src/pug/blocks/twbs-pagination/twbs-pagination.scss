@@ -1,5 +1,6 @@
 .twbs-pagination{
     display: inline-block;
+    padding: 0;
     .page-item:last-child .page-link{
         border-radius: 22px ;
     }
@@ -15,14 +16,18 @@
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         color: #fff;
         z-index: 1;
+
     }
 
     & li {
         display: inline-block;
+        min-width: 40px;
+        min-height: 40px;
     }
     & .page-link {
-        width: 40px;
-        height: 40px;
+        display: block;
+        min-width: 40px;
+        min-height: 40px;
         border: none;
         border-radius: 22px;
         text-align: center;
@@ -33,6 +38,7 @@
         font-weight: normal;
         font-size: 12px;
         padding: 0;
+        text-decoration: none;
       
         //@extend %h3;
     }

@@ -4,3 +4,31 @@
 @import "../range-slider/range-slider"; 
 @import "../checkbox-list/checkbox-list"; 
 @import "../extra-list/extra-list"; 
+
+
+.room-filter{
+    &__dates{
+        margin-bottom: 20px;
+    }
+
+    &__guests{
+        margin-bottom: 30px;
+    }
+
+    &__range-slider{
+        margin-bottom: 20px;
+    }
+
+    &__cost{
+        margin-bottom: 15px;
+    }
+
+    &__check-list-1{
+        margin-bottom: 2px;
+    }
+
+    &__check-list-2{
+        margin-bottom: 1px;
+    }
+
+}

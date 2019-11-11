@@ -5,8 +5,8 @@
 
 .ui-slider .ui-slider-handle {
     //Стилизация ползунка
-    width: 12px;
-    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
     position: absolute;
 	z-index: 2;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -21,8 +21,8 @@
     left: -1px;
     top: -1px;
     position: absolute;
-    width: 12px;
-    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
     content: '';
     border: 2px solid #FFFFFF;
     border-radius: 10px;

@@ -37,12 +37,24 @@ block content
 
 
     include ../../blocks/room-filter/room-filter
+    include ../../blocks/room-list/room-list
+    include ../../blocks/pagination/pagination
 
     .search-room
         +room-filter()
+        .search-room__result
+          h1.search-room__result-title Номера, которые мы для вас подобрали
+          +room-list({roomListClass : "search-room__room-list"})
+          +pagination(  
+           {
+              paginationClass : "search-room__pagination", 
+              title           : "",
+              text            : "1 – 12 из 100+ вариантов аренды"
+            }
+          )    
 
 
 block footer
   include ../../blocks/footer/footer
   
-  +footer('demo')
+  +footer('toxin')

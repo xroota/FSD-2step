@@ -1,5 +1,7 @@
+include ../twbs-pagination/twbs-pagination
+
 mixin pagination(data)
-  .pagination
+  .pagination(class=data.paginationClass)
     .pagination__title= data.title
     .pagination__box
       +twbs-pagination()

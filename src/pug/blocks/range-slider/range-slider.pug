@@ -1,7 +1,7 @@
 include ../ui-slider/ui-slider
 
 mixin range-slider(data)
-  .range-slider
+  .range-slider(class = data.rangeSliderClass)
       .range-slider__value= data.value
       .range-slider__title= data.title
       +ui-slider()

@@ -6,15 +6,14 @@ include ../../blocks/social/social
 - var rootDir = require('path').resolve() 
 - var dataJson = JSON.parse(fs.readFileSync(rootDir+'/src/pug/blocks/footer/footer.json'));
 
+
+
 mixin footer(name)
      
     - for (var x = 0; x < dataJson.length; x++)
         if(dataJson[x].id===name)
             - var data= dataJson[x].data
-    //- var footerItems = dataJson[1]
         
-
-  
     .footer(class= data.footerClass)
         .footer__nav 
             ul.footer__nav-item

@@ -1,0 +1,12 @@
+include ../room/room
+
+- var  fs = require('fs')
+- var rootDir = require('path').resolve() 
+- var dataJson = JSON.parse(fs.readFileSync(rootDir+'/src/pug/blocks/room-list/room-list.json'));
+
+mixin room-list(data)
+    .room-list(class=data.roomListClass)
+        each rooms in dataJson
+            +room(rooms.roomNumber)
+
+

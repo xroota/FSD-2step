@@ -9,7 +9,7 @@ mixin room-filter(data)
     .room-filter
         +drop-down-date({
             dropDownClass: "room-filter__dates",
-            titleFrom     : "Дата пребывания в отеле",
+            titleFrom     : "Даты пребывания в отеле",
             titleTo       : "",
             placeholder   : "ДД.ММ.ГГГГ",
             menuButtons  : [{
@@ -50,13 +50,13 @@ mixin room-filter(data)
             ]
         })
         +range-slider({
-            rangeSlicerClass : "",
+            rangeSliderClass : "room-filter__cost",
             title            : "Диапазон цены",
             value            : "5 000₽ - 10 000₽",
             text             : "Стоимость за сутки пребывания в номере"
         })
         +checkbox-list({
-            checkboxClass: "checkbox-list--menu-visible",
+            checkboxClass: "room-filter__check-list-1 checkbox-list--menu-visible",
             title        : "Checkbox Buttons",
             buttonText   : "",
             name         : "cl", 
@@ -75,7 +75,7 @@ mixin room-filter(data)
             title       : "доступность",
             buttonText   : "",
             name         : "rcb",
-            checkboxClass: "checkbox-list--menu-visible", 
+            checkboxClass: "room-filter__check-list-2 checkbox-list--menu-visible", 
             items        : [{
                 title     : "Широкий коридор",
                 text      : "Ширина коридоров в номере не менее 91 см.",
@@ -87,24 +87,47 @@ mixin room-filter(data)
                 }]
         })
 
-        +drop-down({
-            dropDownClass: "",
-            title         : "удобства номера",
-            titleText     : "",
-            placeholder   : "2 спальни, 2 кровати...",
-            inputText     : "",
-            readOnly      : true,
-            buttonText    : "",
-            textFieldClass: "text-field--placeholder-dark-75",
-            items        : [{
-                text      : "Спальни",
-                value     : 2
-                },{
-                text      : "Кровати",
-                value     : 2
-                },{
-                text      : "Ванные комнаты",
-                value     : 0
-            }]
-         
-        })
+        +drop-down(
+            {
+              "dropDownClass": "",
+              "title": "удобства номера",
+              "titleText": "",
+              "placeholder": "2 спальни, 2 кровати...",
+              "inputText": "",
+              "readOnly": true,
+              "buttonText": "",
+              "textFieldClass": "text-field--placeholder-dark-75",
+              "items": [
+                {
+                  "text": "Спальни",
+                  "value": 2
+                },
+                {
+                  "text": "Кровати",
+                  "value": 2
+                },
+                {
+                  "text": "Ванные комнаты",
+                  "value": 0
+                }
+              ]
+            }
+        )
+        +checkbox-list(
+            {
+              "title": "дополнительные удобства",
+              "buttonText": "expand_more",
+              "name": "cl",
+              "checkboxClass": "",
+              "items": [
+                { "text": "Завтрак", "value": false },
+                { "text": "Письменный стол", "value": true },
+                { "text": "Стул для кормления", "value": true },
+                { "text": "Кроватка", "value": true },
+                { "text": "Телевизор", "value": false },
+                { "text": "Шампунь", "value": false },
+                { "text": "Телевизор", "value": false },
+                { "text": "Шампунь", "value": false }
+              ]
+            }
+        )
