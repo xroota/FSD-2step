@@ -1,0 +1,76 @@
+mixin pie-chart(items, name='')
+  //- Creates pie-chart for given items, an array of object with properties
+  //- name, amount and color (optional).
+   
+  -
+    let totalAmount = 0;
+
+    items.forEach(item => {
+      totalAmount += item.amount;
+    });
+
+
+
+  .pie-chart
+    h2.text_level_h2.pie-chart__header= name
+    .pie-chart__chart
+      .pie-chart__diagram
+
+        -
+          const size = 120;
+          const baseWidth = 4;
+          const accentWidth = 10;
+          const gap = 2;
+          const radius = (size - baseWidth) / 2;
+          const totalLength = 2 * Math.PI * radius;
+          let position = -(totalLength / 4 + gap / 2);
+          items.forEach(item => {
+            item.length = item.amount ? item.amount / totalAmount * totalLength - gap : 0;
+          });
+
+        -
+          let colorToUse = 0;
+          items.forEach((item, index) => {
+            if (!item.color) {
+              item.color = `url(#gradient${colorToUse++})`;
+            }
+          }); 
+        svg.pie-chart__pie(width=size, height=size, data-accent-width= accentWidth)
+          defs
+            linearGradient#gradient0(x1=0 x2=0 y1=0 y2=1)
+              stop(offset='0%' stop-color='#919191')
+              stop(offset='100%' stop-color='#3d4975')
+            linearGradient#gradient1(x1=0 x2=0 y1=0 y2=1)
+              stop(offset='0%' stop-color='#bc9cff')
+              stop(offset='100%' stop-color='#8ba4f9')
+            linearGradient#gradient2(x1=0 x2=0 y1=0 y2=1)
+              stop(offset='0%' stop-color='#6fcf97')
+              stop(offset='100%' stop-color='#66d2ea')
+            linearGradient#gradient3(x1=0 x2=0 y1=0 y2=1)
+              stop(offset='0%' stop-color='#ffe39c')
+              stop(offset='100%' stop-color='#ffba9c')
+          
+          each item in items
+            circle(
+              r=radius
+              cx='50%'
+              cy='50%'
+              fill='none'
+              stroke= item.color
+              stroke-width=baseWidth
+              stroke-dasharray=`${item.length} ${totalLength - item.length}`
+              stroke-dashoffset= -position
+            )
+            - position += item.length + gap;
+          //- const wording = require('utils/wording');
+        .pie-chart__total= totalAmount +"голосов"
+            .text_level_h1
+            //-  span.pie-chart__total-line= total[0]
+            .text_level_h3
+            //-  span.pie-chart__total-line= total[1]
+      ul.pie-chart__legend
+        each item, index in items.reverse()
+          li.pie-chart__legend-item
+            svg(width=10 height=10)
+              circle(r=5 cx='50%' cy='50%' fill=item.color)
+            =item.name
