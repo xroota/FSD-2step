@@ -1,6 +1,6 @@
 mixin list(data)
   .list
-    .list__tile= data.title
+    .list__title= data.title
     each item in data.items
       +list-item({
         title    : "",

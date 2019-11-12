@@ -36,4 +36,26 @@
         top: 6px;
     }
 
+    &--is-bullet &__pic{
+        position: relative;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background: $dark-shade-25;
+        background-clip: border-box;
+        top: 6px;
+    }
+
+    &--is-text &__pic{
+        position: relative;
+        width: 10px;
+        height: 10px;
+        opacity: 0;
+        
+    }
+
+    &--tiile-large{
+        
+    }
+
 }

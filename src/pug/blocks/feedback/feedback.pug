@@ -1,19 +1,25 @@
-mixin feedback(data)
+include ../../blocks/list-item/list-item
+include ../../blocks/like-button/like-button
+
+mixin feedback(dataFeedbak)
   .feedback
-    +list-item({
-        title    : data.user,
-        text     : data.date,
-        symbol   : "",
-        urlPic   : data.userPic,
-        classItem: "list-item--is-picture"
-        })
-    .feedback__box
-        +like-button(
-          { name           : data.name+"-like",
-            value          : data.likeValue,
-            checked        : data.likeChecked,
-            likeButtonClass: "feedback__like-button"
-          }
-        )
-        .feedback__text= data.feedbackText
+    if (dataFeedbak.feedbackTitle)
+      .feedback__title= dataFeedbak.feedbackTitle
+    each data in dataFeedbak.feedbackItems
+      +list-item({
+          title    : data.user,
+          text     : data.date,
+          symbol   : "",
+          urlPic   : data.userPic,
+          classItem: "list-item--is-picture"
+          })
+      .feedback__box
+          +like-button(
+            { name           : data.name+"-like",
+              value          : data.likeValue,
+              checked        : data.likeChecked,
+              likeButtonClass: "feedback__like-button"
+            }
+          )
+          .feedback__text= data.feedbackText
 

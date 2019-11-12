@@ -1,4 +1,9 @@
 .extra-list{
+    &__title {
+        @extend %h2;
+        margin-bottom: 20px;
+      }
+      
     &__item{
         border-bottom: 1px solid rgba(31, 32, 65, 0.1);
         padding: 20px 0;

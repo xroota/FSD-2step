@@ -8,10 +8,54 @@
     "roomClass": "",
     "imageItems": [
       { "imagePath": "./assets/img/rooms/888.jpg" },
-      { "imagePath": "./assets/img/img2.jpg" },
-      { "imagePath": "./assets/img/img2.jpg" },
+      { "imagePath": "./assets/img/rooms/888-2.jpg" },
+      { "imagePath": "./assets/img/rooms/888-3.jpg" },
       { "imagePath": "./assets/img/img4.jpg" }
-    ]
+    ],
+    "details": {
+      "items": [
+        {
+          "title": "Комфорт",
+          "text": "Шумопоглощающие стены",
+          "symbol": "insert_emoticon"
+        },
+        {
+          "title": "Удобство",
+          "text": "Окно в каждой из спален",
+          "symbol": "location_city"
+        },
+        {
+          "title": "Уют",
+          "text": "Номер оснащён каминомн",
+          "symbol": "whatshot"
+        }
+      ]
+    },
+    "feedbackItems": [
+      {
+        "user": "Мурад Сарафанов",
+        "date": "5 дней назад",
+        "userPic": "../../assets/img/image.png",
+        "likeValue": 12,
+        "likeChecked": true,
+        "feedbackText": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+      },
+      {
+        "user": "Патрисия Стёклышкова",
+        "date": "Неделю назад",
+        "userPic": "../../assets/img/users/patricia.png",
+        "likeValue": 2,
+        "likeChecked": false,
+        "feedbackText": "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+      }
+    ],
+
+    "rules": [
+      { "text": "Нельзя с питомцами" },
+      { "text": "Без вечеринок и мероприятий" },
+      { "text": "Время прибытия — после 13:00, а выезд до 12:00" }
+    ],
+    "cancel"  : [{"text": "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."}]
   },
   {
     "roomNumber": 840,
@@ -35,7 +79,7 @@
     "rateChecked": 5,
     "roomClass": "",
     "imageItems": [
-      { "imagePath": "./assets/img/rooms/980.jpg"},
+      { "imagePath": "./assets/img/rooms/980.jpg" },
       { "imagePath": "./assets/img/img2.jpg" },
       { "imagePath": "./assets/img/img2.jpg" },
       { "imagePath": "./assets/img/img4.jpg" }
@@ -49,7 +93,7 @@
     "rateChecked": 5,
     "roomClass": "",
     "imageItems": [
-      { "imagePath": "./assets/img/rooms/856.jpg"},
+      { "imagePath": "./assets/img/rooms/856.jpg" },
       { "imagePath": "./assets/img/img2.jpg" },
       { "imagePath": "./assets/img/img2.jpg" },
       { "imagePath": "./assets/img/img4.jpg" }

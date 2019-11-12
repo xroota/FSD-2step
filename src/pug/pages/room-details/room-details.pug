@@ -5,7 +5,7 @@ block variables
 block header
 
   include ../../blocks/header/header
-
+ 
   +header(
       { headerClass        : "headers-footers__header",
         buttonLoginText    : "Войти",
@@ -35,16 +35,74 @@ block header
 
 block content
 
+    - var  fs = require('fs')
+    - var rootDir = require('path').resolve() 
+    - var dataJsonRoom = JSON.parse(fs.readFileSync(rootDir+'/src/pug/blocks/room/room.json'));
+    - var roomNumber = 888
+    - for (var x = 0; x < dataJsonRoom.length; x++)
+       if(dataJsonRoom[x].roomNumber===roomNumber)
+        - var data= dataJsonRoom[x]
+
     include ../../blocks/pie-chart/pie-chart
-    +pie-chart([
+    include ../../blocks/room-photos/room-photos
+    include ../../blocks/extra-list/extra-list
+    include ../../blocks/feedback/feedback
+    include ../../blocks/list/list
+
+    .room-details
+      .room-details__photo-box
+        +room-photos(
+          { roomPhotosClass : "room-details__room-photos-left",
+            roomNumber      : 888,
+            imageItems      : data.imageItems,
+            numPhotos       : [1]
+          }
+        )
+        +room-photos(
+          { roomPhotosClass : "room-details__room-photos-right",
+            roomNumber      : 888,
+            imageItems      : data.imageItems,
+            numPhotos       : [2,3]
+          }
+        )
+ 
+      +extra-list(
+        {
+          title: "Сведения о номере",
+          detailItems: data.details
+
+        })
+      +pie-chart([
         { name: 'Разочарован', amount: 0 },
         { name: 'Удовлетворительно', amount: 65 },
         { name: 'Хорошо', amount: 65 },
         { name: 'Великолепно', amount: 130 }
       ], 'Впечатления от номера')
-    
 
-    .room-details 
+      +feedback(
+        {
+          feedbackTitle: "Отзывы посетитилей номера",
+          feedbackItems: data.feedbackItems
+        }
+      )
+
+      +list({
+        title        : "Правила",
+        listItemClass: "list-item--is-bullet",
+
+        items        : data.rules 
+        }
+      )
+
+      +list({
+        title        : "Отмена",
+        listItemClass: "list-item--is-text",
+
+        items        : data.cancel
+        }
+      )
+ 
+     
 
 
 block footer
