@@ -1,10 +1,17 @@
 mixin text-field(data) 
   .text-field(class=data.textFieldClass)&attributes(attributes)
-    if data.title
-      .text-field__title-text= data.titleText 
-    if data.title
+    - var  fs = require('fs')
+    - var rootDir = require('path').resolve() 
+    - var dataElement = JSON.parse(fs.readFileSync(rootDir+'/src/pug/blocks/text-field/text-field.json'));
+    - for (x = 0; x < dataElement.length; x++)
+      if dataElement[x].type === data.type
+        - Object.assign(data, dataElement[x]);
+      if data.title-text
+        .text-field__title-text= data.titleText 
       h3.text-field__title= data.title
     .text-field__input-box
       input(type="text", class="text-field__input" , readonly=true && data.readOnly, value=data.inputText, placeholder= data.placeholder) 
       if data.buttonText
         .text-field__input-button= data.buttonText
+
+

@@ -42,12 +42,15 @@ block content
     - for (var x = 0; x < dataJsonRoom.length; x++)
        if(dataJsonRoom[x].roomNumber===roomNumber)
         - var data= dataJsonRoom[x]
+    
 
     include ../../blocks/pie-chart/pie-chart
     include ../../blocks/room-photos/room-photos
     include ../../blocks/extra-list/extra-list
     include ../../blocks/feedback/feedback
     include ../../blocks/list/list
+    include ../../blocks/card-booking/card-booking
+    include ../../blocks/text-field/text-field
 
     .room-details
       .room-details__photo-box
@@ -97,9 +100,16 @@ block content
       +list({
         title        : "Отмена",
         listItemClass: "list-item--is-text",
-
         items        : data.cancel
         }
+      )
+
+      +card-booking(data)
+      +text-field({
+        type : "mask",
+        text1:  "hekko"
+      }
+
       )
  
      

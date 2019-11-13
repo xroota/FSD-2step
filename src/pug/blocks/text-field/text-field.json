@@ -1,0 +1,7 @@
+[ 
+    { "type" : "mask",
+      "placeholder": "ДД.ММ.ГГГГ",
+      "inputText": "",
+      "readOnly": false
+    }
+]
