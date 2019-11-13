@@ -1,9 +1,15 @@
 include ../../blocks/text-field/text-field
-include ../../blocks/calendar/calendar
 
 
 
 mixin drop-down(data)
+  - var blockName = "drop-down"
+  - var  fs = require('fs')
+  - var rootDir = require('path').resolve() 
+  - var dataElementDD = JSON.parse(fs.readFileSync(rootDir + '/src/pug/blocks/' + blockName +'/' + blockName + '.json'));
+  - for (x = 0; x < dataElementDD.length; x++)
+    if dataElementDD[x].type === data.type
+      - Object.assign(data, dataElementDD[x]);
   .drop-down(class=data.dropDownClass)&attributes(attributes)
     +text-field(
         {title         : data.title,

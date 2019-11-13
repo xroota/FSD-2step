@@ -18,36 +18,12 @@ mixin card-booking(data)
       )(class="card-booking__drop-down-date-in")
 
       +drop-down(
-          {title         : "Гости",
-           titleText     : "",
-           placeholder   : "Сколько гостей",
-           inputText     : "3 гостя",
-           readOnly      : true,
-           buttonText    : "",
-           textFieldClass: "text-field--placeholder-dark-75",
-           items        : [
-             {text      : "Взрослые",
-              value     : 0
-             },
-             {text      : "Дети",
-              value     : 0
-             },
-             {text      : "Младенцы",
-              value     : 0
-             }
-           ],
-           menuButtons  : [
-             {text      : "Очистить",
-              name      : "clear",
-             },
-             {text      : "Применить",
-              name      : "apply",
-             },
-
-           ],
-           dropDownClass: "card-booking__guests"
-           }
-        )
+          {
+            type          : "guests",
+            title         : "Гости",
+            titleText     : "",
+          }
+        )(class="card-booking__guests")
 
       mixin calc-box(data)
         ul.card-booking__calc-items
