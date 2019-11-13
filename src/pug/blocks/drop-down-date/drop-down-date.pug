@@ -1,30 +1,33 @@
 include ../calendar/calendar
 include ../text-field/text-field
 
-mixin drop-down-date(data)
+
+
+mixin drop-down-date(data) 
+  //- Добавление данных из файла json по введенном type при вызове миксина
+  - var blockName = "drop-down-date"
+  - var  fs = require('fs')
+  - var rootDir = require('path').resolve() 
+  - var dataElementDD = JSON.parse(fs.readFileSync(rootDir + '/src/pug/blocks/' + blockName +'/' + blockName + '.json'));
+  - for (x = 0; x < dataElementDD.length; x++)
+    if dataElementDD[x].type === blockName
+      - Object.assign(data, dataElementDD[x]);
   .drop-down-date(class=data.dropDownClass)&attributes(attributes)
-    .drop-down-date__dates
-      +text-field(
-          {title         : data.titleFrom,
-           titleText     : "",
-           placeholder   : data.placeholder,
-           inputText     : "",
-           buttonText    : "expand_more",
-           readOnly      : true,
-           textFieldClass: "text-field--placeholder-dark-75"
-           }
+    .ss= data.titleFrom
+    .drop-down-date__dates  
+      +text-field( 
+        {
+          type          : blockName,
+          title         : data.titleFrom
+        }
         )
       if (data.titleTo)
         +text-field(
-            {title         : data.titleTo,
-             titleText     : "",
-             placeholder   : data.placeholder,
-             inputText     : "",
-             buttonText    : "expand_more",
-             readOnly      : true,
-             textFieldClass: "text-field--placeholder-dark-75"
-             }
-          )
+        {
+          type          : blockName,
+          title         : data.titleTo,
+        }
+        )
     .drop-down-date__menu
       +calendar({
         calendarClass: "drop-down-date__calendar"

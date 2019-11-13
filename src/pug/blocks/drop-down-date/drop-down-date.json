@@ -1,0 +1,10 @@
+[
+  {
+    "type": "drop-down-date",
+    "hekko": "hek",
+    "menuButtons": [
+      { "text": "Очистить", "name": "clear" },
+      { "text": "Применить", "name": "apply" }
+    ]
+  }
+]

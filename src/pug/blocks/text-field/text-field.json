@@ -3,5 +3,11 @@
       "placeholder": "ДД.ММ.ГГГГ",
       "inputText": "",
       "readOnly": false
-    }
+    },
+    { "type" : "drop-down-date",
+        "placeholder": "ДД.ММ.ГГГГ",
+        "inputText": "",
+        "readOnly": false,
+        "buttonText" : "expand_more"
+      }
 ]
