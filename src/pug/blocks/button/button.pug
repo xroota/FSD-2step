@@ -1,15 +1,16 @@
 mixin button(data)
-  button(class="button " + data.buttonClass, name= data.name)
+  - var blockName = "button"
+  - var  fs = require('fs')
+  - var rootDir = require('path').resolve() 
+  - var dataElementBtn = JSON.parse(fs.readFileSync(rootDir + '/src/pug/blocks/' + blockName +'/' + blockName + '.json'));
+  - for (x = 0; x < dataElementBtn.length; x++)
+    if dataElementBtn[x].type === data.type
+      - Object.assign(data, dataElementBtn[x]); 
+  
+  button(class="button " + data.buttonClass, name= data.name)&attributes(attributes)
     div.button__text= data.text
     if (data.symbol)
       .button__symbol= data.symbol
 
-//-  Пример вызова
 
-  +button({
-    name       : "btn7",              //- Имя кнопки                                   
-    text       : "Войти",             //- Текст кнопки   
-    symbol     : "arrow_forward",     //- Символ Material Icons 
-    buttonClass: "card-login__button" //- Модификаторы кнопки
-        })
 

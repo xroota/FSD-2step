@@ -1,0 +1,16 @@
+[
+  {
+    "type": "clear",
+    "text": "Очистить",
+    "name": "clear",
+    "symbol": "",
+    "buttonClass": "button--border-none button--color-grey"
+  },
+  {
+    "type": "apply",
+    "text": "Применить",
+    "name": "apply",
+    "symbol": "",
+    "buttonClass": "button--border-none"
+  }
+]

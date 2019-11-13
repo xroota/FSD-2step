@@ -16,7 +16,7 @@ mixin drop-down(data)
          titleText     : data.titleText,
          placeholder   : data.placeholder,
          inputText     : data.inputText,
-         buttonText    : "expand_more",
+         buttonText    : data.buttonText,
          readOnly      : true,
          textFieldClass: data.textFieldClass
          }
@@ -40,8 +40,5 @@ mixin drop-down(data)
         .drop-down__menu-buttons
           each item in data.menuButtons 
             +button({ 
-              name       : item.name,
-              text       : item.text,
-              symbol     : "",
-              buttonClass: "button--border-none"
+              type       : item.type
               })

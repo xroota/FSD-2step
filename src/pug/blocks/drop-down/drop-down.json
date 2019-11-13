@@ -4,7 +4,7 @@
     "placeholder": "Сколько гостей",
     "inputText": "",
     "readOnly": true,
-    "buttonText": "",
+    "buttonText": "expand_more",
     "textFieldClass": "text-field--placeholder-dark-75",
     "items": [
       { "text": "Взрослые", "value": 0 },
@@ -12,8 +12,9 @@
       { "text": "Младенцы", "value": 0 }
     ],
     "menuButtons": [
-      { "text": "Очистить", "name": "clear" },
-      { "text": "Применить", "name": "apply" }
+      { "type" : "clear" },
+      { "type" : "apply" }
     ]
   }
+
 ]

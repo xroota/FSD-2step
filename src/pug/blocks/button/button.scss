@@ -1,88 +1,90 @@
-.button{
-    padding: 14px 22px 15px 18px;
+.button {
+  padding: 14px 22px 15px 18px;
+  position: relative;
+  border-radius: 22px;
+
+  &__text {
+    @extend %h3;
+    vertical-align: middle;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  &__symbol {
+    top: 0;
+    right: 0;
+    @extend %material-icons;
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    justify-content: center;
+  }
+
+  &.button--fill {
+    border: none;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: #ffffff;
+  }
+  &.button--border {
     position: relative;
-    border-radius: 22px;
+    background-image: linear-gradient(180deg, #bc9cff, #8ba4f9);
+    background-origin: border-box;
+    border: 2px solid transparent;
+    box-shadow: inset 0 3.125rem #fff;
+  }
 
-    &__text{
-        @extend %h3;
-        vertical-align: middle;
-        color: #ffffff;
-        width: 100%;
-        text-align: center;
-        margin-right: 0;   
-    } 
+  &.button--border &__text {
+    color: $purple;
+  }
 
-    &__symbol {
-        top: 0;
-        right:0;  
-        @extend %material-icons;
-        height:44px;
-        width: 44px;
-        position: absolute;
-        justify-content: center;
-    }
+  &.button--border-none &__text {
+    color: $purple;
+  }
 
-    &.button--fill {
-         border: none;
-         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-         color: #FFFFFF;
-    }
-    &.button--border{
-        position: relative;
-        background-image: linear-gradient(180deg,#bc9cff,#8ba4f9);
-        background-origin: border-box;
-        border: 2px solid transparent;
-        box-shadow: inset 0 3.125rem #fff;
-    }
+  &.button--border-none {
+    border: none;
+    padding: 0;
+    color: $purple;
+    background: $white;
+  }
 
-    &.button--border &__text{
-        color: $purple;   
-    }
+  &.button--color-grey &__text{
+    color: $dark-shade-50;
+  }
 
+  &.button--disabled {
+    filter: opacity(0.7);
+  }
 
-    &.button--border-none &__text{
-        color: $purple;   
-    }
+  &.button--disabled:before {
+    filter: opacity(0.7);
+  }
 
-    &.button--border-none{
-        border: none;
-        padding: 0;  
-        color: $purple;
-        background: #fff;
-        }
+  &.button--border.button--disabled {
+    filter: none;
+    position: relative;
+    $border: 2px;
+    color: $purple;
+    //background: #fff;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+  }
 
-    &.button--disabled{
-        filter: opacity(0.7);
-    }
+  &.button--width-full {
+    width: 100%;
+  }
 
-    &.button--disabled:before{
-        filter: opacity(0.7);
-    }
+  &.button--width-normal {
+    width: 99px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    &.button--border.button--disabled{
-        filter: none;
-        position: relative;
-        $border: 2px;
-        color: $purple;
-        //background: #fff;
-        background-clip: padding-box; /* !importanté */
-        border: solid $border transparent; /* !importanté */
-    }
-
-    &.button--width-full{
-        width: 100%;
-    }   
- 
-    &.button--width-normal{
-        width: 99px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-    &.button--padding-0 {
-        padding-top: 0; 
-        padding-bottom: 0;
-        width: 100%;
-    }
+  &.button--padding-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
 }
-  
