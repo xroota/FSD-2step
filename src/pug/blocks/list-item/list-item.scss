@@ -18,7 +18,7 @@
     &__text{
         display: inline-block;
         line-height: 1.5rem;
-        max-width: 300px;
+        //max-width: 300px;
     }
     &--is-picture &__pic{
         background-clip: border-box;
@@ -47,13 +47,14 @@
     }
 
     &--is-text &__pic{
-        position: relative;
-        width: 10px;
-        height: 10px;
-        opacity: 0;
+        display : none;
         
     }
 
+    &--is-text &__text{
+        margin-left: 18px;
+        
+    }
 
 
     &--tiile-large{
