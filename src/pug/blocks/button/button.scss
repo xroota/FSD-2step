@@ -16,8 +16,8 @@
     top: 0;
     right: 0;
     @extend %material-icons;
-    height: 44px;
-    width: 44px;
+    height: 2.75rem;
+    width: 2.75rem;
     position: absolute;
     justify-content: center;
   }
@@ -77,7 +77,7 @@
   }
 
   &.button--width-normal {
-    width: 99px;
+    width: 6.1875rem;
     padding-left: 0;
     padding-right: 0;
   }

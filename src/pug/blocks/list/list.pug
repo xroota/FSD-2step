@@ -1,5 +1,5 @@
 mixin list(data)
-  .list
+  .list&attributes(attributes)
     .list__title= data.title
     each item in data.items
       +list-item({

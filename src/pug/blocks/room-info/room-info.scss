@@ -11,7 +11,7 @@
 
     &__number::before{ 
         content: '№ ';
-        font-size: 14px; 
+        font-size: 0.875rem; 
         margin: 0;
         padding: 0;
     }   
@@ -26,10 +26,10 @@
     &__price{
         margin-left: auto;
         color: $dark-shade-50;
-        font-size: 14px;
+        font-size: 0.875rem; 
     }
 
     &--font-size-small &__number{
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }

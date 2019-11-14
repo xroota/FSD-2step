@@ -45,9 +45,9 @@
     %nav-btn{
         position: absolute;
         @extend %material-icons;
-        width: 44px;
-        height: 44px;
-        font-size: 20px;
+        width: 2.75rem;
+        height: .75rem;
+        font-size: 1.25rem;
         justify-content: center;
         color: $white;
         transform: rotate(-90deg);

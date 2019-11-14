@@ -29,8 +29,8 @@
     &__item-label:before{ 
         content:'star';     
         font-family: 'Material Icons';
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 1.5rem;
+        line-height: 1.25rem;
         mix-blend-mode: screen;
         background: white;
       }
@@ -39,8 +39,8 @@
 
       &__item-input:checked ~ div &__item-label:before {
         content:'star_border';    
-        font-size: 24px;
-        line-height: 20px;   
+        font-size: 1.5rem;
+        line-height: 1.25rem;
         mix-blend-mode: screen;
         background: white; 
     
@@ -48,8 +48,8 @@
 
       &__item-input:checked + div &__item-label:before {
         content:'star';  
-        font-size: 24px;
-        line-height: 20px;
+        font-size: 1.5rem;
+        line-height: 1.25rem;
         color: blue;
      
        }  

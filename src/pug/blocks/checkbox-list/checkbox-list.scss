@@ -1,13 +1,13 @@
 .checkbox-list{
     &__button{
         @extend %material-icons;
-        max-width:44px;
-        height: 44px;
+        max-width: 2.75rem;
+        height: 2.75rem;
         display: flex;
         justify-content: center;
     }
     &__title{
-        line-height: 44px;
+        line-height: 2.75rem;
         float: left;
         margin: 0 30px 0 0;
     }
@@ -40,14 +40,14 @@
 
     &__item-title{
         font-weight: bold;
-        line-height: 20px;
+        line-height: 1.25rem;
         vertical-align: middle;
         margin-bottom: 2px;
 
     }
 
     &__item-text{
-        line-height: 18px;
+        line-height: 1.12rem;
         color: $dark-shade-50;
         vertical-align: middle;
         width: 200px;

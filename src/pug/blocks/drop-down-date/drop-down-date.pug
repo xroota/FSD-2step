@@ -13,7 +13,6 @@ mixin drop-down-date(data)
     if dataElementDD[x].type === blockName
       - Object.assign(data, dataElementDD[x]);
   .drop-down-date(class=data.dropDownClass)&attributes(attributes)
-    .ss= data.titleFrom
     .drop-down-date__dates  
       +text-field( 
         {

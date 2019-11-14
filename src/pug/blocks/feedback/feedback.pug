@@ -2,7 +2,7 @@ include ../../blocks/list-item/list-item
 include ../../blocks/like-button/like-button
 
 mixin feedback(dataFeedbak)
-  .feedback
+  .feedback&attributes(attributes)
     if (dataFeedbak.feedbackTitle)
       .feedback__title= dataFeedbak.feedbackTitle
     each data in dataFeedbak.feedbackItems

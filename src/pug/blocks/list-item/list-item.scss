@@ -6,8 +6,8 @@
 
     &__pic{
         @extend %material-icons;
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 3rem;
+        line-height: 3rem;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -17,7 +17,7 @@
     }
     &__text{
         display: inline-block;
-        line-height: 24px;
+        line-height: 1.5rem;
         max-width: 300px;
     }
     &--is-picture &__pic{
@@ -53,6 +53,8 @@
         opacity: 0;
         
     }
+
+
 
     &--tiile-large{
         

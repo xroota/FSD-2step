@@ -68,48 +68,50 @@ block content
             numPhotos       : [2,3]
           }
         )
- 
-      +extra-list(
-        {
-          title: "Сведения о номере",
-          detailItems: data.details
 
-        })
-      +pie-chart([
-        { name: 'Разочарован', amount: 0 },
-        { name: 'Удовлетворительно', amount: 65 },
-        { name: 'Хорошо', amount: 65 },
-        { name: 'Великолепно', amount: 130 }
-      ], 'Впечатления от номера')
+      section.room-details__room-section
+  
+        +extra-list(
+          {
+            title: "Сведения о номере",
+            detailItems: data.details
 
-      +feedback(
-        {
-          feedbackTitle: "Отзывы посетитилей номера",
-          feedbackItems: data.feedbackItems
-        }
-      )
+          })(class="room-details__room-about")
+        +pie-chart([
+          { name: 'Разочарован', amount: 0 },
+          { name: 'Удовлетворительно', amount: 65 },
+          { name: 'Хорошо', amount: 65 },
+          { name: 'Великолепно', amount: 130 }
+        ], 'Впечатления от номера')
 
-      +list({
-        title        : "Правила",
-        listItemClass: "list-item--is-bullet",
+        +feedback(
+          {
+            feedbackTitle: "Отзывы посетитилей номера",
+            feedbackItems: data.feedbackItems
+          }
+        )(class="room-details__feedback")
 
-        items        : data.rules 
-        }
-      )
+        +list({
+          title        : "Правила",
+          listItemClass: "list-item--is-bullet",
 
-      +list({
-        title        : "Отмена",
-        listItemClass: "list-item--is-text",
-        items        : data.cancel
-        }
-      )
+          items        : data.rules 
+          }
+        )
 
-      +card-booking(data)
+        +list({
+          title        : "Отмена",
+          listItemClass: "list-item--is-text",
+          items        : data.cancel
+          }
+        )(class="room-details__cancel")
+
+        +card-booking(data)(class="room-details__card-booking")
 
 
-      
- 
-     
+
+  
+
 
 
 block footer

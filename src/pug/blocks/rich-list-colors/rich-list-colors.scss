@@ -33,7 +33,7 @@
     
     &__item-text{
         @extend %h2;
-        line-height: 29px;
+        line-height: 1.8125rem;
         
 
     }
@@ -41,7 +41,7 @@
     &__item-desc{
         @extend %h2;
         font-weight: normal;
-        line-height: 29px;
+        line-height: 1.8125rem;
         
 
     }

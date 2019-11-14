@@ -3,11 +3,14 @@ $mainFont                : Montserrat, sans-serif;
 $secondFont              : Quicksand, sans-serif;
 // Size
 $mainFontColor           : rgba(31, 32, 65, 0.75);;
-$mainFontSize            : 18px;
+$mainFontSize            : 1rem;
 $mainFontWeight          : normal;
-$mainLineHeight          : 24px;
+$mainLineHeight          : 1.5rem;
 
 $desktopWidth            : 1440px;
+$desktopMaxWidth         : 1920px;
+$desktopMinWidth         : 320px;
+
 $smDesktopWidth          : 980px;
 $tableWidth              : 768px;
 $phoneWidth              : 480px;
@@ -48,8 +51,8 @@ $border-lightex          : #F2F6FC;
     font-family: $mainFont;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
     color: $dark-shade-75;
     width: 100%; 
     margin: 8px 0 8px 14px; 
@@ -59,7 +62,7 @@ $border-lightex          : #F2F6FC;
         font-family: $mainFont;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
+        font-size: 0.875rem;
         color:$dark-shade-25;
         
     }
@@ -70,8 +73,8 @@ $border-lightex          : #F2F6FC;
     font-family: Material Icons;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     display: flex;
     align-items: center;
     text-align: center;
@@ -82,8 +85,8 @@ $border-lightex          : #F2F6FC;
     font-family: $secondFont;
     font-style: normal;
     font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 1.1875rem;
+    line-height: 1.5rem;
     color: $dark-shade-100;
   }
 
@@ -91,8 +94,8 @@ $border-lightex          : #F2F6FC;
     font-family: $mainFont;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;  
+    font-size: 0.75rem;
+    line-height: 0.9375rem;  
     text-transform: uppercase;
     color: $dark-shade-100;
 

@@ -1,5 +1,5 @@
 mixin extra-list(data)
-    .extra-list
+    .extra-list&attributes(attributes)
       .extra-list__title= data.title
       each item in data.detailItems.items
         .extra-list__item

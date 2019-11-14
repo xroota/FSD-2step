@@ -1,7 +1,8 @@
 .extra-list{
     &__title {
         @extend %h2;
-        margin-bottom: 20px;
+        
+        
       }
       
     &__item{
@@ -11,8 +12,8 @@
 
     &__item-pic{
         @extend %material-icons;
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 3rem;
+        line-height: 3rem;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -20,7 +21,7 @@
         margin-right: 10px;
     }
     &__item-text{
-        line-height: 24px;
+        line-height: 1.5rem;
     }
 
 }
