@@ -55,19 +55,17 @@ block content
     .room-details
       .room-details__photo-box
         +room-photos(
-          { roomPhotosClass : "room-details__room-photos-left",
-            roomNumber      : 888,
+          { 
             imageItems      : data.imageItems,
             numPhotos       : [1]
           }
-        )
+        )(class="room-details__room-photos-left")
         +room-photos(
-          { roomPhotosClass : "room-details__room-photos-right",
-            roomNumber      : 888,
+          { 
             imageItems      : data.imageItems,
             numPhotos       : [2,3]
           }
-        )
+        )(class="room-details__room-photos-right")
 
       section.room-details__room-section
   

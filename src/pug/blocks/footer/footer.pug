@@ -14,7 +14,7 @@ mixin footer(name)
         if(dataJson[x].id===name)
             - var data= dataJson[x].data
         
-    .footer(class= data.footerClass)
+    .footer(class= data.footerClass)&attributes(attributes)
         .footer__nav 
             ul.footer__nav-item
                 li.footer__subitem

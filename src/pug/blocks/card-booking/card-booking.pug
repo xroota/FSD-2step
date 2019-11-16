@@ -57,8 +57,9 @@ mixin card-booking(data)
   
         })   
         +button(     
-          { name       : "btn9",
-            text       : "забронировать",
-            symbol     : "arrow_forward",
-            buttonClass: "card-booking__button-book button--fill button--width-full"
-          })
+          { 
+            type       : "fill-arrow", 
+            name       : "btn9",
+            text       : "забронировать" 
+          }
+        )(class="card-booking__button-book")

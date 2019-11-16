@@ -1,5 +1,5 @@
 mixin toggle(data)
-    .toggle(class=data.toggleClass)
+    .toggle(class=data.toggleClass)&attributes(attributes)
         if data.title
           h3.toggle__title= data.title
         .toggle__item

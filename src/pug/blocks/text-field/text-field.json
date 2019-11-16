@@ -1,13 +1,31 @@
-[ 
-    { "type" : "mask",
-      "placeholder": "ДД.ММ.ГГГГ",
-      "inputText": "",
-      "readOnly": false
-    },
-    { "type" : "drop-down-date",
-        "placeholder": "ДД.ММ.ГГГГ",
-        "inputText": "",
-        "readOnly": false,
-        "buttonText" : "expand_more"
-      }
+[
+  {
+    "type": "mask",
+    "placeholder": "ДД.ММ.ГГГГ",
+    "inputText": "",
+    "readOnly": false,
+    "typeInput" : "text"
+  },
+  {
+    "type": "drop-down-date",
+    "placeholder": "ДД.ММ.ГГГГ",
+    "inputText": "",
+    "readOnly": false,
+    "buttonText": "expand_more",
+    "typeInput" : "text"
+  },
+  {
+    "type": "text",
+    "readOnly": false,
+    "typeInput" : "text"
+
+  },
+  {
+    "type": "pass",
+    "readOnly": false,
+    "typeInput" : "password"
+
+  }
+
 ]
+

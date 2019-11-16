@@ -1,0 +1,50 @@
+block variables
+  - var title = "Search room/Filter";
+  - var author = "enlore";
+  - var theGreat = "<span>escape!</span>";
+block header
+
+  include ../../blocks/header/header
+
+
+  +header(
+      { headerClass        : "headers-footers__header",
+        buttonLoginText    : "Войти",
+        buttonRegisterText : "Зарегистрироваться",
+        userName           : "",
+        navItems: [
+           {text      : "О нас",
+            symbol    : ""
+           },
+           {text      : "Услуги",
+            symbol    : "expand_more",
+            hasSubmenu: true
+           },
+           {text      : "Вакансии",
+            symbol    : ""
+           },
+           {text      : "Новости",
+            symbol    : ""
+           },
+           {text      : "Соглашения",
+            symbol    : "expand_more",
+            hasSubmenu: true
+           }
+         ]
+      }
+    )
+
+block content
+
+
+    include ../../blocks/card-register/card-register
+
+    +card-register()
+
+
+
+
+block footer
+  include ../../blocks/footer/footer
+  
+  +footer('toxin')

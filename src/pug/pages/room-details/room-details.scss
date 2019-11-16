@@ -10,16 +10,32 @@
 
 .room-details{
     display: block;
+    background: $white;
 
 
     
     &__photo-box{
         display: grid;
         grid-template-columns: 981fr 461fr;
+        grid-column: 0;
         grid-template-rows: 485fr;
-        justify-items: end;
+        justify-items: start;
+        max-width: 1440px;
+        margin: 0 auto;
         
     
+
+    }
+
+    &__room-photos-left{
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    &__room-photos-right{
+        grid-column: 2;
+        grid-row: 1;
 
     }
 

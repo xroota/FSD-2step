@@ -1,4 +1,4 @@
 mixin room-photos(dataRoom)
-    .room-photos(class=dataRoom.roomPhotosClass)
+    .room-photos&attributes(attributes)
         each numPhoto in dataRoom.numPhotos
             img(class="room-photos__photo" src=dataRoom.imageItems[numPhoto-1].imagePath alt="room")

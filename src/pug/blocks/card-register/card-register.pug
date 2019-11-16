@@ -1,0 +1,78 @@
+mixin card-register()
+    .card-register&attributes(attributes)
+        +card(
+            {
+                title    : "Регистрация аккаунта"
+            }
+        )(class="card-register") 
+            +text-field(
+                {
+                    type          : "text",
+                    placeholder   : "Имя"
+                }
+            )(class="card-register__name")
+            +text-field(
+                {
+                    type          : "text",
+                    placeholder   : "Фамилия"
+                }
+            )(class="card-register__surname")
+            +radio-list(
+                {
+                    title         : "", 
+                    items         : 
+                    [
+                        {
+                            title        : "Мужчина",
+                            value        : true
+                         },
+                        {
+                            title        : "Женщина",
+                            value        : false
+                        }
+                    ],
+            }
+            )(class="card-register__sex")
+
+            +text-field(
+                {
+                    type     : "mask",
+                    title    : "Дата рождения"
+                }
+            )(class="card-register__birthday")
+            +text-field(
+                {
+                    type          : "text",
+                    title         : "Данные для входа в сервис",
+                    placeholder   : "Email",
+                }
+            )(class="card-register__email")
+            +text-field(
+                {
+                    type          : "pass",
+                    placeholder   : "Пароль"
+               }
+            )(class="card-register__password")
+            +toggle(
+                {
+                    text       : "Получать спецпредложения",
+                    name       : "tog1",
+                    checked      : false  
+                }
+            )(class="card-register__offer")
+            +button(
+                {
+                    type       : "fill-arrow",    
+                    name       : "btn-pay",
+                    text       : "Перейти к оплате",
+                }
+            )(class="card-register__button-pay")
+            .card-register__text-account Уже есть аккаунт на Toxin
+            +button(     
+                { 
+                    name       : "btn9",
+                    text       : "войти",
+                    symbol     : "",
+                    buttonClass: "card-register__button-enter "
+                }
+                )   
