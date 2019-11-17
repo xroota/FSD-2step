@@ -1,0 +1,51 @@
+@import "../../blocks/card/card";
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/radio-list/radio-list";
+@import "../../blocks/toggle/toggle";
+@import "../../blocks/button/button";
+
+.card-register{
+     
+    &__name{
+        margin-top: -1px;
+        margin-bottom: 10px;
+    } 
+
+    &__surname{
+        margin-bottom: 7px;
+    }
+    
+    &__sex{
+        margin-bottom: 21.56px;
+    }
+
+    &__birthday{
+        margin-bottom: 20px;
+    }
+
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__password{
+        margin-bottom: 8px; 
+    }
+    
+    &__offer{
+        margin-bottom: 22px;
+    }
+    
+    &__button-pay{
+        margin-bottom: 30px; 
+    }
+
+    &__text-account{
+        margin: auto 0;
+        line-height: 18px;
+    }
+
+
+
+
+
+}
