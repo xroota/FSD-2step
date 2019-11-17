@@ -21,14 +21,14 @@ mixin header(data)
             name       : "btn-header-login",
             text       : data.buttonLoginText,
             symbol     : "",
-            buttonClass: "header__button-login button--border button--padding-0"
+            buttonClass: "header__button-login button--border button--slim-border"
         })
 
         +button({
             name       : "btn-header-register",
             text       : data.buttonRegisterText,
             symbol     : "",
-            buttonClass: "header__button-register button--fill button--padding-0"
+            buttonClass: "header__button-register button--fill button--slim-fill"
         })
     .header__user= data.userName
 
