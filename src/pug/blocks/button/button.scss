@@ -10,6 +10,7 @@
     width: 100%;
     text-align: center;
     margin-right: 0;
+    
   }
 
   &__symbol {
@@ -19,7 +20,7 @@
     height: 2.75rem;
     width: 2.75rem;
     position: absolute;
-    justify-content: center;
+    justify-content: baseline;
   }
 
   &.button--fill {
@@ -28,6 +29,7 @@
     color: #ffffff;
   }
   &.button--border {
+    padding: 12px 22px 13px 18px;
     position: relative;
     background-image: linear-gradient(180deg, #bc9cff, #8ba4f9);
     background-origin: border-box;
@@ -36,6 +38,7 @@
   }
 
   &.button--border &__text {
+    
     color: $purple;
   }
 
@@ -82,10 +85,23 @@
     padding-right: 0;
   }
 
-  &.button--padding-0 {
+  &.button--slim-fill {
     height: 2.125rem;
-    padding: 0;
-    padding-left: 1.1875rem;
-    padding-right: 1.25rem;
+    padding: 9px 21px 10px 19px;
+    //padding-left: 19px;
+    //padding-right: 21px;
+    
   }
+
+  &.button--slim-border {
+    height: 2.125rem;
+    padding: 7px 18px 8px 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    
+  }
+
+
+
+
 }
