@@ -9,6 +9,9 @@
     &__title-text{
         @extend %h3;
         color: $dark-shade-50;
+        font-weight: normal;
+        //margin-top: -3px;
+        letter-spacing: -0.2px;
         float: right;
         text-align: right;
     }
@@ -26,6 +29,7 @@
 
     &__input{
         @extend %input;
+        
     }
 
     &__input-button{
@@ -46,8 +50,9 @@
     &--placeholder-dark-75 &__input::placeholder{
         color: $dark-shade-75;    
         font-size: 0.875rem;
+        
     }
-    &--width-s{
+    &--width-short{
         width: 83.125%;
     }
     &--display-inline-block{

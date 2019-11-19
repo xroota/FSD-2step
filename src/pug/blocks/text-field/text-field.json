@@ -25,6 +25,14 @@
     "readOnly": false,
     "typeInput" : "password"
 
+  },
+  {
+    "type":   "arrow-short",
+    "readOnly"       : false,
+    "typeInput"      : "text",
+    "buttonText": "arrow_forward",
+    "textFieldClass" : "text-field--width-short"
+
   }
 
 ]
