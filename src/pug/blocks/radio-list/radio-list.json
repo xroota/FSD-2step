@@ -1,0 +1,9 @@
+[
+  {
+    "type": "men-woman",
+    "items": [
+      { "title": "Мужчина", "value": true },
+      { "title": "Женщина", "value": false }
+    ]
+  }
+]

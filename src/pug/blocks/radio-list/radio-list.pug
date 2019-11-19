@@ -1,10 +1,11 @@
 mixin radio-list(data)
-    .radio-list(class=data.radioListClass)&attributes(attributes)
-      if(data.title) 
-        h3.radio-list__title= data.title
-      .radio-list__items
-        each item in data.items
-            .radio-list__item
-              label.radio-list__item-label
-                input(class="radio-list__item-input", type="radio", name="radio-list-item" checked=item.value)
-                .radio-list__item-title= item.title
+  +dataFromJSON("radio-list", data)
+  .radio-list(class=data.radioListClass)&attributes(attributes)
+    if(data.title) 
+      h3.radio-list__title= data.title
+    .radio-list__items
+      each item in data.items
+        .radio-list__item
+          label.radio-list__item-label
+            input(class="radio-list__item-input", type="radio", name="radio-list-item" checked=item.value)
+            .radio-list__item-title= item.title

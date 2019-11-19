@@ -1,0 +1,7 @@
+mixin room-from-JSON(roomNumber)
+    - var  fs = require('fs')
+    - var rootDir = require('path').resolve() 
+    - var dataJsonRoom = JSON.parse(fs.readFileSync(rootDir+'/src/pug/blocks/room/room.json'));
+    - for (var x = 0; x < dataJsonRoom.length; x++)
+       if(dataJsonRoom[x].roomNumber===roomNumber)
+        - var dataRoom= dataJsonRoom[x]
