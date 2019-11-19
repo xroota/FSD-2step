@@ -1,5 +1,5 @@
-@import "../../blocks/card-register/card-register";
-.login-page{
+@import "../../blocks/card-login/card-login";
+.sign-in-page{
 
     background-image: url(../../assets/img/login-page.jpg);
     background-repeat: no-repeat;
@@ -8,16 +8,19 @@
     display: grid;
     grid-template-columns: minmax(320px,380px);
     justify-content: center;
-    padding: 30px 0 23px 0;
+    padding: 163px 0 163px 0;
 
     @media (max-width: 2000px) {
         grid-template-columns: minmax(380px,500px) ;
         justify-content: center;
+
+   
     }
 
 
     @media (max-width: 1440px) {
-        grid-template-columns: minmax(320px,380px); 
+        grid-template-columns: minmax(320px,380px);
+   
     }
 
 }
