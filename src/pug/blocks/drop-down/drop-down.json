@@ -15,6 +15,25 @@
       { "type" : "clear" },
       { "type" : "apply" }
     ]
+  },
+  {
+    "type": "rooms",
+    "placeholder": "Удобства",
+    "inputText": "",
+    "readOnly": true,
+    "buttonText": "expand_more",
+    "textFieldClass": "text-field--placeholder-dark-75",
+    "items": [
+      { "text": "спальни", "value": 0 },
+      { "text": "кровати", "value": 0 },
+      { "text": "ванные комнаты", "value": 0 }
+    ],
+    "menuButtons": [
+      { "type" : "clear" },
+      { "type" : "apply" }
+    ]
   }
+  
+
 
 ]

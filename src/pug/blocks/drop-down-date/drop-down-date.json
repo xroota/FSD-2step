@@ -1,7 +1,14 @@
 [
   {
-    "type": "drop-down-date",
-    "hekko": "hek",
+    "type": "date",
+    "menuButtons": [
+      { "text": "Очистить", "name": "clear" },
+      { "text": "Применить", "name": "apply" }
+    ]
+  },
+  {
+    "type": "date-width-short",
+    "textFieldClass" : "text-field--width-short",
     "menuButtons": [
       { "text": "Очистить", "name": "clear" },
       { "text": "Применить", "name": "apply" }
