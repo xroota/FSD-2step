@@ -1,9 +1,17 @@
 .toggle-list {
-  margin-top: 16px;
+  margin-top: 0px;
+  &__title {
+    margin-bottom: 10px;
+  } 
+
   &::after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  &__item{ 
+    margin-top: 10px;
   }
 
   &__item-input {

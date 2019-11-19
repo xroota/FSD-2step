@@ -1,5 +1,5 @@
 mixin toggle-list(data)
-    .toggle-list
+    .toggle-list&attributes(attributes)
         h3.toggle-list__title= data.title
         each item in data.items
           .toggle-list__item
