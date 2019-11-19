@@ -6,18 +6,14 @@ include ../text-field/text-field
 mixin drop-down-date(data) 
   //- Добавление данных из файла json по введенному type при вызове миксина
   - var blockName = "drop-down-date"
-  - var  fs = require('fs')
-  - var rootDir = require('path').resolve() 
-  - var dataElementDD = JSON.parse(fs.readFileSync(rootDir + '/src/pug/blocks/' + blockName +'/' + blockName + '.json'));
-  - for (x = 0; x < dataElementDD.length; x++)
-    if dataElementDD[x].type === blockName
-      - Object.assign(data, dataElementDD[x]);
+  +dataFromJSON(blockName, data)
   .drop-down-date(class=data.dropDownClass)&attributes(attributes)
     .drop-down-date__dates  
       +text-field( 
         {
           type          : blockName,
-          title         : data.titleFrom
+          title         : data.titleFrom,
+          textFieldClass: data.textFieldClass
         }
         )
       if (data.titleTo)
@@ -25,6 +21,7 @@ mixin drop-down-date(data)
         {
           type          : blockName,
           title         : data.titleTo,
+          textFieldClass: data.textFieldClass
         }
         )
     .drop-down-date__menu
