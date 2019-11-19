@@ -1,4 +1,12 @@
 .checkbox-list{
+    &__title{
+        line-height: 0.9375rem;
+        margin: 0 30px 14px 0;
+        //float: left;
+        
+    }
+
+
     &__button{
         @extend %material-icons;
         max-width: 2.75rem;
@@ -6,11 +14,7 @@
         display: flex;
         justify-content: center;
     }
-    &__title{
-        line-height: 2.75rem;
-        float: left;
-        margin: 0 30px 0 0;
-    }
+
 
     &__items{
         display: none;

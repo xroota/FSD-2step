@@ -1,0 +1,25 @@
+[
+    {
+        "type"         : "allowed",
+        "title"        : "Checkbox Buttons",
+        "buttonText"   : "",
+        "checkboxClass": "checkbox-list--menu-visible",
+        "items"        : [
+            {
+            "text"      : "Можно курить",
+            "value"     : false,
+            "name"      : "canSoke"
+            },
+            {
+            "text"      : "Можно с питомцами",
+            "value"     : false,
+            "name"      : "canPets"
+            },
+            {
+            "text"      : "Можно пригласить гостей (до 10 человек)",
+            "value"     : false,
+            "name"      : "canGuests"
+            }
+        ]
+    }
+]
