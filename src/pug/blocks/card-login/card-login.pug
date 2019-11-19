@@ -1,0 +1,39 @@
+include ../../blocks/card/card
+include ../../blocks/text-field/text-field
+include ../../blocks/button/button
+
+mixin card-login()
+    .card-login&attributes(attributes)
+        +card(
+            {
+                title    : "Войти"
+            }
+        )(class="card-login__card")
+
+            +text-field(
+                 {
+                    type          : "text",
+                    placeholder   : "Email"
+                }
+            )(class="card-login__email")
+            +text-field(
+                {
+                    type          : "pass",
+                    placeholder   : "Пароль"
+                }
+            )(class="card-login__pass")
+            +button(     
+                {  
+                    type       : "fill-arrow",    
+                    name       : "btn-enter",
+                    text       : "войти"
+                }
+            )(class="card-login__button-enter")
+            .card-login__text-account Нет аккаунта на Toxin?
+            +button(     
+                {  
+                    type       : "border",
+                    name       : "btn-enter",
+                    text       : "создать"
+                }
+            )(class="card-login__button-register")
