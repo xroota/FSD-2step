@@ -57,13 +57,14 @@ $border-lightex          : #F2F6FC;
     width: 100%; 
     margin: 8px 0 8px 14px; 
     border: none;
+    letter-spacing: -0.2px;
     &::placeholder{
- 
         font-family: $mainFont;
         font-style: normal;
         font-weight: normal;
         font-size: 0.875rem;
         color:$dark-shade-25;
+        letter-spacing: -0.08px;
         
     }
     outline:none;
@@ -98,6 +99,7 @@ $border-lightex          : #F2F6FC;
     line-height: 0.9375rem;  
     text-transform: uppercase;
     color: $dark-shade-100;
+    margin: 0;
 
   }
 
