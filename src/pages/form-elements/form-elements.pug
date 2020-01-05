@@ -1,0 +1,204 @@
+block variables
+  - var title = "Form Elements";
+  - var author = "enlore";
+  - var theGreat = "<span>escape!</span>";
+block header
+block content
+  include ../../blocks/logo/logo
+  include ../../blocks/text-field/text-field
+  include ../../blocks/drop-down/drop-down
+  include ../../blocks/drop-down-date/drop-down-date
+  include ../../blocks/checkbox-list/checkbox-list
+  include ../../blocks/radio-list/radio-list
+  include ../../blocks/toggle/toggle
+  include ../../blocks/like-button/like-button
+  include ../../blocks/rate-button/rate-button
+  include ../../blocks/range-slider/range-slider
+  include ../../blocks/pagination/pagination
+
+  .form-elements
+    +logo("../../../assets/img/logo.svg","red")
+    .form-elements__section-top
+      +text-field(
+          {
+          type          : "text",
+          title        : "Text Field",
+          titleText    : "Default",
+          placeholder  : "Email",
+          }
+        )
+      +text-field(
+          {
+          type          : "text",
+          title        : "Text Field",
+          titleText    : "Hover / Focus",
+          inputText    : "This is pretty awesome"
+          }
+        )
+      +drop-down(
+          {
+           type          : "guests",
+           title         : "Dropdown",
+           titleText    : "Default"
+          }
+      )(class="form-elements__guests")
+      +text-field(
+          {
+          type          : "mask",
+          title        : "masked text field",
+          titleText    : "Default"
+          }
+        )(class="form-elements__date")
+
+      +drop-down-date(
+        {
+          type          : "date",
+          titleFrom     : "date Dropdown",
+          titleTo       : "date Dropdown"
+        }
+      )(class="form-elements__drop-down-date")
+      +drop-down-date(
+        {
+          type          : "date-width-short",
+          titleFrom     : "filter date dropdown"
+        }
+      )(class="form-elements__filter-date")
+      +text-field(
+          {
+          type          : "arrow-short",
+          title        : "subscription text field",
+          placeholder  : "Email",
+          }
+        )
+      +checkbox-list(
+        {
+          type    : "allowed",
+          name    : "check-allowed",
+        
+           
+        }
+      )(class="form-elements__allowed")
+      +radio-list(
+        {
+          type    : "men-woman",
+          title   : "Radio Buttons"
+        }
+      )(class="form-elements__sex")
+      .form-elements__toggles
+        h3.form-elements__toggles-title toggle
+        +toggle(
+          {
+            text: "Получать спецпредложения",
+            name: "tog1",
+            value: true
+          }
+        )
+        +toggle(
+          {
+            text: "Получать спецпредложения",
+            name: "tog2",
+            value: false
+          }
+        )
+      .form-elements__like-buttons
+        h3.form-elements__like-buttons-title like button 
+        +like-button(
+          { name      : "like1",
+           value     : 2,
+           checked   : false
+
+          }
+        )
+        +like-button(
+         { name      : "like1",
+           value     : 12,
+           checked   : true
+
+          }
+       )
+
+      .form-elements__rate-buttons
+        
+        +rate-button(
+          { 
+            name      : "rate-1",
+            value     : 5,
+            checked   : 4
+          }
+        )
+        +rate-button(
+          { 
+            name      : "rate-2",
+            value     : 5,
+            checked   : 5
+          }
+        )
+
+
+      +range-slider({
+            title            : "range slider",
+            value            : "5 000₽ - 10 000₽"
+        })(class="form-elements__price-slider")
+      .form-elements__buttons
+        h3.form-elements__buttons-title buttons
+        +button(
+          {
+            type       : "fill",
+            name       : "btn1",
+            text       : "Click Me"
+          }
+        )(class="form-elements__button1")
+        +button(
+          {
+            type       : "fill",
+            name       : "btn2",
+            text       : "Click Me"
+          }
+        )(class="button--disabled form-elements__button2")
+
+        +button(     
+          { name       : "btn3",
+            text       : "Click Me",
+            buttonClass: "button--border"
+          })(class="form-elements__button3")
+        +button(     
+          { name       : "btn4",
+            text       : "Click Me",
+            buttonClass: "button--border button--disabled"
+          })(class="form-elements__button4")
+
+        +button(     
+          { name       : "btn5",
+            text       : "Click Me",
+            buttonClass: "button--border-none"
+          })(class="form-elements__button5")
+        +button(     
+          { name       : "btn6",
+            text       : "Click Me",
+            buttonClass: "button--border-none button--disabled"
+          })(class="form-elements__button6")
+        +button(     
+          { name       : "btn7",
+            text       : "Перейти к оптате",
+            symbol     : "arrow_forward",
+            buttonClass: "button--fill button--width-full"
+          })
+      +pagination(  
+        {
+          paginationClass : "search-room__pagination", 
+          title           : "",
+              text            : "1 – 12 из 100+ вариантов аренды"
+        }
+      )
+              
+      
+
+    .form-elements__section-expanded
+      +drop-down(
+          {
+           type          : "rooms",
+           title         : "Dropdown",
+           titleText    : "Default"
+          }
+      )(class="form-elements__rooms")
+    

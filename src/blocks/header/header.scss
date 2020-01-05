@@ -1,0 +1,126 @@
+//@import "../../pug/blocks/button/button"; 
+
+.header{
+    display : grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: .5625rem 9.7223%;
+    background: $white;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    @media (max-width: 1200px) {
+        column-gap: 40px;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+        "logo user"
+        "nav nav"
+    }
+
+    &__logo{
+        //width: 40px;
+        //height: 40px;
+        background-size: cover;
+        margin-top: 4px;
+        @media (max-width: 1200px) {
+            grid-area: logo;
+            justify-self: start;
+        
+        }
+
+    }
+    
+
+
+    &__nav{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-left: auto;
+        @media (max-width: 1200px) {
+            grid-area: nav;
+            justify-content: space-around;
+            justify-self: stretch;
+            margin-left: 0;
+        
+        }
+    }
+
+    &__nav-item{
+        display: flex;
+        margin-right: 20px;   
+        align-self: baseline;
+
+
+    }
+
+    &__nav-text{
+        color: $dark-shade-50;
+        letter-spacing: 1;
+    }
+
+    &__nav-symbol{
+        @extend %material-icons;
+        color: $dark-shade-50;
+        margin-left: 0.125px;
+        margin-top: 0.0625px;
+    }
+
+    
+
+    &__buttons-auth{
+        height: 34px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @media (max-width: 1150px) {
+            grid-area: user;
+            justify-self: end;
+            margin-bottom: 10px;
+        
+        }
+        
+    }
+
+    &__button-login{
+        margin-right: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__button-register{
+    }
+
+    &__user{
+        position: relative;
+        display: none;
+        margin-left: 34px;
+        color: $dark-shade-50;
+        
+    }
+
+    &__user::before{
+        position: absolute;
+        content: "";
+        height: 30px;
+        left: -31px;
+        width: 1px;
+        background: $dark-shade-50;
+
+        
+     }
+
+    &.header--logined &__buttons-auth{
+        display: none;
+    }
+    &.header--logined &__user{
+       display: block;
+    }
+    
+
+
+
+
+    &__nav-item.header__nav--has-submenu{
+        margin-right: 21px;
+            
+    }
+}

@@ -1,0 +1,74 @@
+svg path {
+    position: absolute;
+
+    fill: rgba(31, 32, 65, 0.25);
+
+}
+
+.container{
+    margin: 0;
+    padding: 145px 164px 145px 150px;
+    width: $desktopWidth;
+    display: flex;
+    justify-content: space-between;
+    &__logo{
+        position: absolute;
+        left: 30px;
+        top:30px;
+        margin: 0;
+    }
+}
+
+
+
+.types-list {
+    
+    margin: 0 27px 0 200px ;
+    padding: 0;
+
+
+
+
+    &__item{
+        display: flex;
+        padding: 0;
+        margin: 0 0 50px 0;
+        
+    }
+
+    &__item:last-child{
+        margin-top: -3px;
+    }
+
+    &__item-tag{
+        margin: 0 30px 0 0;
+        padding: 0;
+        width: 40px;
+        text-align: right;
+        font-weight: normal;
+        color: $dark-shade-25;
+        
+        h1, h2,h3{
+            margin: 0;
+            font-family: $mainFont;
+            font-weight: normal;
+            color: $dark-shade-25;
+
+        }
+
+    }
+
+    &__item-text{
+        padding: 0;
+        margin: 0;
+        width: 336px;
+        h1, h2,h3{
+            margin: 0;
+        }
+
+        
+
+        
+    }
+
+}

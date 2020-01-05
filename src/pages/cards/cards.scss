@@ -1,0 +1,207 @@
+@import "../../blocks/card/card";
+@import "../../blocks/air-datepicker/datepicker.min";
+@import "../../blocks/drop-down/drop-down";
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/button/button";
+@import "../../blocks/radio-list/radio-list";
+@import "../../blocks/toggle/toggle";
+@import "../../blocks/room-info/room-info";
+@import "../../blocks/slider/slider";
+@import "../../blocks/room/room";
+@import "../../blocks/calendar/calendar.scss";
+@import "../../blocks/air-datepicker/air-datepicker.scss";
+
+
+.cards{
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 1440px;
+  height: 1350px;
+  padding: 149px 140px 130px 140px;
+
+  &__calendar{
+    margin-bottom: 40px;
+  }
+
+  &__room{
+    margin-bottom: 40px;
+  }
+
+  &__logo{
+    position: absolute;
+    left: 30px;
+    top:30px;
+    margin: 0;
+
+  }
+
+}
+
+.card-find-number{
+  margin-bottom: 38px;
+    &__drop-down-date-in{
+        margin-bottom: 20.56px;
+        width: 46.875%;
+    }
+
+    &__drop-down-date-out{
+        margin-bottom: 20.56px;
+        width: 46.875%;
+    }
+    &__drop-down-guests{
+        margin-bottom: 31px;
+    }
+
+}
+
+.card-register{
+     
+    &__name{
+        margin-bottom: 10px;
+    } 
+
+    &__surname{
+        margin-bottom: 8.44px;
+    }
+    
+    &__sex{
+        margin-bottom: 21.56px;
+    }
+
+    &__birthday{
+        margin-bottom: 20px;
+    }
+
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__password{
+        margin-bottom: 8px; 
+    }
+    
+    &__offer{
+        margin-bottom: 22px;
+    }
+    
+    &__button-pay{
+        margin-bottom: 30px; 
+    }
+
+    &__text-account{
+        margin: auto 0;
+        line-height: 18px;
+    }
+
+
+
+
+
+}
+
+.card-booking{
+    margin-bottom: 37px;
+    &__room-info{
+      margin-bottom: 16px;
+    }
+
+    &__drop-down-date-in{
+        margin-bottom: 20px;
+        width:46.875%;
+    }
+
+    &__drop-down-date-out{
+        margin-bottom: 20px;
+        width:46.875%;
+    }
+
+    &__guests{
+        margin-bottom: 18px;
+    }
+
+    &__calc-items{
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        margin: 0 0 20px 0
+        
+    }
+    &__calc-item{
+        
+        display: flex;
+        margin-bottom: 10px;
+        align-items: baseline;
+    }
+
+    &__calc-item-value{
+        margin-left: auto;
+        color: $dark-shade-75;
+    }
+
+    &__calc-item-hint{
+        border: 1px solid $dark-shade-25;
+        border-radius: 22px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-left: 5px;
+        color: $dark-shade-25; 
+    }
+    
+    &__calc-item-text{
+        max-width: 214px;
+        line-height: 18px;
+        color: $dark-shade-75;
+    }
+
+    &__total{
+        width: 100%;
+        align-items: end;
+        column-gap: 5px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: baseline;
+        margin-bottom: 20px;
+    }
+
+    &__total-line{
+      border-bottom: 1px dotted $dark-shade-25;
+      height: 1px;
+      
+  }
+
+    &__total-text{
+        font-family: $mainFont;
+        @extend %h2;   
+ 
+    }
+    
+    &__total-value{
+    
+        font-family: $secondFont;
+        @extend %h2; 
+        
+    }
+}
+
+.card-login{
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__password{
+        margin-bottom: 20px;
+    }
+
+    &__email{
+        margin-bottom: 10px;
+    }
+
+    &__button-login{
+        margin-bottom: 30px;
+    }
+
+}

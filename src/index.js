@@ -1,20 +1,19 @@
-// JS
-import './js/index'
-
 
 // SCSS
-import './pug/blocks/main.scss'
+//import './blocks/main.scss'
 
-// CSS (example)
-// import './assets/css/main.css'
+function importAll(resolve) {
+    resolve.keys().forEach(resolve);
+  }
+  
+  
+  importAll(require.context('./img', true, /\.(jpg|png|svg|png)$/));
+  importAll(require.context('./static/', true, /\.(svg|png|ico|xml|json)$/));
+  
+  importAll(require.context('./styles', true, /\.(css|scss)$/));
+  importAll(require.context('./blocks', true, /\.(css|scss|jpg|png|svg|png|ico|xml|mp4|)$/));
+  importAll(require.context('./pages', true, /\.(css|scss)$/));
+  
+  importAll(require.context('./', true, /\.(js)$/));
+  importAll(require.context('./blocks', true, /\.(js)$/));
 
-// Vue.js
-//window.Vue = require('vue')
-
-// Vue components (for use in html)
-//Vue.component('example-component', require('./components/Example.vue').default)
-
-// Vue init
-//const app = new Vue({
-//  el: '#app'
-//})

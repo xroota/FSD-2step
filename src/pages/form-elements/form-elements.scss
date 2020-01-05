@@ -1,0 +1,165 @@
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/drop-down/drop-down";
+@import "../../blocks/drop-down-date/drop-down-date";
+@import "../../blocks/checkbox-list/checkbox-list";
+@import "../../blocks/extra-list/extra-list";
+@import "../../blocks/radio-list/radio-list";
+@import "../../blocks/toggle-list/toggle-list";
+@import "../../blocks/toggle/toggle";
+@import "../../blocks/like-button/like-button";
+@import "../../blocks/rate-button/rate-button";
+@import "../../blocks/list-item/list-item";
+@import "../../blocks/feedback/feedback";
+@import "../../blocks/button/button";
+@import "../../blocks/ui-slider/ui-slider";
+@import "../../blocks/range-slider/range-slider";
+@import "../../blocks/pagination/pagination";
+@import "../../blocks/twbs-pagination/twbs-pagination";
+
+.form-elements {
+  &__section-top {
+    display: grid;
+    grid-template-columns: minmax(320px, 320px) minmax(320px, 320px) minmax(320px, 320px) ;
+    grid-template-rows: repeat(7, auto);
+    grid-auto-flow: column;
+    grid-row-gap: 20px;
+    grid-column-gap: 126px;
+    background: $white;
+  }
+
+  &__guests {
+    //margin-top: 2px;
+  }
+
+  &__date {
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+
+  &__drop-down-date {
+    margin-top: -9px; 
+    margin-bottom: 21px;
+  }
+
+  &__filter-date {
+    margin-bottom: 21px;
+  }
+
+  &__allowed {
+    grid-row: span 2;
+  }
+
+  &__sex {
+    margin-top: 2px;
+  }
+
+  &__offer {
+    margin-top: 10px;
+  
+  }
+
+  &__toggles{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content max-content max-content;
+    grid-row-gap: 10px;
+ 
+  }
+
+  &__toggles-title{
+    margin-bottom: 3px;
+
+  }
+
+  &__like-buttons{
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content ;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+  }
+
+  &__like-buttons-title{
+    margin-bottom: 1px;
+    grid-column: span 2;
+
+  }
+
+  &__rate-buttons{
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content;
+    grid-column-gap: 20px;
+    grid-row-gap: 17px;
+    grid-row: span 2;
+  }
+
+  &__rate-buttons-title{
+    
+
+    grid-column: span 2;
+
+  }
+
+  &__price-slider{
+    
+
+    
+
+  }
+
+  &__buttons{
+    
+  }
+
+  &__buttons-title{
+    margin-bottom: 16px;
+  }
+
+  &__button1{
+    margin-right: 19px;
+    margin-bottom: 30px;
+  }
+
+  &__button2{
+    margin-right: 19px;
+  }
+
+  &__button3{
+    margin-right: 19px;
+    margin-bottom: 25px;
+  }
+
+  
+  &__button4{
+    margin-right: 59px;
+  }
+
+  &__button5{
+    margin-right: 23px;
+    margin-bottom: 30px;
+  }
+
+   
+}
+
+.block {
+  margin: 141px 143px;
+  padding: 40px 30px 30px 30px;
+  width: 380px;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.double-drop {
+  display: flex;
+  justify-content: space-between;
+  &__drop-down {
+    flex-basis: 46.875%;
+  }
+}

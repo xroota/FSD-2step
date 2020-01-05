@@ -1,0 +1,100 @@
+.button{
+  padding: 14px 22px 15px 18px;
+  position: relative;
+  border-radius: 22px;
+
+
+  &__text {
+    @extend %h3;
+    vertical-align: middle;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    
+  }
+
+  &__symbol {
+    top: 0;
+    right: 0;
+    @extend %material-icons;
+    height: 2.75rem;
+    width: 2.75rem;
+    position: absolute;
+    justify-content: center;
+  }
+
+  &.button--fill {
+    padding: 14px 20px 15px 20px;
+
+    border: none;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: #ffffff;
+  }
+  &.button--border {
+    padding: 12px 18px 13px 18px;
+    position: relative;
+    background-image: linear-gradient(180deg, #bc9cff, #8ba4f9);
+    background-origin: border-box;
+    border: 2px solid transparent;
+    box-shadow: inset 0 3.125rem #fff;
+  }
+
+  &.button--border &__text {
+    
+    color: $purple;
+  }
+
+  &.button--border-none &__text {
+    color: $purple;
+  }
+
+  &.button--border-none {
+    border: none;
+    padding: 0;
+    color: $purple;
+    background: $white;
+  }
+
+  &.button--color-grey &__text{
+    color: $dark-shade-50;
+  }
+
+  &.button--disabled {
+    filter: opacity(0.7);
+  }
+
+  &.button--disabled.button--border-none  &__text  {
+    color: $dark-shade-50;
+  }
+
+
+
+
+  &.button--width-full {
+    width: 100%;
+  }
+
+  &.button--width-normal {
+    width: 6.1875rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.button--slim-fill {
+    height: 2.125rem;
+    padding: 9px 21px 10px 19px;
+    //padding-left: 19px;
+    //padding-right: 21px;
+    
+  }
+
+  &.button--slim-border {
+    height: 2.125rem;
+    padding: 7px 18px 8px 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    
+  }
+
+}

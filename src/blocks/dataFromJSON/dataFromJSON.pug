@@ -1,0 +1,7 @@
+mixin dataFromJSON(blockName, data)
+  - var  fs = require('fs')
+  - var rootDir = require('path').resolve() 
+  - var dataElement = JSON.parse(fs.readFileSync(rootDir + '/src/blocks/' + blockName +'/' + blockName + '.json'));
+  - for (x = 0; x < dataElement.length; x++)
+    if dataElement[x].type === data.type
+      - Object.assign(data, dataElement[x]); 

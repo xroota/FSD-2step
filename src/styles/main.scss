@@ -1,0 +1,94 @@
+
+html {
+
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    height: 100%;
+    
+    @media screen and (max-width: 1920px){ 
+        font-size: 20px;
+    }
+ 
+    @media screen and (max-width: 1680px){
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 1500px)  {
+        font-size: 16px;
+    }
+
+    
+    @media screen and (max-width: 1360px)  {
+        font-size: 16px;
+    }
+
+    
+    @media screen and (max-width: 1360px)  {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 1360px)  {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 1280px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 800px) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 640px) {
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 320px)  {
+        font-size: 10px;
+    }
+
+}
+
+body {
+    //width: $desktopWidth;
+    margin: 0;
+    padding: 0;
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    color: $dark-shade-100;
+    background: $background-color;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: $desktopMaxWidth;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: $desktopMinWidth;
+}
+
+h1 {
+    color: $dark-shade-100;
+    font-family: $secondFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+}
+
+h2 {
+    @extend %h2; 
+}
+
+h3 {
+    font-family: $mainFont;
+    @extend %h3; 
+}
+  

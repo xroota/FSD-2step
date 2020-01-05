@@ -1,0 +1,36 @@
+[
+  {
+    "type": "clear",
+    "text": "Очистить",
+    "name": "clear",
+    "symbol": "",
+    "buttonClass": "button--border-none button--color-grey"
+  },
+  {
+    "type": "apply",
+    "text": "Применить",
+    "name": "apply",
+    "symbol": "",
+    "buttonClass": "button--border-none"
+  },
+  {
+    "type"       : "fill-arrow",
+    "symbol"     : "arrow_forward",
+    "buttonClass": " button--fill button--width-full"
+  },
+  {
+    "type"       : "border",
+    "symbol"     : "",
+    "buttonClass": " button--border"
+  },
+  {
+    "type"       : "fill",
+    "symbol"     : "",
+    "buttonClass": "button--fill"
+  },
+  {
+    "type"       : "border",
+    "symbol"     : "",
+    "buttonClass": "button--border"
+  }
+]

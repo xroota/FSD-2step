@@ -1,0 +1,47 @@
+.pie-chart__legend-item {
+  align-items: center;
+  column-gap: 5px;
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  line-height: 1.25rem;
+  padding-top: 4px;
+}
+
+.pie-chart__total {
+  align-content: center;
+  bottom: 0;
+  display: grid;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: -1;
+}
+.pie-chart__total-line {
+  color: red;
+}
+
+.pie-chart__legend {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.pie-chart__header {
+  margin-top: 0;
+  padding-bottom: 5px;
+}
+
+.pie-chart__diagram {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.pie-chart__chart {
+  align-items: end;
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+}
