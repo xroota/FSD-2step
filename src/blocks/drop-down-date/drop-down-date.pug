@@ -13,7 +13,8 @@ mixin drop-down-date(data)
         {
           type          : blockName,
           title         : data.titleFrom,
-          textFieldClass: data.textFieldClass
+          textFieldClass: data.textFieldClass,
+          placeholder   : data.textFieldPlaceholder
         }
         )
       if (data.titleTo)
@@ -21,21 +22,19 @@ mixin drop-down-date(data)
         {
           type          : blockName,
           title         : data.titleTo,
-          textFieldClass: data.textFieldClass
+          textFieldClass: data.textFieldClass,
+          placeholder   : data.textFieldPlaceholder
         }
         )
     .drop-down-date__menu
       +calendar({
-        calendarClass: "drop-down-date__calendar"
+        calendarClass: "drop-down-date__calendar " + data.calendarClass 
       })
       if(data.menuButtons)
         .drop-down-date__menu-buttons
           each item in data.menuButtons 
             +button({ 
-              name       : item.name,
-              text       : item.text,
-              symbol     : "",
-              buttonClass: "button--border-none"
+              type       : item.type
               })
 
 

@@ -3,17 +3,19 @@
 .drop-down {
   width: 100%;
   position: relative;
+  
   &__menu {
     display: none;
     border: 1px solid $dark-shade-25;
     border-radius: 0 0 4px 4px;
     border-top-style: none;
-    padding: 7px 7px 13px 15px;
+    padding: 4px 5px 13px 15px;
     background: white;
     z-index: 2;
   }
 
   &__items {
+    margin: 0;
     list-style-type: none;
     padding: 0;
   }
@@ -31,7 +33,9 @@
   }
 
   &__item-group {
-    width: 95px;
+    margin-top: 2px;
+    margin-bottom: -1px;
+    width: 92px;
     display: flex;
   }
 
@@ -40,6 +44,8 @@
     outline: none;
     border: none;
     text-align: center;
+    margin-top: -1px;
+    margin-bottom: 2px;
     width: 35px;
     color: black;
   }
@@ -59,6 +65,8 @@
   }
 
   &__menu-buttons {
+    margin-top: 20px;
+    margin-bottom: -2px;
     display: flex;
     justify-content: space-between;
   }
@@ -68,6 +76,7 @@
     background: #ffffff;
     @extend %h3;
     color: $purple;
+    
   }
   &__menu-button:first-child {
     color: $dark-shade-50;
@@ -85,9 +94,12 @@
     display: block;
     position: absolute;
     width: 100%;
+  
+    box-sizing: border-box;
   }
 
   &__item-button--hidden {
     opacity: 0;
+    pointer-events: none;
   }
 }

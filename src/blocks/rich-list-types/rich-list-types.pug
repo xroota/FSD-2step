@@ -1,0 +1,9 @@
+mixin rich-list-types(tagItems)
+    .rich-list-types&attributes(attributes)
+      .rich-list-types__items
+        each item in tagItems
+          .rich-list-types__item
+           .rich-list-types__item-tag
+             #{item.tag} #{item.tag}
+           .rich-list-types__item-text
+             #{item.tag}!= item.text

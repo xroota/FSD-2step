@@ -1,17 +1,23 @@
 [
   {
     "type": "date",
+    "textFieldClass" : "text-field--mask",
+    "calendarClass" : "calendar__datepicker",
+    "textFieldPlaceholder" : "ДД.ММ.ГГГГ",
     "menuButtons": [
-      { "text": "Очистить", "name": "clear" },
-      { "text": "Применить", "name": "apply" }
+      { "type": "clear" },
+      { "type": "apply" }
     ]
   },
   {
     "type": "date-width-short",
+    "dropDownClass" : "drop-down-date--width-short",
     "textFieldClass" : "text-field--width-short",
+    "textFieldPlaceholder" : "ДД.ММ - ДД.MM",
+    "calendarClass" : "calendar__datepicker-short",
     "menuButtons": [
-      { "text": "Очистить", "name": "clear" },
-      { "text": "Применить", "name": "apply" }
+      { "type" : "clear" },
+      { "type" : "apply" }
     ]
   }
 ]

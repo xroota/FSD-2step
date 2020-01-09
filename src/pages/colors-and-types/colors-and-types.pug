@@ -5,11 +5,13 @@ block variables
 block header
 block content
   include ../../blocks/rich-list-colors/rich-list-colors
+  include ../../blocks/rich-list-types/rich-list-types
   include ../../blocks/logo/logo
-  +logo({
-    logoClass: "container__logo",
-  })
-  .container
+
+  .colors-and-types
+    +logo({
+      logoClass: "colors-and-types__logo",
+    })
     
     +rich-list-colors([["Dark Shade 100%","#1F2041","#1F2041"],
                        ["Dark Shade 75%","#1F2041","rgba(31, 32, 65, 0.75)"],
@@ -18,9 +20,9 @@ block content
                        ["Dark Shade 5%","#1F2041","rgba(31, 32, 65, 0.05)"],
                        ["Purple","#BC9CFF","#BC9CFF"],
                        ["Green","#6FCF97","#6FCF97"]                                     
-                       ])
+                       ])(class="colors-and-types__colors")
 
-    //tag- выводимое имя, addTag - тег добавляемы в разметку
+    //tag- выводимое имя, addTag - тег добавляемый в разметку
     - 
       var tagItems = [
         {tag: "H1", text : "This one is the sub-section or widget title"},
@@ -28,14 +30,6 @@ block content
         {tag: "H3", text : "This is a label or CTA text"},
         {tag: "Body", text : "This is the body text which is used for most <br> of the design, like paragraphs, lists, etc."}
       ]
-
-    .types-list
-      .types-list__items
-        each item in tagItems
-          .types-list__item
-           .types-list__item-tag
-             #{item.tag} #{item.tag}
-           .types-list__item-text
-             #{item.tag}!= item.text
+    +rich-list-types(tagItems)(class="colors-and-types__types")
   
-block footer         
+block footer

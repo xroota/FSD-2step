@@ -66,6 +66,7 @@
     "air-datepicker": "^2.2.3",
     "app-root-path": "^3.0.0",
     "bootstrap": "^4.3.1",
+    "inputmask": "^5.0.1",
     "ion-rangeslider": "^2.3.0",
     "jquery-ui": "^1.12.1",
     "material-design-icons": "^3.0.1",

@@ -155,8 +155,21 @@
       @extend %h3;
       color: $dark-shade-50;
       font-weight: normal;
-      width: 39.88px;
+      width: 14.2%;
       height: 40px;
     }
+    
   }
+
+  &.air-datepicker--width-small{
+    
+    &--cell-day {
+      @extend %h3;
+      color: $dark-shade-50;
+      font-weight: normal;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
 }

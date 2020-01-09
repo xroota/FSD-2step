@@ -7,16 +7,16 @@
         
     }
     &__item-text {
+        box-sizing: border-box;
         position: relative;
         cursor: pointer;
         width: 40px;
         height: 20px;
-        padding: 2px 0 0 11px ;
+        padding: 0px 0 0 10px ;
         text-align: center;
         font-size: 0.625rem;
-        line-height: 0.75rem;
+        line-height: 20px;
         color: $dark-shade-25;
-        position: relative;
         background-image: linear-gradient(180deg, $dark-shade-25 0%, $dark-shade-25);
         background-origin: border-box;
         border: 1px solid transparent; 

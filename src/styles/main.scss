@@ -1,4 +1,7 @@
 
+  
+
+
 html {
 
     font-size: $mainFontSize;
@@ -23,14 +26,6 @@ html {
     }
 
     
-    @media screen and (max-width: 1360px)  {
-        font-size: 16px;
-    }
-
-    @media screen and (max-width: 1360px)  {
-        font-size: 16px;
-    }
-
     @media screen and (max-width: 1280px) {
         font-size: 16px;
     }
@@ -60,7 +55,7 @@ body {
     font-family: $mainFont;
     font-size: $mainFontSize;
     font-weight: $mainFontWeight;
-    color: $dark-shade-100;
+    color: $dark-shade-75;
     background: $background-color;
     font-style: normal;
     font-weight: normal;
@@ -91,4 +86,8 @@ h3 {
     font-family: $mainFont;
     @extend %h3; 
 }
+  
+
+
+
   

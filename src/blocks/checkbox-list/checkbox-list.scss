@@ -36,10 +36,11 @@
         border:1px solid $dark-shade-25;
         border-radius: 4px;
         margin-right: 10px;
+        box-sizing: border-box;
     }
     &__item-checkbox-hidden:checked + &__item-checkbox{
         border-color: $purple;
-        background: url(/assets/img/vector.svg) no-repeat 4px 2px;   
+        background: url(/img/vector.svg) no-repeat 4px 2px;   
     }
 
     &__item-title{

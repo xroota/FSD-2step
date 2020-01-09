@@ -3,6 +3,9 @@ require('popper.js');
 require('bootstrap');
 
 
+$(document).ready(function() {
+	jQuery("ul.pagination li a").html("...");
+});
 
 $(function () {
 	window.pagObj = $('#pagination').twbsPagination({
@@ -24,3 +27,8 @@ $(function () {
 		console.info(page + ' (from event listening)');
 	});
 });
+
+$(document).ready(function() {
+	jQuery("ul.pagination li:nth-child(6) a").text("...");
+});
+

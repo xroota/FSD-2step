@@ -6,16 +6,16 @@ mixin text-field(data)
   - var dataElementTF = JSON.parse(fs.readFileSync(rootDir+'/src/blocks/text-field/text-field.json'));
   - for (x = 0; x < dataElementTF.length; x++)
     if dataElementTF[x].type === data.type
-      - Object.assign(data, dataElementTF[x]);
+      - data = Object.assign(  dataElementTF[x],data);
 
 
-  .text-field(class=data.textFieldClass)&attributes(attributes)
+  .text-field(class=data.textFieldClass )&attributes(attributes)
     if data.titleText
       .text-field__title-text= data.titleText 
     if data.title
       h3.text-field__title= data.title
     .text-field__input-box
-      input(type=data.typeInput, class="text-field__input" , readonly=true && data.readOnly, value=data.inputText, placeholder= data.placeholder) 
+      input(type=data.typeInput, class="text-field__input"   , readonly=true && data.readOnly, value=data.inputText, placeholder= data.placeholder) 
       if data.buttonText
         .text-field__input-button= data.buttonText
 

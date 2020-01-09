@@ -4,7 +4,8 @@
     "placeholder": "ДД.ММ.ГГГГ",
     "inputText": "",
     "readOnly": false,
-    "typeInput" : "text"
+    "typeInput" : "text",
+    "textFieldClass" : "text-field--mask"
   },
   {
     "type": "drop-down-date",

@@ -17,6 +17,7 @@
 @import "../../blocks/twbs-pagination/twbs-pagination";
 
 .form-elements {
+  margin-left: 300px;
   &__section-top {
     display: grid;
     grid-template-columns: minmax(320px, 320px) minmax(320px, 320px) minmax(320px, 320px) ;
@@ -26,6 +27,18 @@
     grid-column-gap: 126px;
     background: $white;
   }
+
+
+  &__section-expanded {
+    display: grid;
+    grid-template-columns: minmax(320px, 320px) minmax(320px, 320px) minmax(320px, 320px) ;
+    grid-template-rows: repeat(7, auto);
+    grid-auto-flow: column;
+    grid-row-gap: 20px;
+    grid-column-gap: 126px;
+    background: $white;
+  }
+
 
   &__guests {
     //margin-top: 2px;

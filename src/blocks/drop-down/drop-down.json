@@ -2,14 +2,19 @@
   {
     "type": "guests",
     "placeholder": "Сколько гостей",
+    "defaultPlaceholder": "Сколько гостей",
     "inputText": "",
     "readOnly": true,
     "buttonText": "expand_more",
     "textFieldClass": "text-field--placeholder-dark-75",
+    "sumTypes" : { 
+      "guest": ["гость","гостя","гостей"],
+      "baby": ["младенец","младенца","младенцев"]
+    },
     "items": [
-      { "text": "Взрослые", "value": 0 },
-      { "text": "Дети", "value": 0 },
-      { "text": "Младенцы", "value": 0 }
+      { "text": "Взрослые", "value": 0, "sumType": "guest"},
+      { "text": "Дети", "value": 0, "sumType": "guest" },
+      { "text": "Младенцы", "value": 0, "sumType": "baby" }
     ],
     "menuButtons": [
       { "type" : "clear" },
@@ -19,14 +24,20 @@
   {
     "type": "rooms",
     "placeholder": "Удобства",
+    "defaultPlaceholder": "Удобства",
     "inputText": "",
     "readOnly": true,
     "buttonText": "expand_more",
     "textFieldClass": "text-field--placeholder-dark-75",
+    "sumTypes" : { 
+      "bedroom": ["спальная","спальни","спальней"],
+      "bed": ["кровать","кровати","кроватей"],
+      "bathroom": ["ванная комната","ванные комнаты","ванных комнат"]
+    },
     "items": [
-      { "text": "спальни", "value": 0 },
-      { "text": "кровати", "value": 0 },
-      { "text": "ванные комнаты", "value": 0 }
+      { "text": "спальни", "value": 0 ,"sumType": "bedroom"},
+      { "text": "кровати", "value": 0 ,"sumType": "bed"},
+      { "text": "ванные комнаты", "value": 0 ,"sumType": "bathroom"}
     ],
     "menuButtons": [
       { "type" : "clear" },
