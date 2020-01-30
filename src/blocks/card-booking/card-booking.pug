@@ -12,9 +12,11 @@ mixin card-booking(data)
         +room-info(data)(class='card-booking__room-info')
   
         +drop-down-date(
-            {titleFrom     : "Прибытие",
-             titleTo       : "Выезд"
-             }
+          {
+            type          : "date",
+            titleFrom     : "Прибытие",
+            titleTo       : "Выезд"
+          }
         )(class="card-booking__drop-down-date-in")
   
         +drop-down(

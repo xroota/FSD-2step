@@ -1,6 +1,24 @@
 .list{
+  box-sizing: border-box;
     &__title {
-        @extend %h2;
-        margin: 0 0 1.25rem 20px;
+        @extend %h3;
+        margin: 0 0 0.75rem 0px;
       }
+    &__item{
+      margin-bottom: 10px;
+
+    }
+    &.list--theme-toxin &__title{
+      @extend %h2;
+      text-transform: none;
+      margin-bottom: -2px;
+      margin: 0 0 1rem 20px;
+      letter-spacing: 0.6px;
+    
+
+    }
+  
+
+
 } 
+

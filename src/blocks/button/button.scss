@@ -6,6 +6,9 @@
 
   &__text {
     @extend %h3;
+    font-weight:bold;
+    font-style: normal;
+font-weight: bold;
     vertical-align: middle;
     color: #ffffff;
     width: 100%;
@@ -20,6 +23,7 @@
     @extend %material-icons;
     height: 2.75rem;
     width: 2.75rem;
+    line-height: 2.75rem;
     position: absolute;
     justify-content: center;
   }

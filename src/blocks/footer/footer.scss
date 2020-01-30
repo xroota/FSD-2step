@@ -5,20 +5,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 106px 140px 0 140px;
+    
     background: $white;
-    height: 443px;
+    height: 340px;
 
     &__logo{
         margin-top: -5px;
-        margin-bottom: -7px;
+        
     }
 
 
     &__nav{
+        padding: 106px 140px 80px 140px;
         display: grid;
         grid-template-columns: 300px 200px 200px 200px 260px; 
         padding-left: -1px;
+        box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
     }
 
     &__nav-item{
@@ -45,18 +47,34 @@
     &__subitem-text{
         line-height: 1.5rem;
         color: $dark-shade-100;
-        padding-right: 40px;
+        padding-right: 0px;
+        margin-right: 10px;
         margin-top: -2px;
         letter-spacing: -0.15px;
     }
 
     &__copyright{
-
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        padding: 25px 140px 21px 140px;
         height: 70px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
+    &__copyright-text{
+        
+        letter-spacing: -0.1;
+    }
+
+    &.footer--theme-toxin &__nav{
+        padding: 106px 140px 77px 140px;
+    }
+
+    &.footer--theme-toxin &__subitem-text{ 
+        margin-top: -5px;
+    }
+
 
     &.footer--theme-light &__nav-item:not(:first-child){
         display: none;

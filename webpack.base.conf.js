@@ -155,5 +155,11 @@ module.exports = {
       filename: './login-page.html',
     }), 
 
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/room-details/room-details.pug`,
+      filename: './room-details.html',
+    }), 
+
+
   ],
 }

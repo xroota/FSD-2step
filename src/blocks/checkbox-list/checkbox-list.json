@@ -1,25 +1,60 @@
 [
-    {
-        "type"         : "allowed",
-        "title"        : "Checkbox Buttons",
-        "buttonText"   : "",
-        "checkboxClass": "checkbox-list--menu-visible",
-        "items"        : [
-            {
-            "text"      : "Можно курить",
-            "value"     : false,
-            "name"      : "canSoke"
-            },
-            {
-            "text"      : "Можно с питомцами",
-            "value"     : false,
-            "name"      : "canPets"
-            },
-            {
-            "text"      : "Можно пригласить гостей (до 10 человек)",
-            "value"     : false,
-            "name"      : "canGuests"
-            }
-        ]
-    }
+  {
+    "type": "allowed",
+    "title": "Checkbox Buttons",
+    "name": "ch1",
+    "buttonText": "",
+    "checkboxClass": "checkbox-list--menu-visible",
+    "items": [
+      {
+        "text": "Можно курить",
+        "value": false,
+        "name": "canSoke"
+      },
+      {
+        "text": "Можно с питомцами",
+        "value": false,
+        "name": "canPets"
+      },
+      {
+        "text": "Можно пригласить гостей <br>(до 10 человек)",
+        "value": false,
+        "name": "canGuests"
+      }
+    ]
+  },
+  {
+    "type": "funiture",
+    "name": "ch2",
+    "buttonText": "expand_more",
+    "checkboxClass": "",
+    "items": [
+      { "text": "Завтрак", "value": false, "name": "dinner" },
+      { "text": "Письменный стол", "value": true, "name": "table" },
+      { "text": "Стул для кормления", "value": true, "name": "chair" },
+      { "text": "Кроватка", "value": true, "name": "TV" },
+      { "text": "Телевизор", "value": false },
+      { "text": "Шампунь", "value": false },
+      { "text": "Телевизор", "value": false },
+      { "text": "Шампунь", "value": false }
+    ]
+  },
+  {
+    "type": "rich",
+    "buttonText": "",
+    "name": "rcb",
+    "checkboxClass": "checkbox-list--menu-visible checkbox-list--theme-rich",
+    "items": [
+      {
+        "title": "Широкий коридор",
+        "text": "Ширина коридоров в номере <br> не менее 91 см.",
+        "value": false
+      },
+      {
+        "title": "Помощник для инвалидов",
+        "text": "На 1 этаже вас встретит специалист <br> и проводит до номера.",
+        "value": true 
+      }
+    ]
+  }
 ]

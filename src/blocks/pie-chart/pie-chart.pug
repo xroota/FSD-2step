@@ -63,11 +63,10 @@ mixin pie-chart(items, name='')
             )
             - position += item.length + gap;
           //- const wording = require('utils/wording');
-        .pie-chart__total= totalAmount +"голосов"
-            .text_level_h1
-            //-  span.pie-chart__total-line= total[0]
-            .text_level_h3
-            //-  span.pie-chart__total-line= total[1]
+        
+        .pie-chart__total
+            .pie-chart__total-num= totalAmount
+            .pie-chart__total-text= "голосов"
       ul.pie-chart__legend
         each item, index in items.reverse()
           li.pie-chart__legend-item

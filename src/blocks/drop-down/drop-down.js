@@ -28,21 +28,18 @@ function sumGuests(items) {
         if (num > 1) {
           tmp = 1
         }
-        if (num > 5) {
+        if (num > 4) {
           tmp = 2
         }
 
-        if ((num > 0) && (numKeys <= 2)) {
+        if ((num > 0) ) {
 
           numKeys=numKeys+1;
           if (numKeys === 2) 
           {text =  text + " , ";} 
-
+          if (numKeys <= 2) {
           text = text + sumCount[key] + " " +  sumTypes[key][tmp];
-
-
-        
-        
+          }
         }
         console.log(numKeys);
 
@@ -59,7 +56,7 @@ function sumGuests(items) {
       $(this)
         .closest(".drop-down")
         .find(".button__clear")
-        .removeClass("drop-down__item-button--hidden ");
+        .removeClass("drop-down__menu-button--hidden ");
     } else {
       {
         let defaultPlaceholder = $(this)
@@ -69,10 +66,12 @@ function sumGuests(items) {
           .closest(".drop-down")
           .find(".text-field__input")
           .val(defaultPlaceholder);
-        $(this)
+          $(this)
           .closest(".drop-down")
           .find(".button__clear")
-          .addClass("drop-down__item-button--hidden ");
+          .addClass("drop-down__menu-button--hidden ");
+
+        
       }
     }
   });

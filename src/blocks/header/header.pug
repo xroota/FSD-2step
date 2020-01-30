@@ -1,10 +1,16 @@
 include ../../blocks/logo/logo
 include ../../blocks/button/button
 
-mixin header(data)
+- var  fs = require('fs')
+- var rootDir = require('path').resolve() 
+- var dataJsonH = JSON.parse(fs.readFileSync(rootDir+'/src/blocks/header/header.json'));
 
+mixin header(name)
 
-  .header(class = data.headerClass)
+   - for (var x = 0; x < dataJsonH.length; x++)
+        if(dataJsonH[x].id===name)
+            - var data= dataJsonH[x].data
+   .header(class = data.headerClass)
     +logo({
         logoClass: "header__logo",
         type     : "full"

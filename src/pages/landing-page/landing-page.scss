@@ -3,11 +3,13 @@
 @import "../../blocks/card-find-number/card-find-number";
 
 .landing-page{
+    box-sizing: border-box;
     height: 830px;
     background-image: url(../../img/landing-page.jpg);
     background-position: center -71px;
 
     &__card-find-number{
+        width: 380px;
         position: absolute;
         top: 140px;
         left: 140px;

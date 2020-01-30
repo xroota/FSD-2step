@@ -1,9 +1,10 @@
 mixin checkbox-list(data)
   +dataFromJSON("checkbox-list", data)
   .checkbox-list(class=data.checkboxClass)&attributes(attributes)
-    h3.checkbox-list__title= data.title
-    if data.buttonText
-      .checkbox-list__button= data.buttonText
+    .checkbox-list__section
+      h3.checkbox-list__title= data.title
+      if data.buttonText
+        .checkbox-list__button= data.buttonText
     ul.checkbox-list__items
       - for (var x = 0; x < data.items.length; x++){
       li.checkbox-list__item
@@ -12,5 +13,5 @@ mixin checkbox-list(data)
         .checkbox-list__item-text-box
           if (data.title)
             div.checkbox-list__item-title= data.items[x].title
-          .checkbox-list__item-text= data.items[x].text
+          .checkbox-list__item-text!= data.items[x].text
       - }

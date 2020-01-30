@@ -6,33 +6,8 @@ block header
 
   include ../../blocks/header/header
  
-  +header(
-      { headerClass        : "headers-footers__header",
-        buttonLoginText    : "Войти",
-        buttonRegisterText : "Зарегистрироваться",
-        userName           : "",
-        navItems: [
-           {text      : "О нас",
-            symbol    : ""
-           },
-           {text      : "Услуги",
-            symbol    : "expand_more",
-            hasSubmenu: true
-           },
-           {text      : "Вакансии",
-            symbol    : ""
-           },
-           {text      : "Новости",
-            symbol    : ""
-           },
-           {text      : "Соглашения",
-            symbol    : "expand_more",
-            hasSubmenu: true
-           }
-         ]
-      }
-    )
-
+  +header("toxin")
+ 
 block content
 
     - var  fs = require('fs')
@@ -57,7 +32,7 @@ block content
         +room-photos(
           { 
             imageItems      : data.imageItems,
-            numPhotos       : [1]
+            numPhotos       : [4]
           }
         )(class="room-details__room-photos-left")
         +room-photos(
@@ -72,7 +47,7 @@ block content
         +extra-list(
           {
             title: "Сведения о номере",
-            detailItems: data.details
+            items: data.details.items
 
           })(class="room-details__room-about")
         +pie-chart([
@@ -95,14 +70,13 @@ block content
 
           items        : data.rules 
           }
-        )
-
+        )(class="room-details__rules list--theme-toxin")
         +list({
           title        : "Отмена",
           listItemClass: "list-item--is-text",
           items        : data.cancel
           }
-        )(class="room-details__cancel")
+        )(class="room-details__cancel list--theme-toxin")
 
         +card-booking(data)(class="room-details__card-booking")
 

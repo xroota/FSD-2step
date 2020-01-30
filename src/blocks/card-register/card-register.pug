@@ -25,19 +25,8 @@ mixin card-register()
             )(class="card-register__surname")
             +radio-list(
                 {
-                    title         : "", 
-                    items         : 
-                    [
-                        {
-                            title        : "Мужчина",
-                            value        : true
-                         },
-                        {
-                            title        : "Женщина",
-                            value        : false
-                        }
-                    ],
-            }
+                    type    : "men-woman"
+                }
             )(class="card-register__sex")
 
             +text-field(

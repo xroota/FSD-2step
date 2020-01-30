@@ -1,6 +1,7 @@
 .social {
+
   display: grid;
-  column-gap: 20px;
+  column-gap: 23px;
   grid-template-columns: auto auto auto;
 
   &__item {
@@ -12,5 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background-clip:text;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

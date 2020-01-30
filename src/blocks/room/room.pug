@@ -5,7 +5,6 @@ include ../../blocks/slider/slider
 
 
 mixin room(roomNumber)
-  .room() 
     - var  fs = require('fs')
     - var rootDir = require('path').resolve() 
     - var dataJsonRoom = JSON.parse(fs.readFileSync(rootDir+'/src/blocks/room/room.json'));
@@ -14,7 +13,7 @@ mixin room(roomNumber)
        if(dataJsonRoom[x].roomNumber===roomNumber)
         - var data= dataJsonRoom[x]
 
-    .room(class=data.roomClass) 
+    .room(class=data.roomClass)&attributes(attributes)
       +slider(
           { 
            items        : data.imageItems,
@@ -24,10 +23,9 @@ mixin room(roomNumber)
       +room-info(
           {roomNumber  : data.roomNumber,
            roomType    : data.roomType,
-           roomPrice   : data.roomPrice,
-           roomInfoClass: "room__room-info room-info--font-size-small"
+           roomPrice   : data.roomPrice
           }
-      )
+      )(class="room__room-info room-info--font-size-small")
       .room__line
       +rate-button(
         { name           : "room__rate-"+data.roomNumber,

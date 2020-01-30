@@ -1,13 +1,13 @@
 .rate-button {
   display: flex;
   justify-content: left;
-  margin: 0;
+
   &__items {
     position: relative;
     display: flex;
     flex-direction: row;
     background: linear-gradient(180deg, #bc9cff, #8ba4f9);
-    height: 20px;
+    height: 1.25rem;
   }
 
   &__item-input {

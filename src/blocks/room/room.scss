@@ -6,11 +6,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-sizing: border-box;
     width: 270px;
 
 
     &__slider{
-        margin-bottom: 10px;
+        margin-bottom: 18px;
     }
 
     &__room-info{
@@ -18,18 +19,13 @@
         padding: 0 18px 0 19px;
     }
 
-    &__line{
-        width: 100%;
-        border-bottom: 1px dotted $dark-shade-25;
-        height: 1px;
-        margin-bottom: 8px;
-    }
+
 
     &__line{
         width: 100%;
         border-bottom: 1px dotted $dark-shade-25;
         height: 1px;
-        margin: 0 10px 8px 20px;
+        margin: 0 20px 11px 20px;
     }
 
     &__rate-button{
@@ -42,6 +38,9 @@
         margin-right: 20px;
         margin-bottom: 23.37px;
     }
+
+
+
 
 
     

@@ -1,12 +1,14 @@
 //@import "../../blocks/card-login/card-login";
 .sign-in-page{
+    width: 1440px;
+    box-sizing: border-box;
 
     background-image: url(../../img/login-page.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center -70px;
     display: grid;
-    grid-template-columns: minmax(320px,380px);
+    grid-template-columns: minmax(320px,320px);
     justify-content: center;
     padding: 163px 0 163px 0;
 

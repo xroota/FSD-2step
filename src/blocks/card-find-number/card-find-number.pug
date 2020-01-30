@@ -8,53 +8,22 @@ mixin card-find-number(data)
           title    : "Найдём номера под ваши пожелания",
           cardClass: "card-find-number__card"
       })
-          +drop-down-date({
-            titleFrom     : "Прибытие",
-            titleTo       : "Выезд",
-            placeholder   : "ДД.ММ.ГГГГ",
-            menuButtons  : [{
-              text      : "Очистить",
-              name      : "clear",
-            },{
-              text      : "Применить",
-              name      : "apply",
-            }],
-            dropDownClass: "card-find-number__drop-down-date"
-          })
-          +drop-down(
-            {title         : "Гости",
-             titleText     : "",
-             placeholder   : "Сколько гостей",
-             inputText     : "",
-             readOnly      : true,
-             buttonText    : "",
-             textFieldClass: "text-field--placeholder-dark-75",
-             items        : [
-               {text      : "Взрослые",
-                value     : 0
-               },
-               {text      : "Дети",
-                value     : 0
-               },
-               {text      : "Младенцы",
-                value     : 0
-               }
-             ],
-             menuButtons  : [
-               {text      : "Очистить",
-                name      : "clear",
-               },
-               {text      : "Применить",
-                name      : "apply",
-               },
-
-             ],
-             dropDownClass: "card-find-number__drop-down-guests"
-             }
-          )
-          +button(     
-          { name       : "btn7",
-            text       : "Подобрать номер",
-            symbol     : "arrow_forward",
-            buttonClass: "card-find-number__button-submit button--fill button--width-full"
-          })
+      +drop-down-date(
+        {
+          type          : "date",
+          titleFrom     : "Прибытие",
+          titleTo       : "Выезд"
+        }
+      )(class="card-find-number__drop-down-date")
+      +drop-down(
+        {
+          type          : "guests",
+          title         : "Гости"
+        }
+      )(class="card-find-number__drop-down-guests")
+      +button(     
+        { 
+          type       : "fill-arrow",
+          text       : "Подобрать номер",
+        }
+      )(class="card-find-number__button-submit")

@@ -7,6 +7,6 @@ include ../room/room
 mixin room-list(data)
     .room-list(class=data.roomListClass)
         each rooms in dataJson
-            +room(rooms.roomNumber)
+            +room(rooms.roomNumber)(class="room--theme-toxin")
 
 

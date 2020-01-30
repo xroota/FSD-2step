@@ -1,13 +1,13 @@
 mixin list-item(data)
-    .list-item(class=data.classItem)
-      if (data.symbol)
-        .list-item__pic= item.symbol
+  .list-item(class=data.classItem)&attributes(attributes)
+    if (data.symbol)
+      .list-item__pic= item.symbol
+    else
+      div(class="list-item__pic" style="background-image: url("+ data.urlPic+")")
+    .list-item__text
+      if (data.title)
+        #{"strong"}=data.title
+        #{"br"}= data.text
       else
-        div(class="list-item__pic" style="background-image: url("+ data.urlPic+")")
-      .list-item__text
-          if (data.title)
-            #{"strong"}=data.title
-            #{"br"}= data.text
-          else
-            = data.text
+        != data.text
 

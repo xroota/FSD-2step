@@ -21,7 +21,7 @@ mixin footer(name)
                         logoClass: "footer__logo",
                         type     : "full"
                     })
-                li.footer__subitem-text= data.footerText
+                li.footer__subitem-text!= data.footerText
             each item in data.navItems
                 ul.footer__nav-item
                     .footer__nav-item-title= item.navTitle

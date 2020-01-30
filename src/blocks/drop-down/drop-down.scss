@@ -99,7 +99,14 @@
   }
 
   &__item-button--hidden {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+
+  &__menu-button--hidden {
     opacity: 0;
     pointer-events: none;
   }
+
 }

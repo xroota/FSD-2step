@@ -1,7 +1,7 @@
 mixin extra-list(data)
     .extra-list&attributes(attributes)
       .extra-list__title= data.title
-      each item in data.detailItems.items
+      each item in data.items
         .extra-list__item
           .extra-list__item-pic= item.symbol
           .extra-list__item-text

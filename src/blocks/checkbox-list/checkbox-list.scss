@@ -1,8 +1,13 @@
 .checkbox-list{
+    &__section{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
     &__title{
         line-height: 0.9375rem;
-        margin: 0 30px 14px 0;
-        //float: left;
+        margin: 0 10px 14px 0;
         
     }
 
@@ -10,9 +15,10 @@
     &__button{
         @extend %material-icons;
         max-width: 2.75rem;
-        height: 2.75rem;
+        line-height: 0.9375rem;
+        margin-bottom: 14px;
         display: flex;
-        justify-content: center;
+        margin-right: 10px;
     }
 
 
@@ -24,14 +30,14 @@
     }
     &__item{
         display: flex;
-        margin: 0 0 11px 0;
+        margin: 0 0 10px 0;
     }
     &__item-checkbox-hidden{
         display:none;
     }
     &__item-checkbox{
         display:block;
-        width: 20px;
+        min-width: 20px;
         height: 20px;
         border:1px solid $dark-shade-25;
         border-radius: 4px;
@@ -40,7 +46,7 @@
     }
     &__item-checkbox-hidden:checked + &__item-checkbox{
         border-color: $purple;
-        background: url(/img/vector.svg) no-repeat 4px 2px;   
+        background: url(/img/vector.svg) no-repeat 4px 3px;   
     }
 
     &__item-title{
@@ -55,7 +61,9 @@
         line-height: 1.12rem;
         color: $dark-shade-50;
         vertical-align: middle;
-        width: 200px;
+
+     
+      
     }
 
 
@@ -63,7 +71,7 @@
     &--menu-visible &__button{
         color: $dark-shade-50;  
         transform: rotate(-180deg); 
-
+        
     }
 
     &--menu-visible &__button{
@@ -76,4 +84,13 @@
         display: block;
 
     }
+
+    &--theme-rich &__item{
+        margin-bottom: 6px;
+    }
+
+    &--theme-rich &__item-text{
+        font-size: 0.75rem;
+        line-height: 1rem;
+}
 }

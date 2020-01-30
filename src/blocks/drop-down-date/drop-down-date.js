@@ -44,7 +44,6 @@ $(document).ready(function() {
 
 
       var myDatepicker = $($(this).closest(".calendar__datepicker-short")).datepicker().data('datepicker');
-      myDatepicker.clear()
   });
 
 });

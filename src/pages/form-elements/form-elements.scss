@@ -17,62 +17,89 @@
 @import "../../blocks/twbs-pagination/twbs-pagination";
 
 .form-elements {
-  margin-left: 300px;
-  &__section-top {
+  padding: 143px 141px;
+
+  
+
+  
+  &__logo{
+    position: absolute;
+    left: 30px;
+    top:30px;
+    margin: 0;
+  }
+
+  &__section {
     display: grid;
     grid-template-columns: minmax(320px, 320px) minmax(320px, 320px) minmax(320px, 320px) ;
-    grid-template-rows: repeat(7, auto);
-    grid-auto-flow: column;
+    grid-template-rows: auto auto auto;
     grid-row-gap: 20px;
     grid-column-gap: 126px;
     background: $white;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: minmax(320px, 320px) minmax(320px, 320px) ;
+      grid-template-rows: auto auto auto auto;
+    }
+
+    @media (max-width: 800px) {
+      grid-template-rows: auto auto auto auto;
+      grid-template-columns: minmax(320px, 320px) ;
+      justify-content: center;
+    }
   }
 
 
   &__section-expanded {
-    display: grid;
-    grid-template-columns: minmax(320px, 320px) minmax(320px, 320px) minmax(320px, 320px) ;
-    grid-template-rows: repeat(7, auto);
-    grid-auto-flow: column;
-    grid-row-gap: 20px;
-    grid-column-gap: 126px;
-    background: $white;
+
+  }
+  
+  &__text {
+    margin-bottom: 20px;
+    
   }
 
 
   &__guests {
-    //margin-top: 2px;
+    margin-bottom: 20px;
+    
   }
 
   &__date {
-    margin-top: 3px;
     margin-bottom: 20px;
   }
 
   &__drop-down-date {
-    margin-top: -9px; 
-    margin-bottom: 21px;
+    margin-bottom: 20px;
+    
   }
 
   &__filter-date {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
+
+  }
+
+  &__subscription {
+    margin-bottom: 20px;
+
   }
 
   &__allowed {
     grid-row: span 2;
+    width: 230px;
   }
 
   &__sex {
-    margin-top: 2px;
+    margin-bottom: 20px;
   }
 
   &__offer {
-    margin-top: 10px;
+    margin-bottom: 20px;
   
   }
 
   &__toggles{
-    margin-top: 10px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: max-content;
     grid-template-rows: max-content max-content max-content;
@@ -80,13 +107,13 @@
  
   }
 
-  &__toggles-title{
-    margin-bottom: 3px;
+  &__rooms{
+    margin-bottom: 20px;
 
   }
 
   &__like-buttons{
-    margin-top: 26px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content max-content ;
@@ -95,13 +122,13 @@
   }
 
   &__like-buttons-title{
-    margin-bottom: 1px;
+
     grid-column: span 2;
 
   }
 
   &__rate-buttons{
-    margin-top: 26px;
+
     display: grid;
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content max-content;
@@ -111,17 +138,11 @@
   }
 
   &__rate-buttons-title{
-    
-
     grid-column: span 2;
-
   }
 
   &__price-slider{
-    
-
-    
-
+    margin-bottom: 20px;
   }
 
   &__buttons{
@@ -156,7 +177,14 @@
     margin-bottom: 30px;
   }
 
-   
+
+  &__feedback{
+    grid-column: span 2;
+    @media (max-width: 800px) {
+      grid-column: span 1;
+    }
+
+  }
 }
 
 .block {
@@ -169,10 +197,4 @@
   border-radius: 4px;
 }
 
-.double-drop {
-  display: flex;
-  justify-content: space-between;
-  &__drop-down {
-    flex-basis: 46.875%;
-  }
-}
+

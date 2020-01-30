@@ -1,6 +1,9 @@
 //@import "../../pug/blocks/button/button"; 
 
 .header{
+    width: 1440px;
+    box-sizing: border-box;
+
     display : grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -19,7 +22,8 @@
         //width: 40px;
         //height: 40px;
         background-size: cover;
-        margin-top: 4px;
+        margin-top: 2px;
+        margin-left: 2px;
         @media (max-width: 1200px) {
             grid-area: logo;
             justify-self: start;
@@ -46,7 +50,7 @@
 
     &__nav-item{
         display: flex;
-        margin-right: 20px;   
+        margin-right: 28px;   
         align-self: baseline;
 
 
@@ -54,7 +58,11 @@
 
     &__nav-text{
         color: $dark-shade-50;
-        letter-spacing: 1;
+        letter-spacing: 0;
+    }
+
+    &__nav-text:first-child{
+        color: $dark-shade-75;
     }
 
     &__nav-symbol{
@@ -103,7 +111,7 @@
         height: 30px;
         left: -31px;
         width: 1px;
-        background: $dark-shade-50;
+        background: rgba(31, 32, 65, 0.1);
 
         
      }
@@ -114,7 +122,14 @@
     &.header--logined &__user{
        display: block;
     }
-    
+
+    &.header--theme-toxin &__nav-item{
+        display: flex;
+        margin-right: 21px;   
+        align-self: baseline;
+
+
+    }
 
 
 

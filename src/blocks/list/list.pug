@@ -1,3 +1,5 @@
+include ../../blocks/list-item/list-item
+
 mixin list(data)
   .list&attributes(attributes)
     .list__title= data.title
@@ -9,4 +11,4 @@ mixin list(data)
         urlPic   : "",
         classItem: data.listItemClass
         }
-      )
+      )(class="list__item")

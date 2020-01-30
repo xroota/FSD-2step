@@ -1,0 +1,52 @@
+[
+  {
+    "id": "demo2",
+    "data": {
+      "headerClass": "headers-footers__header header--logined ",
+      "buttonLoginText": "Login",
+      "buttonRegisterText": "Register",
+      "userName": "Cosmin Negoita",
+      "navItems": [
+        { "text": "<strong>Home</strong>", "symbol": "" },
+        { "text": "About Us", "symbol": "" },
+        { "text": "Services", "symbol": "expand_more", "hasSubmenu": true },
+        { "text": "Careers", "symbol": "" },
+        { "text": "News", "symbol": "" },
+        { "text": "Documentation", "symbol": "" }
+      ]
+    }
+  },
+  {
+    "id": "demo",
+    "data": {
+      "headerClass": "headers-footers__header",
+      "buttonLoginText": "Login",
+      "buttonRegisterText": "Register",
+      "userName": "Cosmin Negoita",
+      "navItems": [
+        { "text": "<strong>Home</strong>", "symbol": "" },
+        { "text": "About Us", "symbol": "" },
+        { "text": "Services", "symbol": "expand_more", "hasSubmenu": true },
+        { "text": "Careers", "symbol": "" },
+        { "text": "News", "symbol": "" },
+        { "text": "Documentation", "symbol": "" }
+      ]
+    }
+  },
+  {
+    "id": "toxin",
+    "data": {
+      "headerClass": "headers-footers__header header--theme-toxin",
+      "buttonLoginText": "Войти",
+      "buttonRegisterText": "Зарегистрироваться",
+      "userName": "",
+      "navItems": [
+        { "text": "О нас", "symbol": "" },
+        { "text": "Услуги", "symbol": "expand_more", "hasSubmenu": true },
+        { "text": "Вакансии", "symbol": "" },
+        { "text": "Новости", "symbol": "" },
+        { "text": "Соглашения", "symbol": "expand_more", "hasSubmenu": true }
+      ]
+    }
+  }
+]

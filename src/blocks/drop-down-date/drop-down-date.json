@@ -19,5 +19,16 @@
       { "type" : "clear" },
       { "type" : "apply" }
     ]
+  },
+  {
+    "type": "date-single",
+    "dropDownClass" : "",
+    "textFieldClass" : "",
+    "textFieldPlaceholder" : "ДД.ММ - ДД.MM",
+    "calendarClass" : "calendar__datepicker-short",
+    "menuButtons": [
+      { "type" : "clear" },
+      { "type" : "apply" }
+    ]
   }
 ]
