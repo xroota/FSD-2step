@@ -1,8 +1,6 @@
 include ../../blocks/text-field/text-field
 include ../../blocks/button/button
 
-
-
 mixin drop-down(data)
   - var blockName = "drop-down"
   - var  fs = require('fs')
@@ -22,7 +20,6 @@ mixin drop-down(data)
          textFieldClass: data.textFieldClass
          }
       )
-      
     .drop-down__menu
       if (data.items)
         ul.drop-down__items

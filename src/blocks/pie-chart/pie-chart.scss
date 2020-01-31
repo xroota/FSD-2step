@@ -1,78 +1,74 @@
-.pie-chart__legend-item {
-  align-items: center;
-  column-gap: 5px;
-  display: grid;
-  grid-template-columns: 10px 1fr;
-  line-height: 1.25rem;
-  padding-top: 4px;
-}
+.pie-chart {
+  &_legend-item {
+    column-gap: 5px;
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    line-height: 1.25rem;
+    padding-top: 4px;
+  }
 
-.pie-chart__total {
-  align-content: center;
-  bottom: 0;
-  display: grid;
-  left: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  z-index: 1;
-}
+  &__total {
+    align-content: center;
+    bottom: 0;
+    display: grid;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+  }
 
-.pie-chart__total-num {
-  margin-top: -4px;
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  /* identical to box height */
-  
-  
-  text-transform: uppercase;
-  
-  color: #BC9CFF;
+  &__total-num {
+    margin-top: -4px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
 
-}
+    text-transform: uppercase;
 
-.pie-chart__total-text {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  /* identical to box height */
-  
-  
-  text-transform: uppercase;
-  
-  color: #BC9CFF;
-}
+    color: #bc9cff;
+  }
 
-.pie-chart__total-line {
-  color: red;
-}
+  &__total-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
 
-.pie-chart__legend {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
+    text-transform: uppercase;
 
-.pie-chart__header {
-  margin-top: 0;
-  padding-bottom: 5px;
-}
+    color: #bc9cff;
+  }
 
-.pie-chart__diagram {
-  position: relative;
-  width: 120px;
-  height: 120px;
-}
+  &__total-line {
+    color: red;
+  }
 
-.pie-chart__chart {
-  align-items: end;
-  column-gap: 30px;
-  display: grid;
-  grid-template-columns: 120px 1fr;
+  &__legend {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &__header {
+    margin-top: 0;
+    padding-bottom: 5px;
+  }
+
+  &__diagram {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+
+  &__chart {
+    align-items: end;
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+  }
 }

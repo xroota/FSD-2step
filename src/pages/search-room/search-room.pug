@@ -3,15 +3,10 @@ block variables
   - var author = "enlore";
   - var theGreat = "<span>escape!</span>";
 block header
-
   include ../../blocks/header/header
-  
-
   +header("toxin")
 
 block content
-
-
     include ../../blocks/room-filter/room-filter
     include ../../blocks/room-list/room-list
     include ../../blocks/pagination/pagination
@@ -28,10 +23,7 @@ block content
               text            : "1 – 12 из 100+ вариантов аренды"
             }
           )
-              
-
 
 block footer
   include ../../blocks/footer/footer
-  
   +footer('toxin')

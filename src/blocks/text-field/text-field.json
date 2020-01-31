@@ -4,8 +4,8 @@
     "placeholder": "ДД.ММ.ГГГГ",
     "inputText": "",
     "readOnly": false,
-    "typeInput" : "text",
-    "textFieldClass" : "text-field--mask"
+    "typeInput": "text",
+    "textFieldClass": "text-field--mask"
   },
   {
     "type": "drop-down-date",
@@ -13,28 +13,23 @@
     "inputText": "",
     "readOnly": false,
     "buttonText": "expand_more",
-    "typeInput" : "text"
+    "typeInput": "text"
   },
   {
     "type": "text",
     "readOnly": false,
-    "typeInput" : "text"
-
+    "typeInput": "text"
   },
   {
     "type": "pass",
     "readOnly": false,
-    "typeInput" : "password"
-
+    "typeInput": "password"
   },
   {
-    "type":   "arrow-short",
-    "readOnly"       : false,
-    "typeInput"      : "text",
+    "type": "arrow-short",
+    "readOnly": false,
+    "typeInput": "text",
     "buttonText": "arrow_forward",
-    "textFieldClass" : "text-field--width-short"
-
+    "textFieldClass": "text-field--width-short"
   }
-
 ]
-

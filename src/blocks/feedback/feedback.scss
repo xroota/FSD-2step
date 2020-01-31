@@ -1,10 +1,6 @@
-@import "../../blocks/list-item/list-item";
-@import "../../blocks/like-button/like-button";
-
 .feedback {
-  
   margin-left: -1px;
-  margin-bottom: -3px;  
+  margin-bottom: -3px;
   &__title {
     @extend %h2;
     margin-bottom: 18px;

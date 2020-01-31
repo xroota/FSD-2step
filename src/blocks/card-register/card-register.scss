@@ -1,55 +1,43 @@
-@import "../../blocks/card/card";
-@import "../../blocks/text-field/text-field";
-@import "../../blocks/radio-list/radio-list";
-@import "../../blocks/toggle/toggle";
-@import "../../blocks/button/button";
+.card-register {
+  &__name {
+    margin-top: -1px;
+    margin-bottom: 10px;
+  }
 
-.card-register{
-     
-    &__name{
-        margin-top: -1px;
-        margin-bottom: 10px;
-    } 
+  &__surname {
+    margin-bottom: 7px;
+  }
 
-    &__surname{
-        margin-bottom: 7px;
-    }
-    
-    &__sex{
-        margin-bottom: 23px;
-    }
+  &__sex {
+    margin-bottom: 23px;
+  }
 
-    &__birthday{
-        margin-bottom: 20px;
-    }
+  &__birthday {
+    margin-bottom: 20px;
+  }
 
-    &__email{
-        margin-bottom: 10px;
-    }
+  &__email {
+    margin-bottom: 10px;
+  }
 
-    &__password{
-        margin-bottom: 7px; 
-    }
-    
-    &__offer{
-        margin-bottom: 23px;
-    }
-    
-    &__button-pay{
-        margin-bottom: 29px; 
-    }
+  &__password {
+    margin-bottom: 7px;
+  }
 
-    &__text-account{
-        margin: auto 0;
-        line-height: 18px;
-    }
+  &__offer {
+    margin-bottom: 23px;
+  }
 
-    &__button-enter{
-        width: 99px
-    }
+  &__button-pay {
+    margin-bottom: 29px;
+  }
 
+  &__text-account {
+    margin: auto 0;
+    line-height: 18px;
+  }
 
-
-
-
+  &__button-enter {
+    width: 99px;
+  }
 }

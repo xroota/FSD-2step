@@ -3,9 +3,7 @@ block variables
   - var author = "enlore";
   - var theGreat = "<span>escape!</span>";
 block header
-
   include ../../blocks/header/header
- 
   +header("toxin")
  
 block content
@@ -17,7 +15,6 @@ block content
     - for (var x = 0; x < dataJsonRoom.length; x++)
        if(dataJsonRoom[x].roomNumber===roomNumber)
         - var data= dataJsonRoom[x]
-
 
     include ../../blocks/pie-chart/pie-chart
     include ../../blocks/room-photos/room-photos
@@ -43,7 +40,6 @@ block content
         )(class="room-details__room-photos-right")
 
       section.room-details__room-section
-  
         +extra-list(
           {
             title: "Сведения о номере",
@@ -67,7 +63,6 @@ block content
         +list({
           title        : "Правила",
           listItemClass: "list-item--is-bullet",
-
           items        : data.rules 
           }
         )(class="room-details__rules list--theme-toxin")
@@ -80,13 +75,6 @@ block content
 
         +card-booking(data)(class="room-details__card-booking")
 
-
-
-  
-
-
-
 block footer
   include ../../blocks/footer/footer
-  
   +footer('toxin')

@@ -1,21 +1,16 @@
 @import "../twbs-pagination/twbs-pagination";
 
-.pagination{
-    display: inline-block;
-    margin-bottom: 10px;
+.pagination {
+  display: inline-block;
+  margin-bottom: 10px;
 
+  &__title {
+    @extend %h3;
+  }
 
-    &__title{
-        @extend %h3;
-
-    }
-
-    
-
-    &__text{
-        color: $dark-shade-75;
-        margin-left: 5px;
-        margin-top: -2px;
-    }
-
+  &__text {
+    color: $dark-shade-75;
+    margin-left: 5px;
+    margin-top: -2px;
+  }
 }

@@ -1,15 +1,10 @@
 mixin pie-chart(items, name='')
-  //- Creates pie-chart for given items, an array of object with properties
-  //- name, amount and color (optional).
-   
   -
     let totalAmount = 0;
 
     items.forEach(item => {
       totalAmount += item.amount;
     });
-
-
 
   .pie-chart&attributes(attributes)
     h2.text_level_h2.pie-chart__header= name
@@ -62,8 +57,7 @@ mixin pie-chart(items, name='')
               stroke-dashoffset= -position
             )
             - position += item.length + gap;
-          //- const wording = require('utils/wording');
-        
+
         .pie-chart__total
             .pie-chart__total-num= totalAmount
             .pie-chart__total-text= "голосов"

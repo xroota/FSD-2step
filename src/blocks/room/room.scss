@@ -1,50 +1,34 @@
-@import "../../blocks/rate-button/rate-button";
-@import "../../blocks/room-info/room-info";
-@import "../../blocks/slider/slider";
+.room {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 270px;
 
-.room{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    box-sizing: border-box;
-    width: 270px;
+  &__slider {
+    margin-bottom: 18px;
+  }
 
+  &__room-info {
+    margin-bottom: 5px;
+    padding: 0 18px 0 19px;
+  }
 
-    &__slider{
-        margin-bottom: 18px;
-    }
+  &__line {
+    width: 100%;
+    border-bottom: 1px dotted $dark-shade-25;
+    height: 1px;
+    margin: 0 20px 11px 20px;
+  }
 
-    &__room-info{
-        margin-bottom: 5px;
-        padding: 0 18px 0 19px;
-    }
+  &__rate-button {
+    margin: 0 auto 0 20px;
+  }
 
-
-
-    &__line{
-        width: 100%;
-        border-bottom: 1px dotted $dark-shade-25;
-        height: 1px;
-        margin: 0 20px 11px 20px;
-    }
-
-    &__rate-button{
-        margin: 0 auto 0 20px;
-    }
-
-    &__rate-count{
-        line-height: 1.125rem;
-        color: $dark-shade-50;
-        margin-right: 20px;
-        margin-bottom: 23.37px;
-    }
-
-
-
-
-
-    
-
-
-
+  &__rate-count {
+    line-height: 1.125rem;
+    color: $dark-shade-50;
+    margin-right: 20px;
+    margin-bottom: 23.37px;
+  }
 }

@@ -1,112 +1,93 @@
 // Font
-$mainFont                : Montserrat, sans-serif;
-$secondFont              : Quicksand, sans-serif;
+$mainFont: Montserrat, sans-serif;
+$secondFont: Quicksand, sans-serif;
 // Size
-$mainFontColor           : rgba(31, 32, 65, 0.75);;
-$mainFontSize            : 1rem;
-$mainFontWeight          : normal;
-$mainLineHeight          : 1.5rem;
+$mainFontColor: rgba(31, 32, 65, 0.75);
+$mainFontSize: 1rem;
+$mainFontWeight: normal;
+$mainLineHeight: 1.5rem;
 
-$desktopWidth            : 1440px;
-$desktopMaxWidth         : 1920px;
-$desktopMinWidth         : 320px;
-
-$smDesktopWidth          : 980px;
-$tableWidth              : 768px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
+$desktopWidth: 1440px;
+$desktopMaxWidth: 1920px;
+$desktopMinWidth: 320px;
 
 // Main color
-$default-color           : #ffffff;
-$white                   : #ffffff;
-$dark-shade-100          : #1F2041;
-$dark-shade-75           : rgba(31, 32, 65, 0.75);
-$dark-shade-50           : rgba(31, 32, 65, 0.5);
-$dark-shade-25           : rgba(31, 32, 65, 0.25);
-$dark-shade-5            : rgba(31, 32, 65, 0.05);
-$green                   : #6FCF97;
-$purple                  : #BC9CFF;
-$background-color        : #ffffff;
-$primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
-$purple-color            : #8854d0;
+$default-color: #ffffff;
+$white: #ffffff;
+$dark-shade-100: #1f2041;
+$dark-shade-75: rgba(31, 32, 65, 0.75);
+$dark-shade-50: rgba(31, 32, 65, 0.5);
+$dark-shade-25: rgba(31, 32, 65, 0.25);
+$dark-shade-5: rgba(31, 32, 65, 0.05);
 
-// Neutral Color
-$neutral-primary         : #303133;
-$neutral-regular         : #606266;
-$neutral-secondary       : #909399;
-$neutral-placeholder     : #C0C4CC;
-
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;
-
-
-%input{
+%input {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: $dark-shade-75;
+  width: 100%;
+  margin: 8px 0 8px 14px;
+  border: none;
+  letter-spacing: -0.2px;
+  &::placeholder {
     font-family: $mainFont;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: $dark-shade-75;
-    width: 100%; 
-    margin: 8px 0 8px 14px; 
-    border: none;
-    letter-spacing: -0.2px;
-    &::placeholder{
-        font-family: $mainFont;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        color:$dark-shade-25;
-        letter-spacing: -0.08px;
-        
-    }
-    outline:none;
+    color: $dark-shade-25;
+    letter-spacing: -0.08px;
   }
-  
-%material-icons{
-    font-family: Material Icons;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  
-  }
+  outline: none;
+}
 
-  %h2{
-    font-family: $secondFont;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.1875rem;
-    line-height: 1.5rem;
-    color: $dark-shade-100;
-  }
+%material-icons {
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
 
-  %h3{
-    font-family: $mainFont;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;  
-    text-transform: uppercase;
-    color: $dark-shade-100;
-    
+%h2 {
+  font-family: $secondFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1875rem;
+  line-height: 1.5rem;
+  color: $dark-shade-100;
+}
 
-  }
+%h3 {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  text-transform: uppercase;
+  color: $dark-shade-100;
+}
 
-  $primary-gradient-25 : linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+$primary-gradient-25: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.25) 0%,
+  rgba(139, 164, 249, 0.25) 100%
+);
 
-$primary-gradient-50 : linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+$primary-gradient-50: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.5) 0%,
+  rgba(139, 164, 249, 0.5) 100%
+);
 
-$primary-gradient : linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+$primary-gradient: linear-gradient(
+  180deg,
+  rgb(188, 156, 255) 0%,
+  rgb(139, 164, 249) 100%
+);
 
-$secondary-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$secondary-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);

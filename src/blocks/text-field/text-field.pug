@@ -8,7 +8,6 @@ mixin text-field(data)
     if dataElementTF[x].type === data.type
       - data = Object.assign(  dataElementTF[x],data);
 
-
   .text-field(class=data.textFieldClass )&attributes(attributes)
     if data.titleText
       .text-field__title-text= data.titleText 

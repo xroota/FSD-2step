@@ -1,67 +1,61 @@
-.text-field{
-    width: 100%;
-    background: $white;
-    box-sizing: border-box;
-    &__title {
+.text-field {
+  width: 100%;
+  background: $white;
+  box-sizing: border-box;
+  &__title {
     margin: 0 0 5px 0;
-    
-    }
+  }
 
-    &__title-text{
-        @extend %h3;
-        color: $dark-shade-50;
-        font-weight: normal;
-        //margin-top: -3px;
-        letter-spacing: -0.2px;
-        float: right;
-        text-align: right;
-    }
-    
-    &__input-box{
-        width: 100%;
-        display:flex;
-        border: 1px solid $dark-shade-25;
-        border-radius: 4px;
-        box-sizing: border-box;
-        &:focus, &:hover {
-            border: 1px solid $dark-shade-50;
+  &__title-text {
+    @extend %h3;
+    color: $dark-shade-50;
+    font-weight: normal;
+    //margin-top: -3px;
+    letter-spacing: -0.2px;
+    float: right;
+    text-align: right;
+  }
 
-        }
+  &__input-box {
+    width: 100%;
+    display: flex;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    box-sizing: border-box;
+    &:focus,
+    &:hover {
+      border: 1px solid $dark-shade-50;
     }
+  }
 
-    &__input{
-        @extend %input;
-        
-    }
+  &__input {
+    @extend %input;
+  }
 
-    &__input-button{
-        @extend %material-icons;
-        min-width: 42px;
-        color: $dark-shade-50;
-        justify-content: center;
-        z-index: 1;
-    }
+  &__input-button {
+    @extend %material-icons;
+    min-width: 42px;
+    color: $dark-shade-50;
+    justify-content: center;
+    z-index: 1;
+  }
 
-    &--menu-visible &__input-button{
-        color: $dark-shade-75;
-    }
-    &--menu-visible &__input-box{
-        border-radius: 4px 4px 0 0 ; 
-    }
+  &--menu-visible &__input-button {
+    color: $dark-shade-75;
+  }
+  &--menu-visible &__input-box {
+    border-radius: 4px 4px 0 0;
+  }
 
-    &--placeholder-dark-75 &__input::placeholder{
-        color: $dark-shade-75;    
-        font-size: 0.875rem;
-        
-    }
-    &--width-short{
-        width: 83.125%;
-    }
-    &--display-inline-block{
-        display: inline-block;
-        width: 40%;
-    }
-
-
-  
+  &--placeholder-dark-75 &__input::placeholder {
+    color: $dark-shade-75;
+    font-size: 0.875rem;
+  }
+  &--width-short {
+    width: 83.125%;
+  }
+  &--display-inline-block {
+    display: inline-block;
+    width: 40%;
+  }
 }

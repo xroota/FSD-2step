@@ -3,22 +3,14 @@ block variables
   - var author = "enlore";
   - var theGreat = "<span>escape!</span>";
 block header
-
   include ../../blocks/header/header
-
-
   +header("toxin")
+  
 block content
-
-
     include ../../blocks/card-register/card-register
     .login-page
       +card-register()(login-page__card-register)
 
-
-
-
 block footer
-  include ../../blocks/footer/footer
-  
+  include ../../blocks/footer/footer 
   +footer('toxin')

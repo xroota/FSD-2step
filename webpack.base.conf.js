@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const webpack = require('webpack');
 
 const PATHS = {
   src: path.join(__dirname, './src'),
@@ -109,6 +109,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `css/[name].[hash].css`,
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    }),
+
 
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/index.pug`,

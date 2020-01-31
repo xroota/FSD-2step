@@ -1,98 +1,67 @@
-@import "../../blocks/card/card";
-@import "../../blocks/air-datepicker/datepicker.min";
-@import "../../blocks/drop-down/drop-down";
-@import "../../blocks/text-field/text-field";
-@import "../../blocks/button/button";
-@import "../../blocks/radio-list/radio-list";
-@import "../../blocks/toggle/toggle";
-@import "../../blocks/room-info/room-info";
-@import "../../blocks/slider/slider";
-@import "../../blocks/room/room";
-@import "../../blocks/calendar/calendar.scss";
-@import "../../blocks/air-datepicker/air-datepicker.scss";
+.cards {
+  display: grid;
+  grid-template-columns: minmax(380px, 380px) minmax(380px, 380px) minmax(
+      320px,
+      320px
+    );
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 40px;
+  grid-column-gap: 40px;
 
-.cards{
+  width: 1440px;
+  height: 1350px;
+  padding: 149px 140px 130px 140px;
 
-display: grid;
-grid-template-columns: minmax(380px, 380px) minmax(380px, 380px) minmax(320px, 320px) ; 
-grid-template-rows: auto auto auto;
-grid-row-gap: 40px;
-grid-column-gap: 40px;
+  @media (max-width: 1300px) {
+    grid-template-columns: minmax(380px, 380px) minmax(380px, 380px);
+  }
 
-  
-width: 1440px;
-height: 1350px;
-padding: 149px 140px 130px 140px;
+  @media (max-width: 1000px) {
+    grid-template-columns: minmax(380px, 380px);
+  }
 
-@media (max-width: 1300px) {
-    grid-template-columns: minmax(380px, 380px) minmax(380px, 380px)  ; 
-}
-
-@media (max-width: 1000px) {
-    grid-template-columns: minmax(380px, 380px)   ; 
-
-}
-
-
-
-  &__card-room{ 
+  &__card-room {
     box-sizing: border-box;
     width: 270px;
   }
 
-  &__calendar{
-    
+  &__calendar {
     padding: 0;
   }
 
-  &__room{
+  &__room {
     margin-bottom: 40px;
   }
 
-  &__logo{
+  &__logo {
     position: absolute;
     left: 30px;
-    top:30px;
+    top: 30px;
     margin: 0;
-
   }
 
-  &__calendar{
-      margin-bottom: 0px;
-      max-width: 320px;
-      max-height: 369px;
-
-
+  &__calendar {
+    margin-bottom: 0px;
+    max-width: 320px;
+    max-height: 369px;
   }
 
-  &__card-calendar{
+  &__card-calendar {
     max-width: 320px;
     max-height: 369px;
     margin-bottom: 40px;
   }
-  &__calendar-button-clear{
-
+  &__calendar-button-clear {
     margin-left: 18px;
     margin-bottom: 20px;
   }
-  
-  &__calendar-button-apply{
 
-      margin-right: 20px;
-      margin-bottom: 20px;
-
+  &__calendar-button-apply {
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
-  &__card-room{
+  &__card-room {
     margin-bottom: 40px;
-
   }
-
-      
-
-
- 
-
 }
-
-

@@ -1,41 +1,37 @@
 @import "../../blocks/calendar/calendar.scss";
 @import "../../blocks/air-datepicker/air-datepicker.scss";
 
-.drop-down-date{
-    position: relative;
-    width: 100%;
-    
-    &__dates{
-        display: grid;
-        column-gap: 6.25% ;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-    &__menu{
+.drop-down-date {
+  position: relative;
+  width: 100%;
 
-        display: none;
-        z-index: 2;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-        border-radius: 4px;
-        background: $white;
-        top: 107%;
-    }
+  &__dates {
+    display: grid;
+    column-gap: 6.25%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  &__menu {
+    display: none;
+    z-index: 2;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+    background: $white;
+    top: 107%;
+  }
 
-    &.drop-down-date--menu-visible &__menu{
-        display:block;
-        position: absolute;
-        
-    }
+  &.drop-down-date--menu-visible &__menu {
+    display: block;
+    position: absolute;
+  }
 
+  &__menu-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 20px 20px;
+  }
 
-    
-    &__menu-buttons{
-        display : flex;
-        justify-content: space-between;
-        margin: 0 20px 20px 20px;
-    }
-
-    &.drop-down-date--width-short &__menu{
-        width: 83%;
-    }
+  &.drop-down-date--width-short &__menu {
+    width: 83%;
+  }
 }

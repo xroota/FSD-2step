@@ -1,9 +1,7 @@
-@import "../../blocks/calendar/calendar";
-
 .drop-down {
   width: 100%;
   position: relative;
-  
+
   &__menu {
     display: none;
     border: 1px solid $dark-shade-25;
@@ -50,8 +48,6 @@
     color: black;
   }
 
-
-
   &__item-button {
     font-size: 18px;
     line-height: 1.375rem;
@@ -76,7 +72,6 @@
     background: #ffffff;
     @extend %h3;
     color: $purple;
-    
   }
   &__menu-button:first-child {
     color: $dark-shade-50;
@@ -94,7 +89,7 @@
     display: block;
     position: absolute;
     width: 100%;
-  
+
     box-sizing: border-box;
   }
 
@@ -103,10 +98,8 @@
     pointer-events: none;
   }
 
-
   &__menu-button--hidden {
     opacity: 0;
     pointer-events: none;
   }
-
 }

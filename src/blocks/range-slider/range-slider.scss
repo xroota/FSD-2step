@@ -1,25 +1,21 @@
-@import "../ui-slider/ui-slider"; 
+@import "../ui-slider/ui-slider";
 
-.range-slider{
+.range-slider {
+  @extend %h3;
+  &__title {
+    margin-bottom: 23px;
+  }
+  &__value {
+    float: right;
+    font-weight: normal;
+  }
+
+  &__text {
+    color: $dark-shade-50;
     @extend %h3;
-    &__title{
-        margin-bottom: 23px;
-    }
-    &__value{
-        float: right;
-        font-weight: normal;
-    }
-
-    &__text{
-        color: $dark-shade-50;
-        @extend %h3;
-        line-height: 0.875rem;
-        font-weight: normal;
-        text-transform: none;
-        margin-top: 15px;
-    }
-
- 
-
-
+    line-height: 0.875rem;
+    font-weight: normal;
+    text-transform: none;
+    margin-top: 15px;
+  }
 }

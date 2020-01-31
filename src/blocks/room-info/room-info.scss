@@ -1,37 +1,35 @@
-.room-info{
-    width: 100%;
-    display: flex;
-    align-items: baseline;
- 
-    
-    &__number{ 
-        margin: 0;
-        padding: 0;
-        letter-spacing: 0.5px;
-    }
+.room-info {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
 
-    &__number::before{ 
-        content: '№ ';
-        font-size: 0.875rem; 
-        margin: 0;
-        padding: 0;
-    }   
+  &__number {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+  }
 
-    &__type{
-       @extend %h3;
-       color: $purple;
-       font-weight: normal;
-       margin-left: 5px;
-    
-    }
-    &__price{
-        margin-left: auto;
-        color: $dark-shade-50;
-        font-size: 0.875rem; 
-        margin-right: 2px;
-    }
+  &__number::before {
+    content: "№ ";
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0;
+  }
 
-    &--font-size-small &__number{
-        font-size: 1.125rem;
-    }
+  &__type {
+    @extend %h3;
+    color: $purple;
+    font-weight: normal;
+    margin-left: 5px;
+  }
+  &__price {
+    margin-left: auto;
+    color: $dark-shade-50;
+    font-size: 0.875rem;
+    margin-right: 2px;
+  }
+
+  &--font-size-small &__number {
+    font-size: 1.125rem;
+  }
 }

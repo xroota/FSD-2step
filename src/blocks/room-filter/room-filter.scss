@@ -1,36 +1,25 @@
-@import "../drop-down/drop-down"; 
-@import "../drop-down-date/drop-down-date"; 
-@import "../drop-down/drop-down"; 
-@import "../range-slider/range-slider"; 
-@import "../checkbox-list/checkbox-list"; 
-@import "../extra-list/extra-list"; 
+.room-filter {
+  &__dates {
+    margin-bottom: 20px;
+  }
 
+  &__guests {
+    margin-bottom: 30px;
+  }
 
-.room-filter{
-    &__dates{
-        margin-bottom: 20px;
-    }
+  &__cost {
+    margin-bottom: 30px;
+  }
 
-    &__guests{
-        margin-bottom: 30px;
-    }
+  &__check-list-1 {
+    margin-bottom: 31px;
+  }
 
-    &__cost{
-        margin-bottom: 30px;
-    }
+  &__check-list-2 {
+    margin-bottom: 31px;
+  }
 
-
-
-    &__check-list-1{
-        margin-bottom: 31px;
-    }
-
-    &__check-list-2{
-        margin-bottom: 31px;
-    }
-
-    &__rooms{
-        margin-bottom: 30px;
-    }
-
+  &__rooms {
+    margin-bottom: 30px;
+  }
 }

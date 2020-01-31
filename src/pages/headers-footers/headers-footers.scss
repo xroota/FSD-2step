@@ -1,16 +1,12 @@
-@import "../../blocks/header/header";
-@import "../../blocks/footer/footer";
-
-.headers-footers{
-    //background: #E5E5E5;
-    padding: 150px 0;
-    display: grid; 
-    grid-template-rows: repeat(4, auto);
-    row-gap: 39px;
-    &__logo{
-        position: absolute;
-        left: 30px;
-        top:30px;
-        margin: 0;
-      }
+.headers-footers {
+  padding: 150px 0;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 39px;
+  &__logo {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    margin: 0;
+  }
 }

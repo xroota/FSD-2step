@@ -1,10 +1,7 @@
 include ../calendar/calendar
 include ../text-field/text-field
 
-
-
 mixin drop-down-date(data) 
-  //- Добавление данных из файла json по введенному type при вызове миксина
   - var blockName = "drop-down-date"
   +dataFromJSON(blockName, data)
   .drop-down-date(class=data.dropDownClass)&attributes(attributes)
