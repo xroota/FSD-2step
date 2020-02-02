@@ -1,4 +1,5 @@
-# Toxin
+#FSD The 2nd task 
+
 ---
 ## Развёртывание
 Клонировать
@@ -13,7 +14,8 @@
 Запустить production build
 >```npm run build```
 
-
+## Использованные библиотеки
+[jQuery](https://github.com/jquery/jquery), [air-datepicker](https://github.com/t1m0n/air-datepicker), [ui-slider](https://jqueryui.com/slider/), [twbs-pagination](https://github.com/josecebe/twbs-pagination)
 
 ---
 ## UI kit
