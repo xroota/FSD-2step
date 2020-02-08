@@ -1,0 +1,13 @@
+mixin calc-box(data)
+  ul.calc-box__calc-items
+    each item in data.items
+      li.calc-box__calc-item
+        .calc-box__calc-item-text= item.text
+        if item.hint
+          .calc-box__calc-item-hint i
+        .calc-box__calc-item-value= item.value
+  .calc-box__total
+    .calc-box__total-text= data.totalText
+    .calc-box__total-line
+    .calc-box__total-value= data.totalValue
+

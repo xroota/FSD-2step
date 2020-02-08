@@ -1,13 +1,24 @@
 .landing-page {
-  box-sizing: border-box;
-  height: 830px;
   background-image: url(../../img/landing-page.jpg);
-  background-position: center -71px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -70px;
+  display: grid;
+  grid-template-columns: minmax(270px, 320px);
+  padding: 70px 0 346px 140px;
 
-  &__card-find-number {
-    width: 380px;
-    position: absolute;
-    top: 140px;
-    left: 140px;
+  @media (max-width: 2000px) {
+    grid-template-columns: minmax(380px, 400px);
+    justify-content: center;
+  }
+
+  @media (max-width: 1460px) {
+    grid-template-columns: minmax(320px, 380px);
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: minmax(320px, 380px);
+    justify-content: center;
   }
 }

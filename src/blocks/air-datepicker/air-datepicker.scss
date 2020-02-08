@@ -27,7 +27,7 @@
         background: $dark-shade-50;
         border-radius: 50%;
         border: none;
-        color: $white;
+        color: $default-color;
       }
 
       &.-range-from-::after {
@@ -43,7 +43,7 @@
       &.-current- {
         background: $secondary-gradient;
         border-radius: 50%;
-        color: $white;
+        color: $default-color;
 
         &.-in-range- {
           background: $secondary-gradient;

@@ -1,5 +1,5 @@
 mixin toggle(data)
-    .toggle(class=data.toggleClass)&attributes(attributes)
-      label.toggle__item-label
-        input(class="toggle__item-input",type="checkbox", name=data.name, checked=data.value)
-        .toggle__item-title= data.text 
+  .toggle(class=data.toggleClass)&attributes(attributes)
+    label.toggle__item-label
+      input(class="toggle__item-input",type="checkbox", name=data.name, checked=data.value)
+      .toggle__item-title= data.text 

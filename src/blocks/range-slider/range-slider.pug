@@ -2,8 +2,8 @@ include ../ui-slider/ui-slider
 
 mixin range-slider(data)
   .range-slider(class = data.rangeSliderClass)&attributes(attributes)
-      .range-slider__value= data.value
-      .range-slider__title= data.title
-      +ui-slider()
-      .range-slider__text= data.text
+    .range-slider__value= data.value
+    .range-slider__title= data.title
+    +ui-slider()(data-min=0,data-max=15000, data-values = [5000,10000], data-range=true)
+    .range-slider__text= data.text
       

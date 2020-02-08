@@ -1,8 +1,7 @@
 .room-details {
   box-sizing: border-box;
   display: block;
-  background: $white;
-  width: 1440px;
+  background: $default-color;
 
   &__photo-box {
     display: grid;
@@ -26,7 +25,7 @@
 
   &__room-section {
     box-sizing: border-box;
-    background: $white;
+    background: $default-color;
     width: 100%;
     display: grid;
     column-gap: 6.5%;

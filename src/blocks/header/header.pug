@@ -7,34 +7,30 @@ include ../../blocks/button/button
 
 mixin header(name)
 
-   - for (var x = 0; x < dataJsonH.length; x++)
-        if(dataJsonH[x].id===name)
-            - var data= dataJsonH[x].data
-   .header(class = data.headerClass)
+  - for (var x = 0; x < dataJsonH.length; x++)
+    if(dataJsonH[x].id===name)
+      - var data= dataJsonH[x].data
+  .header(class = data.headerClass)
     +logo({
-        logoClass: "header__logo",
-        type     : "full"
-    })
+      logoClass: "header__logo",
+      type     : "full"
+     })
     ul.header__nav
       each item in data.navItems
-         li.header__nav-item(class= (item.hasSubmenu == true) ? "header__nav--has-submenu" : "")
-           .header__nav-text!= item.text
-           if (item.symbol)
-               .header__nav-symbol= item.symbol= item.symbol
+        li.header__nav-item(class= item.hasSubmenu ? "header__nav--has-submenu" : "")
+          .header__nav-text!= item.text
+          if (item.symbol)
+            .header__nav-symbol= item.symbol= item.symbol
     
     .header__buttons-auth
-        +button({
-            name       : "btn-header-login",
-            text       : data.buttonLoginText,
-            symbol     : "",
-            buttonClass: "header__button-login button--border button--slim-border"
-        })
-
-        +button({
-            name       : "btn-header-register",
-            text       : data.buttonRegisterText,
-            symbol     : "",
-            buttonClass: "header__button-register button--fill button--slim-fill"
-        })
+      +button({
+        text       : data.buttonLoginText,
+        buttonClass: "header__button-login button--bordered button--slim-bordered"
+      })
+      .header__button-register 
+      +button({
+        text       : data.buttonRegisterText,
+        type       : "slim-filled"
+      })
     .header__user= data.userName
 

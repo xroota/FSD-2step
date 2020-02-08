@@ -4,7 +4,7 @@ include ../text-field/text-field
 mixin drop-down-date(data) 
   - var blockName = "drop-down-date"
   +dataFromJSON(blockName, data)
-  .drop-down-date(class=data.dropDownClass)&attributes(attributes)
+  .drop-down-date.js-drop-down-date(class=data.dropDownClass)&attributes(attributes)
     .drop-down-date__dates  
       +text-field( 
         {

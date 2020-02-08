@@ -24,7 +24,6 @@ $(function () {
 			jQuery("ul.pagination li.last").removeClass("disabled");
 			jQuery("ul.pagination li.last").addClass("active");
 		}
-		console.info(page + ' (from event listening)');
 	});
 });
 

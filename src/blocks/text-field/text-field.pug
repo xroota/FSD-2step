@@ -8,14 +8,14 @@ mixin text-field(data)
     if dataElementTF[x].type === data.type
       - data = Object.assign(  dataElementTF[x],data);
 
-  .text-field(class=data.textFieldClass )&attributes(attributes)
+  .text-field.js-text-field(class=data.textFieldClass )&attributes(attributes)
     if data.titleText
       .text-field__title-text= data.titleText 
     if data.title
       h3.text-field__title= data.title
     .text-field__input-box
-      input(type=data.typeInput, class="text-field__input"   , readonly=true && data.readOnly, value=data.inputText, placeholder= data.placeholder) 
+      input.text-field__input.js-text-field__input(type=data.typeInput  , readonly=true && data.readOnly, value=data.inputText, placeholder= data.placeholder) 
       if data.buttonText
-        .text-field__input-button= data.buttonText
+        .text-field__input-button.js-text-field__input-button= data.buttonText
 
 

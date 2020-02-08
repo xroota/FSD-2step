@@ -2,66 +2,51 @@ include ../../blocks/card/card
 include ../../blocks/room-info/room-info
 include ../../blocks/drop-down/drop-down
 include ../../blocks/drop-down-date/drop-down-date
+include ../../blocks/calc-box/calc-box
 
 mixin card-booking(data)
-    .card-booking&attributes(attributes)
-      +card({
-          title    : ""
-      })
-  
-        +room-info(data)(class='card-booking__room-info')
-  
-        +drop-down-date(
-          {
-            type          : "date",
-            titleFrom     : "Прибытие",
-            titleTo       : "Выезд"
-          }
-        )(class="card-booking__drop-down-date-in")
-  
-        +drop-down(
-            {
-              type          : "guests",
-              title         : "Гости",
-              titleText     : "",
-            }
-          )(class="card-booking__guests")
-  
-        mixin calc-box(data)
-          ul.card-booking__calc-items
-            each item in data.items
-              li.card-booking__calc-item
-                .card-booking__calc-item-text= item.text
-                if item.hint
-                  .card-booking__calc-item-hint i
-                .card-booking__calc-item-value= item.value
-          .card-booking__total
-            .card-booking__total-text= data.totalText
-            .card-booking__total-line
-            .card-booking__total-value= data.totalValue
-  
-        +calc-box({
-           items  :[
-            {text : "9 990₽ х 4 суток", 
-             hint : "",
-             value: "39 960₽"
-             },
-            {text : "Сбор за услуги: скидка 2 179₽", 
-             hint : "hint",
-             value: "0₽"
-             },
-            {text : "Сбор за дополнительные услуги", 
-             hint : "hint",
-             value: "300₽"
-           }],
-             totalText : "Итого",
-             totalValue: "38 081₽" 
-  
-        })   
-        +button(     
-          { 
-            type       : "fill-arrow", 
-            name       : "btn9",
-            text       : "забронировать" 
-          }
-        )(class="card-booking__button-book")
+  .card-booking&attributes(attributes)
+    +card({
+      title    : ""
+    })
+
+      +room-info(data)(class='card-booking__room-info')
+
+      +drop-down-date(
+        {
+          type          : "date",
+          titleFrom     : "Прибытие",
+          titleTo       : "Выезд"
+        }
+      )(class="card-booking__drop-down-date-in")
+
+      +drop-down(
+        {
+          type          : "guests",
+          title         : "Гости",
+        }
+      )(class="card-booking__guests")
+
+      +calc-box({
+        items  :[
+          {text : "9 990₽ х 4 суток", 
+           hint : "",
+           value: "39 960₽"
+           },
+          {text : "Сбор за услуги: скидка 2 179₽", 
+           hint : "hint",
+           value: "0₽"
+           },
+          {text : "Сбор за дополнительные услуги", 
+           hint : "hint",
+           value: "300₽"
+        }],
+        totalText : "Итого",
+        totalValue: "38 081₽" 
+      })(class="card-booking__calc")
+      +button(     
+        { 
+          type       : "filled-arrow", 
+          text       : "забронировать" 
+        }
+      )(class="card-booking__button-book")

@@ -60,6 +60,7 @@ body {
   min-width: $desktopMinWidth;
 }
 
+
 h1 {
   color: $dark-shade-100;
   font-family: $secondFont;
@@ -74,6 +75,5 @@ h2 {
 }
 
 h3 {
-  font-family: $mainFont;
   @extend %h3;
 }

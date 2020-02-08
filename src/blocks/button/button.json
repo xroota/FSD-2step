@@ -4,33 +4,37 @@
     "text": "Очистить",
     "name": "clear",
     "symbol": "",
-    "buttonClass": "button__clear button--border-none button--color-grey"
+    "buttonClass": "js-button__clear button--bordered-none button--color-grey"
   },
   {
     "type": "apply",
     "text": "Применить",
     "name": "apply",
     "symbol": "",
-    "buttonClass": "button__apply button--border-none"
+    "buttonClass": "js-button__apply button--bordered-none"
   },
   {
-    "type"       : "fill-arrow",
+    "type"       : "filled-arrow",
     "symbol"     : "arrow_forward",
-    "buttonClass": " button--fill button--width-full"
+    "buttonClass": " button--filled button--width-full"
   },
   {
     "type"       : "border",
     "symbol"     : "",
-    "buttonClass": " button--border"
+    "buttonClass": " button--bordered"
   },
   {
     "type"       : "fill",
     "symbol"     : "",
-    "buttonClass": "button--fill"
+    "buttonClass": "button--filled"
   },
   {
     "type"       : "border",
     "symbol"     : "",
-    "buttonClass": "button--border"
+    "buttonClass": "button--bordered"
+  },
+  {
+    "type"       : "slim-filled",
+    "buttonClass": "button--filled button--slim-filled"
   }
 ]

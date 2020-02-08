@@ -1,84 +1,89 @@
 .ui-slider {
   position: relative;
   box-sizing: border-box;
+
+  & &-handle {
+    //Стилизация ползунка
+    min-width: 14px;
+    min-height: 14px;
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: -2px;
+  }
+
+   & &-handle:after {
+    //Стилизация ползунка
+    left: -1px;
+    top: -1px;
+    position: absolute;
+    min-width: 16px;
+    min-height: 16px;
+    content: "";
+    border: 2px solid $default-color;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+  &-horizontal {
+    height: 6px; /* задаем высоту согласно дизайна */
+    box-sizing: border-box;
+  }
+  //Задаем положение ползунков
+  &-horizontal &-handle {
+    top: -4px;
+    margin-left: -6px;
+    box-sizing: border-box;
+  }
+  &-horizontal &-range {
+    top: 0;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  &-horizontal &-range-min {
+    left: 0;
+    box-sizing: border-box;
+  }
+  &-horizontal &-range-max {
+    right: 0;
+    box-sizing: border-box;
+  }
+
+  /* оформление активного участка (между двумя ползунками) */
+
+  & &-range {
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    height: 6px;
+    display: block;
+    border: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  & .ui-widget-header {
+    border-radius: 3px;
+    height: 6px;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    box-sizing: border-box;
+  }
+  
+  /* оформление полосы по которой ходит ползунок */
+   & .ui-widget-content {
+    background: $default-color;
+    /* Dark 25% */
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    z-index: 1;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+   
+
 }
 
-.ui-slider .ui-slider-handle {
-  //Стилизация ползунка
-  min-width: 14px;
-  min-height: 14px;
-  position: absolute;
-  z-index: 2;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-
-  border-radius: 10px;
-  cursor: pointer;
-  box-sizing: border-box;
-  margin-top: -2px;
-}
-
-.ui-slider .ui-slider-handle:after {
-  //Стилизация ползунка
-  left: -1px;
-  top: -1px;
-  position: absolute;
-  min-width: 16px;
-  min-height: 16px;
-  content: "";
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-/* оформление полосы по которой ходит ползунок */
-.ui-widget-content {
-  background: #ffffff;
-  /* Dark 25% */
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  z-index: 1;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
-/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
-.ui-slider-horizontal {
-  height: 6px; /* задаем высоту согласно дизайна */
-  box-sizing: border-box;
-}
-//Задаем положение ползунков
-.ui-slider-horizontal .ui-slider-handle {
-  top: -4px;
-  margin-left: -6px;
-  box-sizing: border-box;
-}
-.ui-slider-horizontal .ui-slider-range {
-  top: 0;
-  height: 100%;
-  box-sizing: border-box;
-}
-.ui-slider-horizontal .ui-slider-range-min {
-  left: 0;
-  box-sizing: border-box;
-}
-.ui-slider-horizontal .ui-slider-range-max {
-  right: 0;
-  box-sizing: border-box;
-}
-
-/* оформление активного участка (между двумя ползунками) */
-.ui-widget-header {
-  border-radius: 3px;
-  height: 6px;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-  box-sizing: border-box;
-}
-
-.ui-slider .ui-slider-range {
-  position: absolute;
-  top: -1px;
-  z-index: 1;
-  height: 6px;
-  display: block;
-  border: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-}

@@ -1,49 +1,62 @@
-$(document).ready(function() {
+import Button from "../button/button";
+import TextField from "../text-field/text-field";
 
-  $(".calendar__datepicker").datepicker({
-    
-    onSelect: function onSelect(formattedDate, date, inst) {
-      const val = formattedDate.split('-');
-      $(inst.$el).closest(".drop-down-date").find("input:first").val(val[0]);
-      $(inst.$el).closest(".drop-down-date").find("input:last").val(val[1]);
+class DropDownDate {
+  constructor($elem) {
+    this.$dropDownDate = $elem;
+    this.textField = new TextField(
+      this.$dropDownDate.find(".js-text-field:first")
+    );
+    this.textField2 = new TextField(
+      this.$dropDownDate.find(".js-text-field:nth(1)")
+    );
+    this.$calendar = this.$dropDownDate.find(".js-calendar__datepicker");
+    this.clearButton = new Button(this.$dropDownDate.find(".js-button__clear"));
+    this.applyButton = new Button(this.$dropDownDate.find(".js-button__apply"));
 
-
+    if (this.$dropDownDate.hasClass("js-drop-down-date--single")) {
+      this.$calendar.datepicker({
+        dateFormat: "dd M",
+        onSelect: (formattedDate, date, inst) => {
+          const val = formattedDate.toLowerCase();
+          this.textField.setText(val);
+        }
+      });
+    } else {
+      this.$calendar.datepicker({
+        onSelect: (formattedDate, date, inst) => {
+          const val = formattedDate.split("-");
+          this.textField.setText(val[0]);
+          this.textField2.setText(val[1]);
+        }
+      });
     }
-  });
+    this.bindEventListeners();
+  }
 
-  $(".calendar__datepicker-short").datepicker({
-    dateFormat: 'dd M',
-    onSelect: function onSelect(formattedDate, date, inst) {
-      const val = formattedDate.toLowerCase();
-      $(inst.$el).closest(".drop-down-date").find("input").val((val)) ;
+  toggleMenu() {
+    this.$dropDownDate.toggleClass("drop-down-date--menu-visible");
+  }
 
-
+  bindEventListeners() {
+    this.textField.bindEventMenuButtonClick(() => {
+      this.toggleMenu();
+      this.textField.toggleMenu();
+    });
+    if (this.textField2) {
+      this.textField2.bindEventMenuButtonClick(() => {
+        this.toggleMenu();
+        this.textField2.toggleMenu();
+      });
     }
-  });
 
+    this.clearButton.bindEventListener("click", () => {
+      this.$dropDownDate.find("input").val("");
+    });
 
-  $(".text-field__input-button").on("click", function() {
-    $(this)
-      .closest(".drop-down-date")
-      .toggleClass("drop-down-date--menu-visible");
-  });
-
-
-  $(".button__clear").on("click", function() {
-    $(this)
-      .closest(".drop-down-date")
-      .find("input")
-      .val("");
-
-  });
-
-  $(".button__apply").on("click", function() {
-    $(this)
-      .closest(".drop-down-date")
-      .toggleClass("drop-down-date--menu-visible");
-
-
-      var myDatepicker = $($(this).closest(".calendar__datepicker-short")).datepicker().data('datepicker');
-  });
-
-});
+    this.applyButton.bindEventListener("click", () => {
+      this.toggleMenu();
+    });
+  }
+}
+export default DropDownDate;

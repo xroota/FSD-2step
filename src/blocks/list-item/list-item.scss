@@ -8,7 +8,7 @@
     @extend %material-icons;
     font-size: 3rem;
     line-height: 3rem;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background: $linear-color-1;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;

@@ -69,7 +69,7 @@
 
   &__menu-button {
     border: none;
-    background: #ffffff;
+    background: $default-color;
     @extend %h3;
     color: $purple;
   }
@@ -93,13 +93,10 @@
     box-sizing: border-box;
   }
 
-  &__item-button--hidden {
+  &__item-button--disabled {
     opacity: 0.5;
     pointer-events: none;
   }
 
-  &__menu-button--hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
+
 }

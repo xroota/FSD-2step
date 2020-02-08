@@ -2,7 +2,7 @@
   {
     "type": "date",
     "textFieldClass" : "text-field--mask",
-    "calendarClass" : "calendar__datepicker",
+    "calendarClass" : "js-calendar__datepicker",
     "textFieldPlaceholder" : "ДД.ММ.ГГГГ",
     "menuButtons": [
       { "type": "clear" },
@@ -11,10 +11,10 @@
   },
   {
     "type": "date-width-short",
-    "dropDownClass" : "drop-down-date--width-short",
+    "dropDownClass" : "drop-down-date--width-short js-drop-down-date--single",
     "textFieldClass" : "text-field--width-short",
     "textFieldPlaceholder" : "ДД.ММ - ДД.MM",
-    "calendarClass" : "calendar__datepicker-short",
+    "calendarClass" : "js-calendar__datepicker js-calendar__datepicker-short",
     "menuButtons": [
       { "type" : "clear" },
       { "type" : "apply" }
@@ -22,10 +22,10 @@
   },
   {
     "type": "date-single",
-    "dropDownClass" : "",
+    "dropDownClass" : "js-calendar__datepicker js-drop-down-date--single",
     "textFieldClass" : "",
     "textFieldPlaceholder" : "ДД.ММ - ДД.MM",
-    "calendarClass" : "calendar__datepicker-short",
+    "calendarClass" : "js-calendar__datepicker-short",
     "menuButtons": [
       { "type" : "clear" },
       { "type" : "apply" }

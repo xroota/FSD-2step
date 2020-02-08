@@ -1,10 +1,18 @@
-$(document).ready(function() {
+class CheckboxList {
+  constructor(elem) {
+    this.element = elem;
+    console.log(333);
+    this.handle = this.element.querySelector(".checkbox-list__button");
 
-  
-    $('.checkbox-list__button').on('click', function () {
-      
-      $(this).closest('.checkbox-list').toggleClass('checkbox-list--menu-visible');
+    if (this.handle) this.bindEventListeners();
+  }
 
-    });
-    
-    });
+  bindEventListeners() {
+    this.handle.addEventListener("click", this.handleClick.bind(this));
+  }
+
+  handleClick() {
+    this.element.classList.toggle("checkbox-list--menu-visible");
+  }
+}
+export default CheckboxList;

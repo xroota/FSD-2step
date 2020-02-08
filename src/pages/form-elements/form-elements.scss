@@ -17,7 +17,7 @@
     grid-template-rows: auto auto auto;
     grid-row-gap: 20px;
     grid-column-gap: 126px;
-    background: $white;
+    background: $default-color;
 
     @media (max-width: 1200px) {
       grid-template-columns: minmax(320px, 320px) minmax(320px, 320px);
@@ -110,9 +110,6 @@
     margin-bottom: 20px;
   }
 
-  &__buttons {
-  }
-
   &__buttons-title {
     margin-bottom: 16px;
   }
@@ -131,14 +128,6 @@
     margin-bottom: 25px;
   }
 
-  &__button4 {
-    margin-right: 59px;
-  }
-
-  &__button5 {
-    margin-right: 23px;
-    margin-bottom: 30px;
-  }
 
   &__feedback {
     grid-column: span 2;

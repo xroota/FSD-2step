@@ -1,6 +1,7 @@
 // Font
-$mainFont                : Montserrat, sans-serif;
-$secondFont              : Quicksand, sans-serif;
+$mainFont                : Montserrat,Arial, sans-serif;
+$secondFont              : Quicksand, Arial, sans-serif;
+
 // Size
 $mainFontColor           : rgba(31, 32, 65, 0.75);;
 $mainFontSize            : 1rem;
@@ -14,7 +15,6 @@ $desktopMinWidth         : 320px;
 
 // Main color
 $default-color           : #ffffff;
-$white                   : #ffffff;
 $dark-shade-100          : #1F2041;
 $dark-shade-75           : rgba(31, 32, 65, 0.75);
 $dark-shade-50           : rgba(31, 32, 65, 0.5);
@@ -24,10 +24,7 @@ $green                   : #6FCF97;
 $purple                  : #BC9CFF;
 $background-color        : #ffffff;
 $primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
+$linear-color-1           : linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $purple-color            : #8854d0;
 
 // Neutral Color
@@ -43,28 +40,6 @@ $border-lighter          : #EBEEF5;
 $border-lightex          : #F2F6FC;
 
 
-%input{
-    font-family: $mainFont;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: $dark-shade-75;
-    width: 100%; 
-    margin: 8px 0 8px 14px; 
-    border: none;
-    letter-spacing: -0.2px;
-    &::placeholder{
-        font-family: $mainFont;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.875rem;
-        color:$dark-shade-25;
-        letter-spacing: -0.08px;
-        
-    }
-    outline:none;
-  }
   
 %material-icons{
     font-family: Material Icons;

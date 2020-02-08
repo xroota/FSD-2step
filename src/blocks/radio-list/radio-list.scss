@@ -43,7 +43,7 @@
     width: 12px;
     height: 12px;
     border-radius: 10px;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background: $linear-color-1;
     opacity: 0;
     transition: 0.2s;
   }

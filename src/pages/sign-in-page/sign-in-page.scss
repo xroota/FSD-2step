@@ -1,6 +1,4 @@
-//@import "../../blocks/card-login/card-login";
 .sign-in-page {
-  width: 1440px;
   box-sizing: border-box;
 
   background-image: url(../../img/login-page.jpg);
@@ -17,7 +15,7 @@
     justify-content: center;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1480px) {
     grid-template-columns: minmax(320px, 380px);
   }
 }

@@ -16,6 +16,7 @@
     margin-bottom: 14px;
     display: flex;
     margin-right: 10px;
+    cursor: pointer;
   }
 
   &__items {
@@ -42,7 +43,7 @@
   }
   &__item-checkbox-hidden:checked + &__item-checkbox {
     border-color: $purple;
-    background: url(/img/vector.svg) no-repeat 4px 3px;
+    background: url('./img/vector.svg') no-repeat 4px 3px;
   }
 
   &__item-title {
@@ -73,7 +74,7 @@
   }
 
   &--theme-rich &__item {
-    margin-bottom: 6px;
+    margin-bottom: 9px;
   }
 
   &--theme-rich &__item-text {

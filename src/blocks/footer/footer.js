@@ -1,11 +1,24 @@
-$(document).ready(function(jQery) {
-  const footers = $(".footer");
-
-  const media = matchMedia("(max-width: 1120px)");
-
-  media.addEventListener("change", setCreative);
-
-  function setCreative(e) {
-    footers.toggleClass("footer--theme-light");
+class Footer {
+  constructor($elem) {
+    this.$footer = $elem;
+    this.media = matchMedia("(max-width: 1120px)");
+    this.setTheme();
+    this.bindEventListeners();
   }
-});
+
+  bindEventListeners() {
+    this.media.addEventListener("change",this.setTheme.bind(this));
+  }
+
+  setTheme(footer) {
+    console.log($(document).width());
+    if ($(document).width() > 1120){
+      
+      this.$footer.removeClass("footer--theme-light");
+    }
+    else {
+      this.$footer.addClass("footer--theme-light");
+    }
+  }
+}
+export default Footer;

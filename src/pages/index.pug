@@ -1,42 +1,54 @@
+block variables
+
 doctype html
 html(lang='ru')
   head
+  
     meta(charset='utf-8')
     title #{title}
     meta(name="description", content=description)
+    meta(name="viewport", content="initial-scale=1.0, width=device-width")
+    link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png")
+    link(rel="manifest" href="./favicons/site.webmanifest")
+    link(rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5")
     block head
-  body(class="page")
+
+  body(class=pageClass)
   
     block header
+      
+    
 
     block content
-    a.link(href="colors-and-types.html") 
-      h2 Colors and types
-
-    a.link(href="form-elements.html") 
-      h2 Form Elements
-
-    a.link(href="cards.html") 
-      h2 Cards
-
-    a.link(href="headers-footers.html") 
-      h2 Headers and Footers 
+      a.link(href="colors-and-types.html") 
+        h2 Colors and types
   
-    a.link(href="landing-page.html") 
-      h2 Landing Page
-
-    a.link(href="search-room.html") 
-      h2 Search Room
-
-    a.link(href="room-details.html") 
-      h2 Room Details
-
-    a.link(href="login-page.html") 
-      h2 Registration
-
-    a.link(href="sign-in-page.html") 
-      h2 Sign in
-
+      a.link(href="form-elements.html") 
+        h2 Form Elements
+  
+      a.link(href="cards.html") 
+        h2 Cards
+  
+      a.link(href="headers-footers.html") 
+        h2 Headers and Footers 
+    
+      a.link(href="landing-page.html") 
+        h2 Landing Page
+  
+      a.link(href="search-room.html") 
+        h2 Search Room
+  
+      a.link(href="room-details.html") 
+        h2 Room Details
+  
+      a.link(href="login-page.html") 
+        h2 Registration
+  
+      a.link(href="sign-in-page.html") 
+        h2 Sign in
+  
 
 
     block footer    
@@ -44,5 +56,3 @@ html(lang='ru')
 
     block script
 
-  
-block footer

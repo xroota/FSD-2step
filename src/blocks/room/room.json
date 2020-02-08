@@ -73,10 +73,10 @@
   },
   {
     "roomNumber": 980,
-    "roomType": "",
+    "roomType": "люкс",
     "roomPrice": "8 500",
     "rateCount": 19,
-    "rateChecked": 5,
+    "rateChecked": 3,
     "roomClass": "",
     "imageItems": [
       { "imagePath": "./img/rooms/980.jpg" },

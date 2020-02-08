@@ -1,3 +1,4 @@
+extends ../index.pug
 block variables
   - var title = "Form Elements";
   - var author = "enlore";
@@ -120,14 +121,14 @@ block content
 
           +rate-button(
             { 
-              name      : "rate-1",
+              name      : "rate1",
               value     : 5,
               checked   : 4
             }
           )
           +rate-button(
             { 
-              name      : "rate-2",
+              name      : "rate2",
               value     : 5,
               checked   : 5
             }
@@ -143,44 +144,27 @@ block content
           +button(
             {
               type       : "fill",
-              name       : "btn1",
               text       : "Click Me"
             }
           )(class="form-elements__button1")
-          +button(
-            {
-              type       : "fill",
-              name       : "btn2",
-              text       : "Click Me"
-            }
-          )(class="button--disabled form-elements__button2")
-  
+
           +button(     
-            { name       : "btn3",
+            { 
               text       : "Click Me",
-              buttonClass: "button--border"
+              buttonClass: "button--bordered"
+            })(class="form-elements__button2")
+
+          +button(     
+            { 
+              text       : "Click Me",
+              buttonClass: "button--bordered-none"
             })(class="form-elements__button3")
+
           +button(     
-            { name       : "btn4",
-              text       : "Click Me",
-              buttonClass: "button--border button--disabled"
-            })(class="form-elements__button4")
-  
-          +button(     
-            { name       : "btn5",
-              text       : "Click Me",
-              buttonClass: "button--border-none"
-            })(class="form-elements__button5")
-          +button(     
-            { name       : "btn6",
-              text       : "Click Me",
-              buttonClass: "button--border-none button--disabled"
-            })(class="form-elements__button6")
-          +button(     
-            { name       : "btn7",
+            { 
               text       : "Перейти к оптате",
               symbol     : "arrow_forward",
-              buttonClass: "button--fill button--width-full"
+              buttonClass: "button--filled button--width-full"
             })
         +pagination(  
           {

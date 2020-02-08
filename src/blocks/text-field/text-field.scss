@@ -1,6 +1,6 @@
 .text-field {
   width: 100%;
-  background: $white;
+  background: $default-color;
   box-sizing: border-box;
   &__title {
     margin: 0 0 5px 0;
@@ -29,7 +29,26 @@
   }
 
   &__input {
-    @extend %input;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $dark-shade-75;
+    width: 100%; 
+    margin: 8px 0 8px 14px; 
+    border: none;
+    letter-spacing: -0.2px;
+    &::placeholder{
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.875rem;
+        color:$dark-shade-25;
+        letter-spacing: -0.08px;
+        
+    }
+    outline:none;
   }
 
   &__input-button {
@@ -38,6 +57,7 @@
     color: $dark-shade-50;
     justify-content: center;
     z-index: 1;
+    cursor: pointer;
   }
 
   &--menu-visible &__input-button {

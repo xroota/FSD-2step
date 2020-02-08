@@ -1,14 +1,13 @@
 mixin slider(data)
-    .slider(class=data.sliderClass)
-      .slider__viewport
-        ul.slider__slidewrapper
-          each item in data.items
-            li.slider__slide
-              img(class="slider__slide-img" src=item.imagePath alt="room")
-        .slider__prev-next-btns
-          .slider__prev-btn expand_less
-          .slider__next-btn expand_more
-        ul.slider__nav-btns
-          - for (var x = 0; x < data.items.length; x++)
-            li.slider__nav-btn(class=(x==0)?"slider__nav-btn--active":"")
-
+  .slider(class=data.sliderClass)
+    .slider__viewport
+      ul.slider__slidewrapper
+        each item in data.items
+          li.slider__slide
+            img(class="slider__slide-img" src=item.imagePath alt="room")
+      .slider__prev-next-btns
+        .slider__prev-btn expand_less
+        .slider__next-btn expand_more
+      ul.slider__nav-btns
+        - for (var x = 0; x < data.items.length; x++)
+          li.slider__nav-btn(class=(x==0)?"slider__nav-btn--active":"")

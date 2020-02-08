@@ -1,3 +1,4 @@
+extends ../index.pug
 block variables
   - var title = "Headers&Footers";
   - var author = "enlore";
@@ -8,12 +9,12 @@ block header
   include ../../blocks/logo/logo 
 
 block content
-.headers-footers
-  +logo({
-    logoClass: "headers-footers__logo",
-  })
-  +header("demo")
-  +header("demo2")
-  +footer('demo')
+  .headers-footers
+    +logo({
+      logoClass: "headers-footers__logo",
+    })
+    +header("demo")
+    +header("demo2")
+    +footer('demo')
 
 block footer

@@ -12,67 +12,6 @@
     margin-bottom: 18px;
   }
 
-  &__calc-items {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    margin: 0 0 20px 0;
-  }
-  &__calc-item {
-    display: flex;
-    margin-bottom: 10px;
-    align-items: baseline;
-  }
-
-  &__calc-item-value {
-    margin-left: auto;
-    color: $dark-shade-75;
-  }
-
-  &__calc-item-hint {
-    box-sizing: border-box;
-    border: 1px solid $dark-shade-25;
-    border-radius: 20px;
-    width: 20px;
-    height: 20px;
-
-    text-align: center;
-
-    margin-left: 5px;
-    color: $dark-shade-25;
-  }
-
-  &__calc-item-text {
-    max-width: 214px;
-    line-height: 18px;
-    color: $dark-shade-75;
-  }
-
-  &__total {
-    width: 100%;
-    align-items: end;
-    column-gap: 5px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: baseline;
-    margin-bottom: 20px;
-  }
-
-  &__total-line {
-    border-bottom: 1px dotted $dark-shade-25;
-    height: 1px;
-  }
-
-  &__total-text {
-    font-family: $mainFont;
-    @extend %h2;
-  }
-
-  &__total-value {
-    font-family: $secondFont;
-    @extend %h2;
-  }
-
   &__button-book {
     margin-top: -2px;
   }

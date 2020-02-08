@@ -15,7 +15,8 @@ mixin feedback(dataFeedbak)
           })
       .feedback__box
           +like-button(
-            { name           : data.name+"-like",
+            {
+              name           : data.name+"-like",
               value          : data.likeValue,
               checked        : data.likeChecked,
               likeButtonClass: "feedback__like-button"
