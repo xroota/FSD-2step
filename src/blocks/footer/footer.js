@@ -13,7 +13,6 @@ class Footer {
   setTheme(footer) {
     console.log($(document).width());
     if ($(document).width() > 1120){
-      
       this.$footer.removeClass("footer--theme-light");
     }
     else {

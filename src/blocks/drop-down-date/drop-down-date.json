@@ -25,7 +25,7 @@
     "dropDownClass" : "js-calendar__datepicker js-drop-down-date--single",
     "textFieldClass" : "",
     "textFieldPlaceholder" : "ДД.ММ - ДД.MM",
-    "calendarClass" : "js-calendar__datepicker-short",
+    "calendarClass" : "js-calendar__datepicker",
     "menuButtons": [
       { "type" : "clear" },
       { "type" : "apply" }

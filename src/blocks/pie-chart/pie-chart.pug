@@ -1,7 +1,6 @@
 mixin pie-chart(items, name='')
   -
     let totalAmount = 0;
-
     items.forEach(item => {
       totalAmount += item.amount;
     });
@@ -10,7 +9,6 @@ mixin pie-chart(items, name='')
     h2.text_level_h2.pie-chart__header= name
     .pie-chart__chart
       .pie-chart__diagram
-
         -
           const size = 120;
           const baseWidth = 4;

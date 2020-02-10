@@ -1,7 +1,7 @@
 include ../twbs-pagination/twbs-pagination
 
 mixin pagination(data)
-  .pagination(class=data.paginationClass)
+  .pagination.js-pagination(class=data.paginationClass,data-visiblePages=data.visiblePages,data-totalPages=data.totalPages)
     .pagination__title= data.title
     .pagination__box
       +twbs-pagination()

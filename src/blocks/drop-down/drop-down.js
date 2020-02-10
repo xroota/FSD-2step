@@ -6,10 +6,7 @@ class DropDown {
     this.$inputs = this.$dropDown.find(".js-drop-down__item-input");
     this.$itemButtons = this.$dropDown.find(".js-drop-down__item-button");
     this.textField = new TextField(this.$dropDown.find(".js-text-field"));
-    this.sumTypes = JSON.parse(
-      this.$dropDown.attr("data-sumTypes")
-    );
-
+    this.sumTypes = JSON.parse(this.$dropDown.attr("data-sumTypes"));
 
     this.defaultPlaceholder = $(this.$dropDown).attr(
       "data-defaultPlaceholdrer"
@@ -33,7 +30,6 @@ class DropDown {
 
       sumCount[symType] =
         sumCount[symType] === undefined ? 0 + num : sumCount[symType] + num;
-
     });
     if (sum > 0) {
       let text = "";
@@ -106,8 +102,7 @@ class DropDown {
     });
     this.$itemButtons.each((index, elem) => {
       $(elem).on("click", () => {
-
-        let $input = $(elem).siblings(".drop-down__item-input");
+        let $input = $(elem).siblings(".js-drop-down__item-input");
         let buttonText = $(elem).text();
 
         let val = parseInt($input.val());

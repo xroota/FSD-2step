@@ -1,8 +1,7 @@
 class CheckboxList {
   constructor(elem) {
     this.element = elem;
-    console.log(333);
-    this.handle = this.element.querySelector(".checkbox-list__button");
+    this.handle = this.element.querySelector(".js-checkbox-list__button");
 
     if (this.handle) this.bindEventListeners();
   }

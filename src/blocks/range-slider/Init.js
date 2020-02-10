@@ -1,8 +1,8 @@
-import DropDown from "./drop-down";
+import RangeSlider from "./range-slider";
 document.addEventListener("DOMContentLoaded", () => {
-  const $dropDowns = $(".js-drop-down");
 
-  $dropDowns.each(function() {
-    new DropDown($(this));
+  const $rangeSliders = $(".js-range-slider");
+  $rangeSliders.each(function() {
+    new RangeSlider($(this));
   });
 });

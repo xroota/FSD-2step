@@ -50,4 +50,8 @@
   & .page-item.next {
     float: right;
   }
+  & .page-item.disabled {
+
+    opacity: 0.5;
+  }
 }

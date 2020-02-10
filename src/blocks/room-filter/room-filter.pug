@@ -19,14 +19,15 @@ mixin room-filter(data)
          title         : "Гости",
         }
     )(class="room-filter__guests")
-    
-    +range-slider(
-      {
-        title            : "Диапазон цены",
-        value            : "5 000₽ - 10 000₽",
-        text             : "Стоимость за сутки пребывания в номере"
-      }
-    )(class="room-filter__cost")
+    +range-slider({
+      min: "0",
+      max: "15000",
+      values: "[5000,10000]",
+      range: "true",
+      title            : "Диапазон цены",
+      value            : "5 000₽ - 10 000₽",
+      text             : "Стоимость за сутки пребывания в номере"
+    })(class="room-filter__cost")
     +checkbox-list(
       {
         type    : "allowed",

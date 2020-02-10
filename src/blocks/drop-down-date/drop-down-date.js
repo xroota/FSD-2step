@@ -51,7 +51,7 @@ class DropDownDate {
     }
 
     this.clearButton.bindEventListener("click", () => {
-      this.$dropDownDate.find("input").val("");
+      this.textField.setText("");
     });
 
     this.applyButton.bindEventListener("click", () => {

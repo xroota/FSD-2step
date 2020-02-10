@@ -136,6 +136,10 @@ block content
 
       .form-elements__other 
         +range-slider({
+              min: "0",
+              max: "15000",
+              values: "[5000,10000]",
+              range: "true",
               title            : "range slider",
               value            : "5 000₽ - 10 000₽"
           })(class="form-elements__price-slider")
@@ -170,7 +174,9 @@ block content
           {
             paginationClass : "search-room__pagination", 
             title           : "",
-                text            : "1 – 12 из 100+ вариантов аренды"
+            text            : "1 – 12 из 100+ вариантов аренды",
+            totalPages      : "15",
+            visiblePages    : "4"
           }
         )
 
