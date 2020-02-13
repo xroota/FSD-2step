@@ -1,31 +1,27 @@
-const path = require('path')
-const fs = require('fs')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const fs = require('fs');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 const PATHS = {
   src: path.join(__dirname, './src'),
   dist: path.join(__dirname, './dist'),
-}
+};
 
-
-
-const PAGES_DIR = `${PATHS.src}/pages/`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_DIR = `${PATHS.src}/pages/`;
 
 module.exports = {
   externals: {
-    paths: PATHS
+    paths: PATHS,
   },
   entry: {
     app: PATHS.src,
-
   },
   output: {
-    filename: `js/[name].[hash].js`,
+    filename: 'js/[name].[hash].js',
     path: PATHS.dist,
-    publicPath: '/'
+    publicPath: '/',
   },
   optimization: {
     splitChunks: {
@@ -34,87 +30,94 @@ module.exports = {
           name: 'vendors',
           test: /node_modules/,
           chunks: 'all',
-          enforce: true
-        }
-      }
-    }
-  },
-  module: {
-    rules: [{
-      test: /\.pug$/,
-      loader: 'pug-loader'
-    }, {
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: '/node_modules/'
-    }, {
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
-      exclude: [/blocks/, /img/, /static/],
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: './fonts/[name].[ext]',
-          publicPath: '../',
+          enforce: true,
         },
       },
     },
-    {
-      test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
-      exclude: [/fonts/, /static/],
-      options: {
-        context: './src/img/',
-        name: './img/[path][name].[ext]',
-        publicPath: '../',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
       },
-    }, {
-      test: /\.(svg|png|ico|xml|json)$/,
-      exclude: [/fonts/, /blocks/, /img/, /node_modules/],
-      use: [{
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: '/node_modules/',
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        exclude: [/blocks/, /img/, /static/],
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './fonts/[name].[ext]',
+            publicPath: '../',
+          },
+        },
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
+        exclude: [/fonts/, /static/],
         options: {
-          name: './favicons/[name].[ext]',
+          context: './src/img/',
+          name: './img/[path][name].[ext]',
           publicPath: '../',
         },
-      }],
-    },{
-      test: /\.(sa|sc|c)ss$/,
-      use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-        },
-        {
-          loader: 'css-loader',
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true,
-            data: '@import \'./src/styles/vars\';',
-            includePaths: [path.join(__dirname, 'src')],
+      },
+      {
+        test: /\.(svg|png|ico|xml|json)$/,
+        exclude: [/fonts/, /blocks/, /img/, /node_modules/],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './favicons/[name].[ext]',
+              publicPath: '../',
+            },
           },
-        }]
-
-    }]
+        ],
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              data: "@import './src/styles/vars';",
+              includePaths: [path.join(__dirname, 'src')],
+            },
+          },
+        ],
+      },
+    ],
   },
 
-  
   resolve: {
     extensions: ['.js', '.scss'],
     alias: {
-      './dependencyLibs/inputmask.dependencyLib': './dependencyLibs/inputmask.dependencyLib.jquery',
+      './dependencyLibs/inputmask.dependencyLib':
+        './dependencyLibs/inputmask.dependencyLib.jquery',
     },
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `css/[name].[hash].css`,
+      filename: 'css/[name].[hash].css',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
     }),
-
 
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/index.pug`,
@@ -141,7 +144,6 @@ module.exports = {
       filename: './headers-footers.html',
     }),
 
-
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/landing-page/landing-page.pug`,
       filename: './landing-page.html',
@@ -157,17 +159,14 @@ module.exports = {
       filename: './sign-in-page.html',
     }),
 
-   
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/login-page/login-page.pug`,
       filename: './login-page.html',
-    }), 
+    }),
 
     new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/room-details/room-details.pug`,
       filename: './room-details.html',
-    }), 
-
-
+    }),
   ],
-}
+};
