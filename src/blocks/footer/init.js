@@ -1,8 +1,9 @@
-import Footer from "./footer";
-document.addEventListener("DOMContentLoaded", () => {
-  const $footers = $(".js-footer");
+import Footer from './footer';
 
-  $footers.each(function() {
+document.addEventListener('DOMContentLoaded', () => {
+  const $footers = $('.js-footer');
+
+  $footers.each(function () {
     new Footer($(this));
   });
 });

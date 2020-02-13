@@ -1,18 +1,19 @@
-import Button from "../button/button";
-import TextField from "../text-field/text-field";
+import Button from '../button/button';
+import TextField from '../text-field/text-field';
+
 class DropDown {
   constructor($elem) {
     this.$dropDown = $elem;
-    this.$inputs = this.$dropDown.find(".js-drop-down__item-input");
-    this.$itemButtons = this.$dropDown.find(".js-drop-down__item-button");
-    this.textField = new TextField(this.$dropDown.find(".js-text-field"));
-    this.sumTypes = JSON.parse(this.$dropDown.attr("data-sumTypes"));
+    this.$inputs = this.$dropDown.find('.js-drop-down__item-input');
+    this.$itemButtons = this.$dropDown.find('.js-drop-down__item-button');
+    this.textField = new TextField(this.$dropDown.find('.js-text-field'));
+    this.sumTypes = JSON.parse(this.$dropDown.attr('data-sumTypes'));
 
     this.defaultPlaceholder = $(this.$dropDown).attr(
-      "data-defaultPlaceholdrer"
+      'data-defaultPlaceholdrer',
     );
-    this.clearButton = new Button(this.$dropDown.find(".js-button__clear"));
-    this.applyButton = new Button(this.$dropDown.find(".js-button__apply"));
+    this.clearButton = new Button(this.$dropDown.find('.js-button__clear'));
+    this.applyButton = new Button(this.$dropDown.find('.js-button__apply'));
 
     this.initInputs();
     this.sumOptions();
@@ -21,21 +22,20 @@ class DropDown {
   }
 
   sumOptions() {
-    let sumCount = [];
+    const sumCount = [];
     let sum = 0;
-    this.$inputs.each(function() {
-      let symType = $(this).attr("data-sumtype");
-      let num = parseInt($(this).val());
-      sum = sum + num;
+    this.$inputs.each(function () {
+      const symType = $(this).attr('data-sumtype');
+      const num = parseInt($(this).val());
+      sum += num;
 
-      sumCount[symType] =
-        sumCount[symType] === undefined ? 0 + num : sumCount[symType] + num;
+      sumCount[symType] = sumCount[symType] === undefined ? 0 + num : sumCount[symType] + num;
     });
     if (sum > 0) {
-      let text = "";
+      let text = '';
       let numKeys = 0;
-      for (let key in sumCount) {
-        let num = sumCount[key];
+      for (const key in sumCount) {
+        const num = sumCount[key];
         let tmp = 0;
         if (num > 1) {
           tmp = 1;
@@ -45,17 +45,17 @@ class DropDown {
         }
 
         if (num > 0) {
-          numKeys = numKeys + 1;
+          numKeys += 1;
           if (numKeys === 2) {
-            text = text + " , ";
+            text += ' , ';
           }
           if (numKeys <= 2) {
-            text = text + sumCount[key] + " " + this.sumTypes[key][tmp];
+            text = `${text + sumCount[key]} ${this.sumTypes[key][tmp]}`;
           }
         }
 
         if (numKeys === 3) {
-          text = text + "...";
+          text += '...';
         }
       }
       this.textField.setText(text);
@@ -70,18 +70,18 @@ class DropDown {
 
   initInputs() {
     this.$inputs
-      .filter(function() {
-        if (this.value === "0") return true;
+      .filter(function () {
+        if (this.value === '0') return true;
       })
-      .siblings(".js-drop-down__item-button")
-      .filter(function() {
-        if ($(this).text() == "-") return true;
+      .siblings('.js-drop-down__item-button')
+      .filter(function () {
+        if ($(this).text() == '-') return true;
       })
-      .addClass("drop-down__item-button--disabled");
+      .addClass('drop-down__item-button--disabled');
   }
 
   toggleMenu() {
-    this.$dropDown.toggleClass("drop-down--menu-visible");
+    this.$dropDown.toggleClass('drop-down--menu-visible');
   }
 
   bindEventListeners() {
@@ -90,34 +90,34 @@ class DropDown {
       this.textField.toggleMenu();
     });
 
-    this.clearButton.bindEventListener("click", () => {
-      this.$inputs.val("0");
+    this.clearButton.bindEventListener('click', () => {
+      this.$inputs.val('0');
 
       this.initInputs();
       this.sumOptions();
     });
 
-    this.applyButton.bindEventListener("click", () => {
+    this.applyButton.bindEventListener('click', () => {
       this.toggleMenu();
     });
     this.$itemButtons.each((index, elem) => {
-      $(elem).on("click", () => {
-        let $input = $(elem).siblings(".js-drop-down__item-input");
-        let buttonText = $(elem).text();
+      $(elem).on('click', () => {
+        const $input = $(elem).siblings('.js-drop-down__item-input');
+        const buttonText = $(elem).text();
 
-        let val = parseInt($input.val());
-        if (buttonText == "-") {
+        const val = parseInt($input.val());
+        if (buttonText === '-') {
           $input.val(val - 1);
-          $input.attr("value", val - 1);
+          $input.attr('value', val - 1);
           if (val - 1 === 0) {
-            $(elem).addClass("drop-down__item-button--disabled");
+            $(elem).addClass('drop-down__item-button--disabled');
           }
         } else {
           $input.val(val + 1);
-          $input.attr("value", val + 1);
+          $input.attr('value', val + 1);
           $input
-            .siblings(".js-drop-down__item-button")
-            .removeClass("drop-down__item-button--disabled");
+            .siblings('.js-drop-down__item-button')
+            .removeClass('drop-down__item-button--disabled');
         }
 
         $input.change();

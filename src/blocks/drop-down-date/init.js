@@ -1,8 +1,9 @@
-import DropDownDate from "./drop-down-date";
-document.addEventListener("DOMContentLoaded", () => {
-  const $dropDowns = $(".js-drop-down-date");
+import DropDownDate from './drop-down-date';
 
-  $dropDowns.each(function() {
+document.addEventListener('DOMContentLoaded', () => {
+  const $dropDowns = $('.js-drop-down-date');
+
+  $dropDowns.each(function () {
     new DropDownDate($(this));
   });
 });

@@ -1,8 +1,9 @@
-import Slider from "./slider";
-document.addEventListener("DOMContentLoaded", () => {
-  const $slider = $(".js-slider");
+import Slider from './slider';
 
-  $slider.each(function() {
+document.addEventListener('DOMContentLoaded', () => {
+  const $slider = $('.js-slider');
+
+  $slider.each(function () {
     new Slider($(this));
   });
 });

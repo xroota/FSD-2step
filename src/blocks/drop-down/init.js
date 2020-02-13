@@ -1,8 +1,9 @@
-import DropDown from "./drop-down";
-document.addEventListener("DOMContentLoaded", () => {
-  const $dropDowns = $(".js-drop-down");
+import DropDown from './drop-down';
 
-  $dropDowns.each(function() {
+document.addEventListener('DOMContentLoaded', () => {
+  const $dropDowns = $('.js-drop-down');
+
+  $dropDowns.each(function () {
     new DropDown($(this));
   });
 });

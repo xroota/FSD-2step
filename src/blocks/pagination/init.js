@@ -1,8 +1,9 @@
-import Pagination from "./pagination";
-document.addEventListener("DOMContentLoaded", () => {
-  const $paginations = $(".js-pagination");
+import Pagination from './pagination';
 
-  $paginations.each(function() {
+document.addEventListener('DOMContentLoaded', () => {
+  const $paginations = $('.js-pagination');
+
+  $paginations.each(function () {
     new Pagination($(this));
   });
 });
