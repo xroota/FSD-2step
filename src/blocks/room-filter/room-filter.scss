@@ -1,3 +1,12 @@
+@import '../../styles/init.scss';
+@import '../../blocks/header/header';
+@import '../../blocks/footer/footer';
+@import '../drop-down-date/drop-down-date';
+@import '../drop-down/drop-down';
+@import '../range-slider/range-slider';
+@import '../checkbox-list/checkbox-list';
+@import '../extra-list/extra-list';
+
 .room-filter {
   &__dates {
     margin-bottom: 20px;

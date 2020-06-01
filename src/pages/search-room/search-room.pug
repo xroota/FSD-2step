@@ -19,11 +19,13 @@ block content
           +room-list({roomListClass : "search-room__room-list"})
           +pagination(  
            {
-              paginationClass : "search-room__pagination", 
-              title           : "",
-              text            : "1 – 12 из 100+ вариантов аренды"
+             paginationClass : "search-room__pagination", 
+             title           : "",
+             text            : "1 – 12 из 100+ вариантов аренды",
+             totalPages      : "15",
+             visiblePages    : "4"
             }
-          )
+        )
 
 block footer
   include ../../blocks/footer/footer

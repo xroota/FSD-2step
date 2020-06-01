@@ -1,3 +1,19 @@
+@import '../../styles/init.scss';
+@import '../../blocks/text-field/text-field';
+@import '../../blocks/button/button';
+@import '../../blocks/drop-down/drop-down';
+@import '../../blocks/drop-down-date/drop-down-date';
+@import '../../blocks/checkbox-list/checkbox-list';
+@import '../../blocks/radio-list/radio-list';
+@import '../../blocks/toggle/toggle';
+@import '../../blocks/like-button/like-button';
+@import '../../blocks/rate-button/rate-button';
+@import '../../blocks/range-slider/range-slider';
+@import '../../blocks/pagination/pagination';
+@import '../../blocks/list/list';
+@import ' ../../blocks/extra-list/extra-list';
+@import '../../blocks/feedback/feedback';
+
 .form-elements {
   padding: 143px 141px;
 

@@ -1,3 +1,7 @@
+@import '../../blocks/rate-button/rate-button';
+@import '../../blocks/room-info/room-info';
+@import '../../blocks/slider/slider';
+
 .room {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +10,7 @@
   width: 270px;
 
   &__slider {
-    margin-bottom: 18px;
+ 
   }
 
   &__room-info {

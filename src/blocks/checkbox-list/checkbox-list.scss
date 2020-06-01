@@ -43,7 +43,7 @@
   }
   &__item-checkbox-hidden:checked + &__item-checkbox {
     border-color: $purple;
-    background: url('./img/vector.svg') no-repeat 4px 3px;
+    background: url('/img/vector.svg') no-repeat 4px 3px;
   }
 
   &__item-title {

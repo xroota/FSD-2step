@@ -1,3 +1,14 @@
+@import '../../styles/init.scss';
+@import '../../blocks/header/header';
+@import '../../blocks/footer/footer';
+@import '../../blocks/pie-chart/pie-chart';
+@import '../../blocks/room-photos/room-photos';
+@import '../../blocks/extra-list/extra-list';
+@import '../../blocks/feedback/feedback';
+@import '../../blocks/list/list';
+@import '../../blocks/card-booking/card-booking';
+@import '../../blocks/text-field/text-field';
+
 .room-details {
   box-sizing: border-box;
   display: block;

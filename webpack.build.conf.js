@@ -1,5 +1,6 @@
-const merge = require('webpack-merge')
-const baseWebpackConfig = require('./webpack.base.conf')
+const merge = require('webpack-merge');
+const baseWebpackConfig = require('./webpack.base.conf');
+
 const publicDir = 'https://xroota.github.io/FSD-2step/';
 const buildWebpackConfig = merge(baseWebpackConfig, {
   // BUILD config
@@ -7,12 +8,12 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
   plugins: [],
 
   output: {
-    filename: `js/[name].[hash].js`,
-    publicPath: publicDir
-  }
+    filename: 'js/[name].[hash].js',
+    publicPath: publicDir,
+  },
 
-})
+});
 
 module.exports = new Promise((resolve, reject) => {
-  resolve(buildWebpackConfig)
-})
+  resolve(buildWebpackConfig);
+});

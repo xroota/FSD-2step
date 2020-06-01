@@ -1,3 +1,9 @@
+@import '../../blocks/card/card';
+@import '../../blocks/text-field/text-field';
+@import '../../blocks/radio-list/radio-list';
+@import '../../blocks/toggle/toggle';
+@import '../../blocks/button/button';
+
 .card-register {
   &__name {
     margin-top: -1px;

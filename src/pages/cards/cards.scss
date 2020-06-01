@@ -1,3 +1,10 @@
+@import '../../styles/init.scss';
+@import '../../blocks/card-find-number/card-find-number';
+@import '../../blocks/card-login/card-login';
+@import '../../blocks/card-register/card-register';
+@import '../../blocks/card-booking/card-booking';
+@import '../../blocks/calendar/calendar';
+@import '../../blocks/room/room';
 .cards {
   box-sizing: border-box;
   display: grid;

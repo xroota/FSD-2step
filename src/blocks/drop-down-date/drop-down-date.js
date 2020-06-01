@@ -1,5 +1,6 @@
 import Button from '../button/button';
 import TextField from '../text-field/text-field';
+import '../calendar/calendar';
 
 class DropDownDate {
   constructor($elem) {

@@ -1,3 +1,7 @@
+@import '../../styles/init.scss';
+@import '../../blocks/header/header';
+@import '../../blocks/footer/footer';
+@import '../../blocks/card-register/card-register';
 .login-page {
   box-sizing: border-box;
   background-image: url(../../img/login-page.jpg);

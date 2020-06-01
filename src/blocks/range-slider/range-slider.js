@@ -1,3 +1,4 @@
+import '../ui-slider/ui-slider';
 class RangeSlider {
   constructor($elem) {
     this.$rangeSlider = $elem;
